@@ -33,9 +33,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          # 设置文档目录为网站根目录
-          source-dir: ./documentation
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
