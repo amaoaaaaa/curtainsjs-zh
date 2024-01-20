@@ -1,79 +1,96 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
 
-		<!-- Metas -->
-		<title>curtains.js | Documentation</title>
-	    <meta name="description" content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes.">
-	    <link rel="canonical" href="https://www.curtainsjs.com/documentation.html">
+        <!-- Metas -->
+        <title>文档 - curtains.js 中文网</title>
+        <meta
+            name="description"
+            content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
+        />
+        <link rel="canonical" href="https://www.curtainsjs.com/documentation.html" />
 
-	    <!-- Facebook OG -->
-	    <meta property="og:title" content="curtains.js | Documentation">
-	    <meta property="og:type" content="website">
-	    <meta property="og:description" content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes.">
-	    <meta property="og:url" content="https://www.curtainsjs.com/documentation.html">
-	    <meta property="og:image" content="https://www.curtainsjs.com/images/curtains-js-logo.jpg">
+        <!-- Facebook OG -->
+        <meta property="og:title" content="curtains.js | Documentation" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:description"
+            content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
+        />
+        <meta property="og:url" content="https://www.curtainsjs.com/documentation.html" />
+        <meta
+            property="og:image"
+            content="https://www.curtainsjs.com/images/curtains-js-logo.jpg"
+        />
 
-	    <!-- Twitter card -->
-	    <meta name="twitter:card" content="summary_large_image">
-	    <meta name="twitter:site" content="@webdesign_ml">
-		<meta name="twitter:creator" content="@webdesign_ml">
-		<meta name="twitter:title" content="curtains.js | Documentation">
-		<meta name="twitter:description" content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes.">
-		<meta name="twitter:image" content="https://www.curtainsjs.com/images/curtains-js-logo.jpg">
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@webdesign_ml" />
+        <meta name="twitter:creator" content="@webdesign_ml" />
+        <meta name="twitter:title" content="curtains.js | Documentation" />
+        <meta
+            name="twitter:description"
+            content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
+        />
+        <meta
+            name="twitter:image"
+            content="https://www.curtainsjs.com/images/curtains-js-logo.jpg"
+        />
 
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png">
-		<link rel="manifest" href="images/favicons/site.webmanifest">
-		<link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#202340">
-		<link rel="shortcut icon" href="images/favicons/favicon.ico">
-		<meta name="msapplication-TileColor" content="#202340">
-		<meta name="msapplication-config" content="images/favicons/browserconfig.xml">
-		<meta name="theme-color" content="#202340">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" />
+        <link rel="manifest" href="images/favicons/site.webmanifest" />
+        <link rel="mask-icon" href="images/favicons/safari-pinned-tab.svg" color="#202340" />
+        <link rel="shortcut icon" href="images/favicons/favicon.ico" />
+        <meta name="msapplication-TileColor" content="#202340" />
+        <meta name="msapplication-config" content="images/favicons/browserconfig.xml" />
+        <meta name="theme-color" content="#202340" />
 
-		<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="style.css" type="text/css">
-	</head>
-	<body>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet" />
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
         <div id="page-wrap">
+            <div id="canvas"></div>
 
-			<div id="canvas"></div>
+            <div id="content">
+                <header id="header">
+                    <div class="wrapper">
+                        <div id="header-wrapper" class="flex-wrapper">
+                            <div id="header-title">
+                                <a href="/" title="Home">curtains.js</a>
+                            </div>
+                            <nav id="main-menu">
+                                <ul class="flex-wrapper">
+                                    <li>
+                                        <a href="get-started.html">Get started</a>
+                                    </li>
+                                    <li>
+                                        <a href="documentation.html" class="active">Docs</a>
+                                    </li>
+                                    <li>
+                                        <a href="download.html">Download</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </header>
 
-			<div id="content">
-
-				<header id="header">
-					<div class="wrapper">
-						<div id="header-wrapper" class="flex-wrapper">
-							<div id="header-title">
-								<a href="/" title="Home">curtains.js</a>
-							</div>
-							<nav id="main-menu">
-								<ul class="flex-wrapper">
-									<li>
-										<a href="get-started.html">Get started</a>
-									</li>
-									<li>
-										<a href="documentation.html" class="active">Docs</a>
-									</li>
-									<li>
-										<a href="download.html">Download</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</header>
-
-				<section class="content-section api-section">
-
+                <section class="content-section api-section">
                     <nav id="api-menu-nav">
-
                         <ul id="api-menu">
                             <li class="active">
                                 <div class="api-top-menu-item">Core</div>
@@ -139,75 +156,168 @@
                         </ul>
                     </nav>
 
-					<div id="api-content">
+                    <div id="api-content">
+                        <div class="api-content-inner">
+                            <div class="inner-section">
+                                <h1>文档</h1>
 
-						<div class="api-content-inner">
-							<div class="inner-section">
-								<h1>Documentation</h1>
-
-                                <h2>Basic concept</h2>
+                                <h2>基本概念</h2>
 
                                 <p>
-                                    Since the <strong>version 7.0</strong> the whole library has been rewritten and broken into multiple class modules to improve the readability and maintainability of the code. Since <strong>curtains.js is a high-level API library</strong>, most of those classes are used internally only. Even tho they are listed here you won't ever need to use them.
+                                    自<strong>7.0</strong>版本以来，整个库已被重写并分解为多个类模块，以提高代码的可读性和可维护性。由于<strong
+                                        >curtains.js 是一个高级 API 库</strong
+                                    >，因此大多数类仅在内部使用。即使它们列在这里，你也永远不需要使用它们。
+
+                                    <span class="original">
+                                        Since the <strong>version 7.0</strong> the whole library has
+                                        been rewritten and broken into multiple class modules to
+                                        improve the readability and maintainability of the code.
+                                        Since
+                                        <strong>curtains.js is a high-level API library</strong>,
+                                        most of those classes are used internally only. Even tho
+                                        they are listed here you won't ever need to use them.
+                                    </span>
                                 </p>
 
                                 <p>
-                                    If you're coming from a previous version of the library, have a look at the <a href="migration-guide-to-v7.html">migration guide</a>.
+                                    如果您来自以前版本的库，请查看<a
+                                        href="migration-guide-to-v7.html"
+                                        >迁移指南</a
+                                    >。
                                 </p>
 
-                                <h3 class="main-classes-directories">Core</h3>
+                                <h3 class="main-classes-directories">核心</h3>
 
                                 <p>
-                                    Main classes needed to create basic scenes.
+                                    创建基本场景所需的主要类。
+                                    <span class="original">
+                                        Main classes needed to create basic scenes.
+                                    </span>
                                 </p>
 
                                 <ul class="main-classes-list">
                                     <li>
                                         <h4>Curtains <span class="api-item-version">v1.0</span></h4>
                                         <p>
-                                            The <a href="curtains-class.html">Curtains</a> class is responsible for the canvas and WebGL context and therefore creates a WebGL scene. It also creates a requestAnimationFrame loop and will draw every Plane elements that you've created.
+                                            <a href="curtains-class.html">Curtains</a> 类负责画布和
+                                            WebGL 上下文，因此创建 WebGL 场景。它还创建一个
+                                            requestAnimationFrame 循环，并将绘制您创建的每个 Plane
+                                            元素。
+
+                                            <span class="original">
+                                                The <a href="curtains-class.html">Curtains</a> class
+                                                is responsible for the canvas and WebGL context and
+                                                therefore creates a WebGL scene. It also creates a
+                                                requestAnimationFrame loop and will draw every Plane
+                                                elements that you've created.
+                                            </span>
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Curtains.js" title="Curtains class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Curtains.js"
+                                                title="Curtains class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
 
                                         <ul class="internal-classes-list">
                                             <li>
                                                 <h5>Renderer</h5>
                                                 <p>
-                                                    The Renderer class is handling everything related to the WebGL context (creation and restoration, extensions, WebGL commands, etc).
+                                                    Renderer 类处理与 WebGL
+                                                    上下文相关的所有内容（创建和恢复、扩展、WebGL
+                                                    命令等）。
+
+                                                    <span class="original">
+                                                        The Renderer class is handling everything
+                                                        related to the WebGL context (creation and
+                                                        restoration, extensions, WebGL commands,
+                                                        etc).
+                                                    </span>
                                                 </p>
                                                 <p class="api-item-examples">
-                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Renderer.js" title="Renderer class source code" target="_blank">Source code</a>.
+                                                    <a
+                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Renderer.js"
+                                                        title="Renderer class source code"
+                                                        target="_blank"
+                                                        >源代码</a
+                                                    >.
                                                 </p>
 
                                                 <ul class="internal-classes-list">
                                                     <li>
                                                         <h6>Scene</h6>
                                                         <p>
-                                                            The Scene class is created by the Renderer. It manages the render order of every WebGL objects (planes, render targets and shader passes) added.<br />
-                                                            Read more about <a href="scene-rendering-order.html">how the library draws the different objects</a>.
+                                                            Scene 类由 Renderer
+                                                            创建。它管理添加的每个 WebGL
+                                                            对象（平面、渲染目标和着色器通道）的渲染顺序。<a
+                                                                href="scene-rendering-order.html"
+                                                                >详细了解该库如何绘制不同的对象</a
+                                                            >
+                                                            <span class="original">
+                                                                The Scene class is created by the
+                                                                Renderer. It manages the render
+                                                                order of every WebGL objects
+                                                                (planes, render targets and shader
+                                                                passes) added.<br />
+                                                                Read more about
+                                                                <a href="scene-rendering-order.html"
+                                                                    >how the library draws the
+                                                                    different objects</a
+                                                                >.
+                                                            </span>
                                                         </p>
                                                         <p class="api-item-examples">
-                                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Scene.js" title="Scene class source code" target="_blank">Source code</a>.
+                                                            <a
+                                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Scene.js"
+                                                                title="Scene class source code"
+                                                                target="_blank"
+                                                                >源代码</a
+                                                            >.
                                                         </p>
                                                     </li>
                                                     <li>
                                                         <h6>CacheManager</h6>
                                                         <p>
-                                                            The CacheManager caches already compiled shaders, vertices and UVs arrays and images textures in order to reuse them whenever possible and avoid extra heavy computations.
+                                                            CacheManager 缓存已编译的着色器、顶点和
+                                                            UV
+                                                            数组以及图像纹理，以便尽可能重用它们并避免额外繁重的计算。
+                                                            <span class="original">
+                                                                The CacheManager caches already
+                                                                compiled shaders, vertices and UVs
+                                                                arrays and images textures in order
+                                                                to reuse them whenever possible and
+                                                                avoid extra heavy computations.
+                                                            </span>
                                                         </p>
                                                         <p class="api-item-examples">
-                                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/utils/CacheManager.js" title="CacheManager class source code" target="_blank">Source code</a>.
+                                                            <a
+                                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/utils/CacheManager.js"
+                                                                title="CacheManager class source code"
+                                                                target="_blank"
+                                                                >源代码</a
+                                                            >.
                                                         </p>
                                                     </li>
                                                     <li>
                                                         <h6>CallbackQueueManager</h6>
                                                         <p>
-                                                            The CallbackQueueManager is used to execute callbacks on the next animation frame call.
+                                                            CallbackQueueManager
+                                                            用于在下一个动画帧调用时执行回调。
+                                                            <span class="original">
+                                                                The CallbackQueueManager is used to
+                                                                execute callbacks on the next
+                                                                animation frame call.
+                                                            </span>
                                                         </p>
                                                         <p class="api-item-examples">
-                                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/utils/CallbackQueueManager.js" title="CallbackQueueManager class source code" target="_blank">Source code</a>.
+                                                            <a
+                                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/utils/CallbackQueueManager.js"
+                                                                title="CallbackQueueManager class source code"
+                                                                target="_blank"
+                                                                >源代码</a
+                                                            >.
                                                         </p>
                                                     </li>
                                                 </ul>
@@ -215,10 +325,21 @@
                                             <li>
                                                 <h5>ScrollManager</h5>
                                                 <p>
-                                                    The ScrollManager class adds a scroll event listener if needed and handles the update of the scroll values.
+                                                    ScrollManager
+                                                    类根据需要添加滚动事件侦听器并处理滚动值的更新。
+                                                    <span class="original">
+                                                        The ScrollManager class adds a scroll event
+                                                        listener if needed and handles the update of
+                                                        the scroll values.
+                                                    </span>
                                                 </p>
                                                 <p class="api-item-examples">
-                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/utils/ScrollManager.js" title="ScrollManager class source code" target="_blank">Source code</a>.
+                                                    <a
+                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/utils/ScrollManager.js"
+                                                        title="ScrollManager class source code"
+                                                        target="_blank"
+                                                        >源代码</a
+                                                    >.
                                                 </p>
                                             </li>
                                         </ul>
@@ -226,58 +347,129 @@
                                     <li>
                                         <h4>Plane <span class="api-item-version">v1.0</span></h4>
                                         <p>
-                                            The <a href="plane-class.html">Plane</a> class creates a WebGL plane that is bound to a HTML element and that will be rendered at the sizes and positions of this HTML element.<br />
+                                            <a href="plane-class.html">Plane</a> 类创建一个绑定到
+                                            HTML 元素的 WebGL 平面，并将按照该 HTML
+                                            元素的大小和位置进行渲染。
+                                            <span class="original">
+                                                The <a href="plane-class.html">Plane</a> class
+                                                creates a WebGL plane that is bound to a HTML
+                                                element and that will be rendered at the sizes and
+                                                positions of this HTML element.<br />
+                                            </span>
                                         </p>
-                                        <p>
-                                            It <strong>extends</strong> the DOMMesh class.
-                                        </p>
+                                        <p>它扩展了 <strong>DOMMesh</strong> 类。</p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Plane.js" title="Plane class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Plane.js"
+                                                title="Plane class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                         <ul class="internal-classes-list">
                                             <li>
                                                 <h5>DOMMesh</h5>
                                                 <p>
-                                                    The DOMMesh class <strong>extends</strong> the Mesh class by adding a few helper methods that relies on the associated HTML element used to create the Mesh.
+                                                    DOMMesh 类通过添加一些依赖于用于创建网格的关联
+                                                    HTML 元素的辅助方法来扩展 Mesh 类。
+                                                    <span class="original">
+                                                        The DOMMesh class
+                                                        <strong>extends</strong> the Mesh class by
+                                                        adding a few helper methods that relies on
+                                                        the associated HTML element used to create
+                                                        the Mesh.
+                                                    </span>
                                                 </p>
                                                 <p class="api-item-examples">
-                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/DOMMesh.js" title="DOMMesh class source code" target="_blank">Source code</a>.
+                                                    <a
+                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/DOMMesh.js"
+                                                        title="DOMMesh class source code"
+                                                        target="_blank"
+                                                        >源代码</a
+                                                    >.
                                                 </p>
                                                 <ul class="internal-classes-list">
                                                     <li>
                                                         <h6>Mesh</h6>
                                                         <p>
-                                                            The Mesh class creates a WebGL mesh, i.e. creates a Geometry, a Program, the Mesh's uniforms and handles Textures creation.
+                                                            Mesh类创建一个WebGL网格，即创建一个几何体（Geometry）、一个程序（Program），处理网格的统一变量（uniforms）和纹理（Textures）的创建。
+                                                            <span class="original">
+                                                                The Mesh class creates a WebGL mesh,
+                                                                i.e. creates a Geometry, a Program,
+                                                                the Mesh's uniforms and handles
+                                                                Textures creation.
+                                                            </span>
                                                         </p>
                                                         <p class="api-item-examples">
-                                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Mesh.js" title="Mesh class source code" target="_blank">Source code</a>.
+                                                            <a
+                                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Mesh.js"
+                                                                title="Mesh class source code"
+                                                                target="_blank"
+                                                                >源代码</a
+                                                            >.
                                                         </p>
                                                         <ul class="internal-classes-list">
                                                             <li>
                                                                 <h6>Geometry</h6>
                                                                 <p>
-                                                                    The Geometry class creates and binds the vertices and texture coordinates attributes buffers and draw the mesh.
+                                                                    几何类（The Geometry
+                                                                    class）负责创建并绑定顶点和纹理坐标属性的缓冲区，并绘制网格。
+                                                                    <span class="original">
+                                                                        The Geometry class creates
+                                                                        and binds the vertices and
+                                                                        texture coordinates
+                                                                        attributes buffers and draw
+                                                                        the mesh.
+                                                                    </span>
                                                                 </p>
                                                                 <p class="api-item-examples">
-                                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Geometry.js" title="Geometry class source code" target="_blank">Source code</a>.
+                                                                    <a
+                                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Geometry.js"
+                                                                        title="Geometry class source code"
+                                                                        target="_blank"
+                                                                        >源代码</a
+                                                                    >.
                                                                 </p>
                                                             </li>
                                                             <li>
                                                                 <h6>Program</h6>
                                                                 <p>
-                                                                    The Program class compiles the shaders and creates a WebGL program used by the Mesh.
+                                                                    程序类（The Program
+                                                                    class）负责编译着色器并将它们链接成一个WebGL程序，这个程序将被网格（Mesh）所使用。
+                                                                    <span class="original">
+                                                                        The Program class compiles
+                                                                        the shaders and creates a
+                                                                        WebGL program used by the
+                                                                        Mesh.
+                                                                    </span>
                                                                 </p>
                                                                 <p class="api-item-examples">
-                                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Program.js" title="Program class source code" target="_blank">Source code</a>.
+                                                                    <a
+                                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Program.js"
+                                                                        title="Program class source code"
+                                                                        target="_blank"
+                                                                        >源代码</a
+                                                                    >.
                                                                 </p>
                                                             </li>
                                                             <li>
                                                                 <h6>Uniforms</h6>
                                                                 <p>
-                                                                    The Uniforms class creates and updates the Mesh's uniforms.
+                                                                    uniforms类（The Uniforms
+                                                                    class）负责创建并更新网格（Mesh）的uniform变量。
+                                                                    <span class="original">
+                                                                        The Uniforms class creates
+                                                                        and updates the Mesh's
+                                                                        uniforms.
+                                                                    </span>
                                                                 </p>
                                                                 <p class="api-item-examples">
-                                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Uniforms.js" title="Uniforms class source code" target="_blank">Source code</a>.
+                                                                    <a
+                                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Uniforms.js"
+                                                                        title="Uniforms class source code"
+                                                                        target="_blank"
+                                                                        >源代码</a
+                                                                    >.
                                                                 </p>
                                                             </li>
                                                         </ul>
@@ -287,10 +479,21 @@
                                             <li>
                                                 <h5>Camera</h5>
                                                 <p>
-                                                    The Camera class creates a perspective camera used to compute the plane's projection matrix.
+                                                    相机类（The Camera
+                                                    class）负责创建一个透视相机，用于计算平面的投影矩阵。
+                                                    <span class="original">
+                                                        The Camera class creates a perspective
+                                                        camera used to compute the plane's
+                                                        projection matrix.
+                                                    </span>
                                                 </p>
                                                 <p class="api-item-examples">
-                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/camera/Camera.js" title="Camera class source code" target="_blank">Source code</a>.
+                                                    <a
+                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/camera/Camera.js"
+                                                        title="Camera class source code"
+                                                        target="_blank"
+                                                        >源代码</a
+                                                    >.
                                                 </p>
                                             </li>
                                         </ul>
@@ -298,182 +501,402 @@
                                     <li>
                                         <h4>Texture <span class="api-item-version">v2.0</span></h4>
                                         <p>
-                                            The <a href="texture-class.html">Texture</a> class is used to create WebGL textures.
+                                            <a href="texture-class.html">Texture类</a
+                                            >用于创建WebGL纹理。
                                         </p>
                                     </li>
                                 </ul>
 
-                                <h3 class="main-classes-directories">Frame Buffer Objects</h3>
+                                <h3 class="main-classes-directories">帧缓冲区对象</h3>
 
                                 <p>
-                                    Those classes are generally used to add post-processing effects to your planes.
+                                    这些类通常用于为您的平面添加后期处理效果。
+                                    <span class="original">
+                                        Those classes are generally used to add post-processing
+                                        effects to your planes.
+                                    </span>
                                 </p>
 
                                 <ul class="main-classes-list">
                                     <li>
-                                        <h4>RenderTarget <span class="api-item-version">v5.0</span></h4>
+                                        <h4>
+                                            RenderTarget <span class="api-item-version">v5.0</span>
+                                        </h4>
                                         <p>
-                                            The <a href="render-target-class.html">RenderTarget</a> class is a Frame Buffer Object used internally to create shader passes. It allows you to render one or multiple planes as a texture that you can then use in another plane or shader pass.
+                                            <a href="render-target-class.html">RenderTarget</a
+                                            >类是一个内部使用的帧缓冲对象（Frame Buffer
+                                            Object），用于创建着色器通道。它允许您将一个或多个平面渲染为纹理，然后您可以在另一个平面或着色器通道中使用这些纹理。
+                                            <span class="original">
+                                                The
+                                                <a href="render-target-class.html">RenderTarget</a>
+                                                class is a Frame Buffer Object used internally to
+                                                create shader passes. It allows you to render one or
+                                                multiple planes as a texture that you can then use
+                                                in another plane or shader pass.
+                                            </span>
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/framebuffers/RenderTarget.js" title="RenderTarget class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/framebuffers/RenderTarget.js"
+                                                title="RenderTarget class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>ShaderPass <span class="api-item-version">v3.0</span></h4>
+                                        <h4>
+                                            ShaderPass <span class="api-item-version">v3.0</span>
+                                        </h4>
                                         <p>
-                                            The <a href="shader-pass-class.html">ShaderPass</a> class <strong>extends</strong> the DOMMesh class.<br />
-                                            ShaderPass elements are used to add post-processing effects. Think of it as an additional plane that will be bound to your WebGL canvas container. This way you will be able to apply shaders to a bunch of planes or to your whole WebGL scene.<br />
-                                            You can add multiple shader passes and they will be applied one after the other in their creation order.
+                                            <a href="shader-pass-class.html">ShaderPass</a
+                                            >类扩展自DOMMesh类。<br />
+                                            ShaderPass元素用于添加后期处理效果。可以将其视为一个附加到WebGL画布容器的额外平面，这样您就可以对一组平面或整个WebGL场景应用着色器了。<br />
+                                            您可以添加多个着色器通道，并且它们会按照创建顺序逐个应用。
+                                            <span class="original">
+                                                The
+                                                <a href="shader-pass-class.html">ShaderPass</a>
+                                                class <strong>extends</strong> the DOMMesh class.<br />
+                                                ShaderPass elements are used to add post-processing
+                                                effects. Think of it as an additional plane that
+                                                will be bound to your WebGL canvas container. This
+                                                way you will be able to apply shaders to a bunch of
+                                                planes or to your whole WebGL scene.<br />
+                                                You can add multiple shader passes and they will be
+                                                applied one after the other in their creation order.
+                                            </span>
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/framebuffers/ShaderPass.js" title="ShaderPass class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/framebuffers/ShaderPass.js"
+                                                title="ShaderPass class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                 </ul>
 
                                 <h3 class="main-classes-directories">Loaders</h3>
 
-                                <p>Useful to create WebGL textures based on HTML media elements</p>
+                                <p>
+                                    可用于创建基于 HTML 媒体元素的 WebGL 纹理
+                                    <span class="original">
+                                        Useful to create WebGL textures based on HTML media elements
+                                    </span>
+                                </p>
 
                                 <ul class="main-classes-list">
                                     <li>
-                                        <h4>TextureLoader <span class="api-item-version">v7.0</span></h4>
+                                        <h4>
+                                            TextureLoader <span class="api-item-version">v7.0</span>
+                                        </h4>
                                         <p>
-                                            The <a href="texture-loader-class.html">TextureLoader</a> class loads images, videos and canvases and creates Textures using those HTML elements as sources.
+                                            <a href="texture-loader-class.html">TextureLoader</a>
+                                            类加载图像、视频和画布，并使用这些 HTML
+                                            元素作为源来创建纹理。
+                                            <span class="original">
+                                                The
+                                                <a href="texture-loader-class.html"
+                                                    >TextureLoader</a
+                                                >
+                                                class loads images, videos and canvases and creates
+                                                Textures using those HTML elements as sources.
+                                            </span>
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/loaders/TextureLoader.js" title="TextureLoader class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/loaders/TextureLoader.js"
+                                                title="TextureLoader class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
 
                                         <ul class="internal-classes-list">
                                             <li>
                                                 <h5>PlaneTextureLoader</h5>
                                                 <p>
-                                                    The PlaneTextureLoader class <strong>extends</strong> the TextureLoader class. Used internally by planes and shader passes to load medias, use the resulting textures and fire the onLoading and onReady callbacks.
+                                                    PlaneTextureLoader 类扩展了 TextureLoader
+                                                    类。由平面和着色器通道在内部使用来加载媒体、使用生成的纹理并触发
+                                                    onLoading 和 onReady 回调。
+
+                                                    <span class="original">
+                                                        The PlaneTextureLoader class
+                                                        <strong>extends</strong> the TextureLoader
+                                                        class. Used internally by planes and shader
+                                                        passes to load medias, use the resulting
+                                                        textures and fire the onLoading and onReady
+                                                        callbacks.
+                                                    </span>
                                                 </p>
                                                 <p class="api-item-examples">
-                                                    <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/loaders/PlaneTextureLoader.js" title="PlaneTextureLoader class source code" target="_blank">Source code</a>.
+                                                    <a
+                                                        href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/loaders/PlaneTextureLoader.js"
+                                                        title="PlaneTextureLoader class source code"
+                                                        target="_blank"
+                                                        >源代码</a
+                                                    >.
                                                 </p>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
 
-
                                 <h3 class="main-classes-directories">Math</h3>
 
                                 <p>
-                                    Math classes used for 3D vectors and matrices calculations. Highly based on <a href="https://github.com/mrdoob/three.js">three.js</a> and <a href="http://glmatrix.net/docs/">glMatrix</a> maths classes.<br />
-                                    Note that at the moment those classes are still not complete and implement only the methods needed internally by the library.
+                                    用于 3D 向量和矩阵计算的 Math 类。高度基于
+                                    <a href="https://github.com/mrdoob/three.js">Three.js</a> 和
+                                    <a href="http://glmatrix.net/docs/">glMatrix</a>
+                                    的 Math 类。<br />
+                                    请注意，目前这些类仍然不完整，并且仅实现了库内部所需的方法。
+
+                                    <span class="original">
+                                        Math classes used for 3D vectors and matrices calculations.
+                                        Highly based on
+                                        <a href="https://github.com/mrdoob/three.js">three.js</a>
+                                        and <a href="http://glmatrix.net/docs/">glMatrix</a> maths
+                                        classes.<br />
+                                        Note that at the moment those classes are still not complete
+                                        and implement only the methods needed internally by the
+                                        library.
+                                    </span>
                                 </p>
 
                                 <ul class="main-classes-list">
                                     <li>
                                         <h4>Vec2 <span class="api-item-version">v7.0</span></h4>
                                         <p>
-                                            The <a href="vec-2-class.html">Vec2</a> class handles 2 dimensions vectors calculations.
+                                            <a href="vec-2-class.html">Vec2</a> 类处理二维向量计算。
+
+                                            <span class="original">
+                                                The <a href="vec-2-class.html">Vec2</a> class
+                                                handles 2 dimensions vectors calculations.</span
+                                            >
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Vec2.js" title="Vec2 class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Vec2.js"
+                                                title="Vec2 class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                     <li>
                                         <h4>Vec3 <span class="api-item-version">v7.0</span></h4>
                                         <p>
-                                            The <a href="vec-3-class.html">Vec3</a> class handles 3 dimensions vectors calculations.
+                                            Vec3 类处理三维向量计算。
+
+                                            <span class="original">
+                                                The <a href="vec-3-class.html">Vec3</a> class
+                                                handles 3 dimensions vectors calculations.
+                                            </span>
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Vec3.js" title="Vec3 class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Vec3.js"
+                                                title="Vec3 class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                     <li>
                                         <h4>Mat4 <span class="api-item-version">v7.0</span></h4>
                                         <p>
-                                            The <a href="mat-4-class.html">Mat4</a> class handles 4 dimensions matrices calculations.
+                                            Mat4 类处理四维矩阵计算。
+
+                                            <span class="original">
+                                                The <a href="mat-4-class.html">Mat4</a> class
+                                                handles 4 dimensions matrices calculations.</span
+                                            >
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Mat4.js" title="Mat4 class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Mat4.js"
+                                                title="Mat4 class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                     <li>
                                         <h4>Quat <span class="api-item-version">v7.0</span></h4>
                                         <p>
-                                            The <a href="quat-class.html">Quat</a> class handles quaternions calculations.
+                                            Quat 类处理四元数计算。
+                                            <span class="original">
+                                                The <a href="quat-class.html">Quat</a> class handles
+                                                quaternions calculations.</span
+                                            >
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Quat.js" title="Quat class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/math/Quat.js"
+                                                title="Quat class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                 </ul>
-
 
                                 <h3 class="main-classes-directories">Extras</h3>
 
-                                <p>Extra classes are often used additional classes built using the other classes above that can help you save some time.</p>
+                                <p>
+                                    额外的类通常是使用上面的其他类构建的附加类，可以帮助您节省一些时间。
+                                    <span class="original">
+                                        Extra classes are often used additional classes built using
+                                        the other classes above that can help you save some
+                                        time.</span
+                                    >
+                                </p>
 
                                 <ul class="main-classes-list">
                                     <li>
-                                        <h4>PingPongPlane <span class="api-item-version">v7.0</span></h4>
+                                        <h4>
+                                            PingPongPlane <span class="api-item-version">v7.0</span>
+                                        </h4>
                                         <p>
-                                            The <a href="ping-pong-plane-class.html">PingPongPlane</a> class <strong>extends</strong> the Plane class by adding 2 read and write render targets that will be swapped during render and a method to get the resulting texture. Allows fluid effects, flowmaps, etc.
+                                            <a href="ping-pong-plane-class.html">PingPongPlane</a>
+                                            类通过添加两个在渲染过程中会进行交换的读写渲染目标以及获取最终纹理的方法，扩展了
+                                            Plane 类。此类设计旨在支持流体特效、流体贴图等功能。
+                                            <span class="original">
+                                                The
+                                                <a href="ping-pong-plane-class.html"
+                                                    >PingPongPlane</a
+                                                >
+                                                class <strong>extends</strong> the Plane class by
+                                                adding 2 read and write render targets that will be
+                                                swapped during render and a method to get the
+                                                resulting texture. Allows fluid effects, flowmaps,
+                                                etc.</span
+                                            >
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/extras/PingPongPlane.js" title="PingPongPlane class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/extras/PingPongPlane.js"
+                                                title="PingPongPlane class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                     <li>
-                                        <h4>FXAAPass <span class="api-item-version">v7.0</span><span class="api-item-version api-item-warning">updated in v8.0</span></h4>
+                                        <h4>
+                                            FXAAPass <span class="api-item-version">v7.0</span
+                                            ><span class="api-item-version api-item-warning"
+                                                >updated in v8.0</span
+                                            >
+                                        </h4>
                                         <p>
-                                            The <a href="fxaa-pass-class.html">FXAAPass</a> class <strong>extends</strong> the ShaderPass class by creating a Fast Approximate Anti-Aliasing pass. If you're using render targets or shader passes in your code, just use this pass as the last pass to add an anti-aliasing effect.
+                                            <a href="fxaa-pass-class.html">FXAAPass</a>
+                                            类通过创建快速近似抗锯齿通道来扩展 ShaderPass
+                                            类。如果您在代码中使用渲染目标或着色器通道，只需使用此通道作为最后一个通道即可添加抗锯齿效果。
+                                            <span class="original">
+                                                The
+                                                <a href="fxaa-pass-class.html">FXAAPass</a> class
+                                                <strong>extends</strong> the ShaderPass class by
+                                                creating a Fast Approximate Anti-Aliasing pass. If
+                                                you're using render targets or shader passes in your
+                                                code, just use this pass as the last pass to add an
+                                                anti-aliasing effect.</span
+                                            >
                                         </p>
                                         <p class="api-item-examples">
-                                            <a href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/extras/FXAAPass.js" title="FXAAPass class source code" target="_blank">Source code</a>.
+                                            <a
+                                                href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/extras/FXAAPass.js"
+                                                title="FXAAPass class source code"
+                                                target="_blank"
+                                                >源代码</a
+                                            >.
                                         </p>
                                     </li>
                                 </ul>
 
+                                <h2>其他资源</h2>
 
-								<h2>Additional ressources</h2>
-
-								<ol>
+                                <ol>
                                     <li>
-                                        <a href="https://github.com/martinlaxenaire/curtainsjs" title="curtains.js on Github" target="_blank">Github</a>
-                                    </li>
-									<li>
-										<a href="https://css-tricks.com/animate-images-and-videos-with-curtains-js/" target="_blank" title="CSS Tricks tutorial">CSS Tricks tutorial</a>
-									</li>
-                                    <li>
-                                        <a href="https://tympanus.net/codrops/2020/10/07/webgl-video-transitions-with-curtains-js/" target="_blank" title="WebGL Video Transitions with Curtains.js">Codrops WebGL Video Transitions with Curtains.js</a>
+                                        <a
+                                            href="https://github.com/martinlaxenaire/curtainsjs"
+                                            title="curtains.js on Github"
+                                            target="_blank"
+                                            >Github</a
+                                        >
                                     </li>
                                     <li>
-                                        <a href="https://css-tricks.com/creating-webgl-effects-with-curtainsjs/" target="_blank" title="Creating WebGL Effects with CurtainsJS on CSS Tricks">Creating WebGL Effects with CurtainsJS on CSS Tricks</a>
+                                        <a
+                                            href="https://css-tricks.com/animate-images-and-videos-with-curtains-js/"
+                                            target="_blank"
+                                            title="CSS Tricks tutorial"
+                                            >CSS Tricks tutorial</a
+                                        >
                                     </li>
                                     <li>
-                                        WebGL drag slider complete step-by-step tutorial on CodePen: <a href="https://codepen.io/martinlaxenaire/post/webgl-enhanced-drag-slider-tutorial-with-curtains-js-part-1" target="_blank" title="WebGL drag slider complete step-by-step tutorial on CodePen, part 1: creating the slider">part 1: creating the slider</a>, <a href="https://codepen.io/martinlaxenaire/post/webgl-enhanced-drag-slider-tutorial-with-curtains-js-part-2" target="_blank" title="WebGL drag slider complete step-by-step tutorial on CodePen, part 2: adding the WebGL">part 2: adding the WebGL</a>, <a href="https://codepen.io/martinlaxenaire/post/webgl-enhanced-drag-slider-tutorial-with-curtains-js-part-3" target="_blank" title="WebGL drag slider complete step-by-step tutorial on CodePen, part 3: improving performance">part 3: improving performance</a>
+                                        <a
+                                            href="https://tympanus.net/codrops/2020/10/07/webgl-video-transitions-with-curtains-js/"
+                                            target="_blank"
+                                            title="WebGL Video Transitions with Curtains.js"
+                                            >Codrops WebGL Video Transitions with Curtains.js</a
+                                        >
                                     </li>
-									<li>
-										<a href="https://codepen.io/collection/XEvPge/" target="_blank" title="CodePen curtains.js collection">CodePen curtains.js collection</a>
-									</li>
-								</ol>
+                                    <li>
+                                        <a
+                                            href="https://css-tricks.com/creating-webgl-effects-with-curtainsjs/"
+                                            target="_blank"
+                                            title="Creating WebGL Effects with CurtainsJS on CSS Tricks"
+                                            >Creating WebGL Effects with CurtainsJS on CSS Tricks</a
+                                        >
+                                    </li>
+                                    <li>
+                                        WebGL drag slider complete step-by-step tutorial on CodePen:
+                                        <a
+                                            href="https://codepen.io/martinlaxenaire/post/webgl-enhanced-drag-slider-tutorial-with-curtains-js-part-1"
+                                            target="_blank"
+                                            title="WebGL drag slider complete step-by-step tutorial on CodePen, part 1: creating the slider"
+                                            >part 1: creating the slider</a
+                                        >,
+                                        <a
+                                            href="https://codepen.io/martinlaxenaire/post/webgl-enhanced-drag-slider-tutorial-with-curtains-js-part-2"
+                                            target="_blank"
+                                            title="WebGL drag slider complete step-by-step tutorial on CodePen, part 2: adding the WebGL"
+                                            >part 2: adding the WebGL</a
+                                        >,
+                                        <a
+                                            href="https://codepen.io/martinlaxenaire/post/webgl-enhanced-drag-slider-tutorial-with-curtains-js-part-3"
+                                            target="_blank"
+                                            title="WebGL drag slider complete step-by-step tutorial on CodePen, part 3: improving performance"
+                                            >part 3: improving performance</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a
+                                            href="https://codepen.io/collection/XEvPge/"
+                                            target="_blank"
+                                            title="CodePen curtains.js collection"
+                                            >CodePen curtains.js collection</a
+                                        >
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
 
-							</div>
-						</div>
-					</div>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141413267-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
 
-				</section>
-			</div>
-		</div>
-
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-141413267-1"></script>
-		<script>
-		  	window.dataLayer = window.dataLayer || [];
-		  	function gtag(){dataLayer.push(arguments);}
-		  	gtag('js', new Date());
-
-		  	gtag('config', 'UA-141413267-1');
-		</script>
-
-	</body>
+            gtag("config", "UA-141413267-1");
+        </script>
+    </body>
 </html>
