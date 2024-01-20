@@ -40,11 +40,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          # path: '.'
-          # 使用子目录作为首页
-          # path: './documentation'
-          # 上传特定的'./documentation'目录
-          path: './documentation'
+          path: '.'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
