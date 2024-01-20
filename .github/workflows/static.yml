@@ -36,7 +36,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
+          # 上传 ./documentation 子目录作为首页
           path: './documentation'
       - name: Deploy to GitHub Pages
         id: deployment
