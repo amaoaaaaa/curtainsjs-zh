@@ -33,13 +33,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v4
+        with:
+          # 设置文档目录为网站根目录
+          source-dir: ./documentation
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: '.'
+          # path: '.'
           # 使用子目录作为首页
           # path: './documentation'
+          # 上传特定的'./documentation'目录
+          path: './documentation'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
