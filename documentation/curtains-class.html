@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | Curtains class</title>
+        <title>Curtains 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -100,18 +100,16 @@
                                         <div class="api-class-content">
                                             <div class="api-class-title">
                                                 <a href="curtains-class.html#basic-usage"
-                                                    >Basic usage</a
+                                                    >基本使用</a
                                                 >
                                             </div>
                                             <div class="api-class-title">
                                                 <a href="curtains-class.html#curtains-init-params"
-                                                    >Parameters</a
+                                                    >参数</a
                                                 >
                                             </div>
                                             <div class="api-class-title">
-                                                <a href="curtains-class.html#properties"
-                                                    >Properties</a
-                                                >
+                                                <a href="curtains-class.html#properties">属性</a>
                                             </div>
                                             <ul class="api-class">
                                                 <li>
@@ -186,7 +184,7 @@
                                                 </li>
                                             </ul>
                                             <div class="api-submenu-title">
-                                                <a href="curtains-class.html#methods">Methods</a>
+                                                <a href="curtains-class.html#methods">方法 </a>
                                             </div>
                                             <ul class="api-submenu">
                                                 <li>
@@ -279,7 +277,7 @@
                                                 </li>
                                             </ul>
                                             <div class="api-submenu-title">
-                                                <a href="curtains-class.html#events">Events</a>
+                                                <a href="curtains-class.html#events">事件</a>
                                             </div>
                                             <ul class="api-submenu">
                                                 <li>
@@ -382,30 +380,36 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>Curtains class</h1>
+                                <h1>Curtains 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
                                         href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Curtains.js"
-                                        title="Curtains class source code"
+                                        title="Curtains 类源码"
                                         target="_blank"
-                                        >Source code</a
+                                        >源码</a
                                     >
                                 </div>
 
-                                <h2 id="basic-usage">Basic usage</h2>
+                                <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    You will have to create a Curtains object first that will handle
-                                    the scene containing all your planes. It will also create the
-                                    WebGL context, append the canvas and handle the
-                                    requestAnimationFrame loop. You just have to pass the HTML
-                                    element (or its ID) that will wrap the canvas :
+                                    您必须首先创建一个 Curtains
+                                    对象来处理包含所有平面的场景。它还将创建 WebGL
+                                    上下文、附加画布并处理 requestAnimationFrame
+                                    循环。您只需传递将包裹画布的 HTML 元素（或其 ID）：
+                                    <span class="original">
+                                        You will have to create a Curtains object first that will
+                                        handle the scene containing all your planes. It will also
+                                        create the WebGL context, append the canvas and handle the
+                                        requestAnimationFrame loop. You just have to pass the HTML
+                                        element (or its ID) that will wrap the canvas :
+                                    </span>
                                 </p>
 
                                 <div class="code">
                                     <div>
                                         <div class="code-comment">
-                                            // "canvas" is the ID of our HTML container element
+                                            // “canvas”是我们的 HTML 容器元素的 ID
                                         </div>
                                         <div>
                                             <div>
@@ -418,8 +422,7 @@
                                                 document.<span class="code-tag">getElementById</span
                                                 >(<span class="code-string">"canvas"</span>)
                                                 <span class="code-comment"
-                                                    >// we could have just pass "canvas"
-                                                    instead</span
+                                                    >// 我们可以直接传递DOM</span
                                                 >
                                             </div>
                                             <div>})<span class="code-var">;</span></div>
@@ -428,9 +431,12 @@
                                 </div>
 
                                 <p>
-                                    There are other options that you can pass as parameters. For
-                                    example, you can specify whether you want to use the library in
-                                    production mode:
+                                    还有其他选项可以作为参数传递。例如，您可以指定是否要在生产模式下使用该库：
+                                    <span class="original">
+                                        There are other options that you can pass as parameters. For
+                                        example, you can specify whether you want to use the library
+                                        in production mode:
+                                    </span>
                                 </p>
 
                                 <div class="code">
@@ -444,13 +450,16 @@
                                             <div>
                                                 <span class="code-property">container</span>:
                                                 <span class="code-string">"canvas"</span
-                                                ><span class="code-var">,</span>
+                                                ><span class="code-var">, </span
+                                                ><span class="code-comment"
+                                                    >// 这里传递的是容器的ID名称</span
+                                                >
                                             </div>
                                             <div>
                                                 <span class="code-property">production</span>:
                                                 <span class="code-var">true</span>
                                                 <span class="code-comment"
-                                                    >// use the library in "production" mode</span
+                                                    >// 在“生产”模式下使用库</span
                                                 >
                                             </div>
                                         </div>
@@ -458,47 +467,41 @@
                                     </div>
                                 </div>
 
-                                <h2 id="curtains-init-params">Parameters</h2>
+                                <h2 id="curtains-init-params">参数</h2>
 
-                                <p>Here is a complete list of all the parameters:</p>
+                                <p>以下是所有参数的完整列表：</p>
                                 <ul id="curtains-init-parameters" class="api-item-parameters">
                                     <li>
                                         <span class="api-item-parameter-label"> container </span>
                                         <span class="api-item-parameter-type">
-                                            HTML Element or string, optional
+                                            HTML DOM元素或元素ID的字符串，可选
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            the HTML Element or ID of the HTML Element that will
-                                            wrap the canvas. If not specified, the WebGL context
-                                            will not be set until you call
+                                            将包裹画布的 HTML 元素或 HTML 元素的
+                                            ID。如果未指定，则在使用有效的 HTML 元素或 ID 调用
                                             <a href="curtains-class.html#set-container"
                                                 >setContainer()</a
                                             >
-                                            with a valid HTML element or ID.
+                                            之前，不会设置 WebGL 上下文。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> alpha </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context should handle transparency.
-                                            Default to true.
+                                            WebGL 上下文是否应处理透明度。默认为 true。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> antialias </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context should use the default
-                                            antialiasing. When using render targets, WebGL disables
-                                            antialiasing, so you can safely set this to false to
-                                            improve the performance. Default to true.
+                                            WebGL 上下文是否使用抗锯齿。默认为
+                                            true。使用渲染目标时，WebGL
+                                            会禁用抗锯齿功能，因此您可以安全地将其设置为 false
+                                            以提高性能。
                                         </span>
                                     </li>
 
@@ -506,23 +509,17 @@
                                         <span class="api-item-parameter-label">
                                             premultipliedAlpha
                                         </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context should handle premultiplied
-                                            alpha. Default to false.
+                                            WebGL 上下文是否应处理预乘 alpha。默认为 false。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> depth </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context should handle depth. Default
-                                            to true.
+                                            WebGL 上下文是否应该处理深度。默认为 true。
                                         </span>
                                     </li>
 
@@ -530,12 +527,9 @@
                                         <span class="api-item-parameter-label">
                                             preserveDrawingBuffer
                                         </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context should preserve the drawing
-                                            buffer. Default to false.
+                                            WebGL 上下文是否应保留绘图缓冲区。默认为 false。
                                         </span>
                                     </li>
 
@@ -543,63 +537,48 @@
                                         <span class="api-item-parameter-label">
                                             failIfMajorPerformanceCaveat
                                         </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context creation should fail in case
-                                            of major performance caveat. Default to true.
+                                            如果出现重大性能问题，WebGL 上下文创建是否会失败。默认为
+                                            true。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> stencil </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the WebGL context should handle stencil. Default
-                                            to false.
+                                            WebGL 上下文是否应该处理模板。默认为 false。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> autoRender </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the library should create a request animation
-                                            frame loop to render the scene. Set it to false if you
-                                            want to handle this by yourself using the
+                                            是否创建 requestAnimationFrame
+                                            循环来渲染场景。如果您想使用
                                             <a href="curtains-class.html#render">render()</a>
-                                            method. Default to true.
+                                            方法自己处理此问题，请将其设置为 false。默认为 true。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> autoResize </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the library should listen to the window resize
-                                            event and actually resize the scene. Set it to false if
-                                            you want to handle this by yourself using the
+                                            是否侦听窗口调整大小事件并实际调整场景大小。如果您想使用
                                             <a href="curtains-class.html#resize">resize()</a>
-                                            method. Default to true.
+                                            方法自行处理此问题，请将其设置为 false。默认为 true。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> pixelRatio </span>
-                                        <span class="api-item-parameter-type">
-                                            float, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 浮点数，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Defines the pixel ratio value. Use it to limit it on
-                                            init to increase performance. Default to
-                                            window.devicePixelRatio.
+                                            定义像素比率值。使用它来限制 init 以提高性能。默认为
+                                            window.devicePixelRatio。
                                         </span>
                                     </li>
 
@@ -608,218 +587,196 @@
                                             renderingScale
                                         </span>
                                         <span class="api-item-parameter-type">
-                                            float, optional (minimum: 0.25, maximum: 1)
+                                            浮点数，可选（最小值：0.25，最大值：1）
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            Use it to downscale your rendering canvas. May improve
-                                            performance but will decrease quality. Default to 1.
+                                            用它来缩小渲染画布的比例。可能会提高性能，但会降低质量。默认为
+                                            1。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> watchScroll </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the library should listen to the window scroll
-                                            event. Set it to false if you want to handle this by
-                                            yourself. Default to true.
+                                            是否监听窗口滚动事件。如果你想自己处理这个问题，请将其设置为
+                                            false。默认为 true。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> production </span>
-                                        <span class="api-item-parameter-type">
-                                            bool, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> 布尔值，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            Whether the library should throw useful console warnings
-                                            or not. Default to false.
+                                            是否抛出有用的控制台警告。默认为 false。
                                         </span>
                                     </li>
                                 </ul>
 
-                                <h2 id="properties">Properties</h2>
+                                <h2 id="properties">属性</h2>
                                 <ul>
                                     <li id="alpha">
                                         <p>
-                                            <strong>alpha</strong> (bool)
+                                            <strong>alpha</strong> (布尔值)
                                             <span class="api-item-version">v5.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>
-                                            Whether the WebGL context handles transparency or not.
-                                        </p>
+                                        <p>是否处理透明度</p>
                                     </li>
                                     <li id="antialias">
                                         <p>
-                                            <strong>antialias</strong> (bool)
+                                            <strong>antialias</strong> (布尔值)
                                             <span class="api-item-version">v6.1</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Whether the WebGL context should use antialiasing.</p>
+                                        <p>是否使用抗锯齿</p>
                                     </li>
                                     <li id="gl-canvas">
                                         <p>
-                                            <strong>canvas</strong> (HTML canvas element)
+                                            <strong>canvas</strong> (HTML canvas 元素)
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>
-                                            The WebGL canvas being created and that contains our
-                                            scene.
-                                        </p>
+                                        <p>正在创建的 WebGL 场景的 canvas 元素</p>
                                     </li>
                                     <li id="container">
                                         <p>
-                                            <strong>container</strong> (HTML element)
+                                            <strong>container</strong> (HTML 元素)
                                             <span class="api-item-version">v1.0</span>
                                         </p>
                                         <p>
-                                            The container that will hold our WebGL canvas. The
-                                            canvas will be sized according to this container. For
-                                            performance reason, the smaller your container the
-                                            better. Most of the time you'll set it to cover the
-                                            window.
+                                            将容纳我们的 WebGL canvas 的容器。canvas
+                                            的大小将根据该容器进行调整。出于性能原因，容器越小越好。大多数时候，您会将其设置为全屏。
                                         </p>
                                     </li>
                                     <li id="depth">
                                         <p>
-                                            <strong>depth</strong> (bool)
+                                            <strong>depth</strong> (布尔值)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Whether the WebGL context handles depth or not.</p>
+                                        <p>WebGL 上下文是否处理深度。</p>
                                     </li>
                                     <li id="fail-if-major-performance-caveat">
                                         <p>
-                                            <strong>failIfMajorPerformanceCaveat</strong> (bool)
+                                            <strong>failIfMajorPerformanceCaveat</strong> (布尔值)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>
-                                            Whether the WebGL context creation should fail in case
-                                            of major performance caveat.
-                                        </p>
+                                        <p>如果出现重大性能问题，WebGL 上下文创建是否会失败。</p>
                                     </li>
                                     <li id="gl">
                                         <p>
-                                            <strong>gl</strong> (WebGL context)
+                                            <strong>gl</strong> (WebGL 上下文)
                                             <span class="api-item-version">v5.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Our WebGL context.</p>
+                                        <p>创建的 WebGL 上下文</p>
                                     </li>
                                     <li id="pixel-ratio">
                                         <p>
-                                            <strong>pixelRatio</strong> (float)
+                                            <strong>pixelRatio</strong> (浮点数)
                                             <span class="api-item-version">v1.0</span>
-                                            <span class="api-item-warning">read only</span>
+                                            <span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The current device pixel ratio.<br />
-                                            Use the
+                                            当前设备像素比。使用
                                             <a href="curtains-class.html#set-pixel-ratio"
                                                 >setPixelRatio()</a
                                             >
-                                            method to change this value at runtime.
+                                            方法在运行时更改此值。
                                         </p>
                                     </li>
                                     <li id="planes">
                                         <p>
-                                            <strong>planes</strong> (array)
+                                            <strong>planes</strong> (数组)
                                             <span class="api-item-version">v1.0</span>
                                         </p>
                                         <p>
-                                            An array containing all your current
-                                            <a href="plane-class.html">Plane</a> elements.
+                                            包含当前所有
+                                            <a href="plane-class.html">Plane</a> 元素的数组。
                                         </p>
                                     </li>
                                     <li id="premultiplied-alpha">
                                         <p>
-                                            <strong>premultipliedAlpha</strong> (bool)
+                                            <strong>premultipliedAlpha</strong> (布尔值)
                                             <span class="api-item-version">v5.0</span>
-                                            <span class="api-item-warning">read only</span>
+                                            <span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>
-                                            Whether the WebGL context handles premultiplied alpha or
-                                            not.
-                                        </p>
+                                        <p>WebGL 上下文是否处理预乘 Alpha。</p>
                                     </li>
                                     <li id="preserve-drawing-buffer">
                                         <p>
-                                            <strong>preserveDrawingBuffer</strong> (bool)
+                                            <strong>preserveDrawingBuffer</strong> (布尔值)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>
-                                            Whether the WebGL context should preserve the drawing
-                                            buffer.
-                                        </p>
+                                        <p>WebGL 上下文是否保留绘图缓冲区。</p>
                                     </li>
                                     <li id="production-mode">
                                         <p>
-                                            <strong>production</strong> (bool)
+                                            <strong>production</strong> (布尔值)
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            If set to true, will remove all helpful warnings
-                                            displayed by the library.
+                                            是否生产模式，如果设置为
+                                            true，将删除库显示的所有有用警告。
                                         </p>
                                     </li>
                                     <li id="render-targets">
                                         <p>
-                                            <strong>renderTargets</strong> (array)
+                                            <strong>renderTargets</strong> (数组)
                                             <span class="api-item-version">v5.0</span>
                                         </p>
                                         <p>
-                                            An array containing all your current
+                                            包含所有当前
                                             <a href="render-target-class.html">RenderTarget</a>
-                                            elements (including the one used by your shader passes).
+                                            元素（包括着色器通道使用的元素）的数组。
                                         </p>
                                     </li>
                                     <li id="shader-passes">
                                         <p>
-                                            <strong>shaderPasses</strong> (array)
+                                            <strong>shaderPasses</strong> (数组)
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            An array containing all your current
-                                            <a href="shader-pass-class.html">ShaderPass</a>
-                                            elements.
+                                            包含所有当前
+                                            <a href="shader-pass-class.html"
+                                                >着色器通道(ShaderPass)</a
+                                            >
+                                            元素的数组。
                                         </p>
                                     </li>
                                     <li id="stencil">
                                         <p>
-                                            <strong>stencil</strong> (bool)
+                                            <strong>stencil</strong> (布尔值)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Whether the WebGL context should handle stencil.</p>
+                                        <p>WebGL 上下文是否处理模板。</p>
                                     </li>
                                 </ul>
-                                <h2 id="methods">Methods</h2>
+                                <h2 id="methods">方法</h2>
                                 <ul>
                                     <li id="clear">
                                         <p>
                                             <strong>clear</strong>():
                                             <span class="api-item-version">v7.3</span>
                                         </p>
-                                        <p>Clears both WebGL context colors and depth buffers.</p>
+                                        <p>清除 WebGL 上下文颜色和深度缓冲区。</p>
                                     </li>
                                     <li id="clear-color">
                                         <p>
                                             <strong>clearColor</strong>():
                                             <span class="api-item-version">v7.3</span>
                                         </p>
-                                        <p>Clears WebGL context color buffer.</p>
+                                        <p>清除 WebGL 上下文颜色缓冲区。</p>
                                     </li>
                                     <li id="clear-depth">
                                         <p>
                                             <strong>clearDepth</strong>():
                                             <span class="api-item-version">v7.3</span>
                                         </p>
-                                        <p>Clears WebGL context depth buffer.</p>
+                                        <p>清除 WebGL 上下文深度缓冲区。</p>
                                     </li>
                                     <li id="disable-drawing">
                                         <p>
@@ -827,33 +784,29 @@
                                             <span class="api-item-version">v1.8</span>
                                         </p>
                                         <p>
-                                            This function will prevent the scene from being drawn
-                                            again (putting it in a paused state). You won't be able
-                                            to update uniforms while the drawing is disabled. Useful
-                                            to improve performance if you got a static scene.
+                                            此函数将防止再次绘制场景（将其置于暂停状态）。当绘图被禁用时，您将无法更新着色器
+                                            uniforms。如果您有静态场景，这对于提高性能很有用。
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
-                                            <a
+                                            <strong>示例：</strong
+                                            ><a
                                                 href="examples/plane-properties-transforms-cheat-sheet/index.html"
                                                 title="Plane properties and transformations cheat sheet"
                                                 target="_blank"
                                                 >Plane properties and transformations cheat sheet</a
-                                            >,
+                                            >，
                                             <a
                                                 href="examples/multiple-textures/index.html"
                                                 title="Slideshow with a displacement shader"
                                                 target="_blank"
                                                 >Slideshow with a displacement shader</a
-                                            >
-                                            and
+                                            >，
                                             <a
                                                 href="examples/asynchronous-textures/index.html"
                                                 title="Asynchronous textures loading"
                                                 target="_blank"
                                                 >Asynchronous textures loading</a
                                             >
-                                            examples.
                                         </p>
                                     </li>
                                     <li id="dispose">
@@ -862,8 +815,8 @@
                                             <span class="api-item-version">v1.0</span>
                                         </p>
                                         <p>
-                                            This function will cancel the requestAnimationFrame
-                                            loop, remove all planes and delete the WebGL context.
+                                            该函数将取消 requestAnimationFrame
+                                            循环，删除所有平面并删除 WebGL 上下文。
                                         </p>
                                     </li>
                                     <li id="enable-drawing">
@@ -872,27 +825,23 @@
                                             <span class="api-item-version">v1.8</span>
                                         </p>
                                         <p>
-                                            This function will reenable the scene drawing in case
-                                            you paused it via disableDrawing(). Could be useful if
-                                            you want to start drawing the scene again when a user
-                                            gesture happens for example.
+                                            如果您通过 disableDrawing()
+                                            暂停场景绘制，此函数将重新启用场景绘制。例如，如果您想在用户手势发生时再次开始绘制场景，这可能会很有用。
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
-                                            <a
+                                            <strong>示例：</strong
+                                            ><a
                                                 href="examples/multiple-textures/index.html"
                                                 title="Slideshow with a displacement shader"
                                                 target="_blank"
                                                 >Slideshow with a displacement shader</a
-                                            >
-                                            and
+                                            >，
                                             <a
                                                 href="examples/asynchronous-textures/index.html"
                                                 title="Asynchronous textures loading"
                                                 target="_blank"
                                                 >Asynchronous textures loading</a
                                             >
-                                            examples.
                                         </p>
                                     </li>
                                     <li id="get-bounding-rect">
@@ -901,33 +850,29 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            Useful to get our
-                                            <a href="#container">container</a> HTML element bounding
-                                            rectangle without causing a reflow/layout repaint. Be
-                                            careful as the values are relative to your
-                                            <a href="#pixel-ratio">pixelRatio</a> value.
+                                            获取
+                                            <a href="#container">container</a>
+                                            元素边界矩形，而不会导致回流/布局重绘。请小心，因为这些值与您的
+                                            <a href="#pixel-ratio">PixelRatio</a> 值相关。
                                         </p>
                                         <p>
-                                            <strong>returns:</strong> an object containing the
-                                            container HTML element width, height, top and left
-                                            positions.
+                                            <strong>返回：</strong>一个包含 container
+                                            元素宽度、高度、顶部和左侧位置的对象。
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
-                                            <a
+                                            <strong>示例：</strong
+                                            ><a
                                                 href="examples/multiple-planes-scroll-effect/index.html"
                                                 title="Multiple planes scroll effect"
                                                 target="_blank"
                                                 >Multiple planes scroll effect</a
-                                            >
-                                            and
+                                            >，
                                             <a
                                                 href="examples/post-processing-scroll-effect/index.html"
                                                 title="Post processing multiple passes"
                                                 target="_blank"
                                                 >Post processing multiple passes</a
                                             >
-                                            examples.
                                         </p>
                                     </li>
 
@@ -937,48 +882,46 @@
                                             <span class="api-item-version">v4.0</span>
                                         </p>
                                         <p>
-                                            Get the last scroll delta values along X and Y axis.
-                                            Call it after having called
+                                            获取沿 X 轴和 Y
+                                            轴的最后滚动增量值。如果滚动监视处于活动状态，则在调用
                                             <a href="curtains-class.html#update-scroll-values"
                                                 >updateScrollValues()</a
                                             >
-                                            or inside the
+                                            后或在
                                             <a href="curtains-class.html#on-scroll">onScroll()</a>
-                                            event if scroll watching is active.
+                                            事件内调用它。
                                         </p>
                                         <p>
-                                            <strong>returns:</strong> an object containing the last
-                                            scroll delta values along X and Y axis.
+                                            <strong>返回：</strong>包含沿 X 轴和 Y
+                                            轴的最后滚动增量值的对象。
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
-                                            <a
+                                            <strong>示例：</strong
+                                            ><a
                                                 href="examples/multiple-planes/index.html"
                                                 title="Multiple planes"
                                                 target="_blank"
                                                 >Multiple planes</a
-                                            >,
+                                            >，
                                             <a
                                                 href="examples/multiple-planes-scroll-effect/index.html"
                                                 title="Multiple planes scroll effect : rotation, scale and parallax"
                                                 target="_blank"
                                                 >Multiple planes scroll effect : rotation, scale and
                                                 parallax</a
-                                            >,
+                                            >，
                                             <a
                                                 href="examples/post-processing-displacement/index.html"
                                                 title="Post processing displacement effect"
                                                 target="_blank"
                                                 >Post processing displacement effect</a
-                                            >
-                                            and
+                                            >，
                                             <a
                                                 href="examples/post-processing-scroll-effect/index.html"
                                                 title="Post processing multiple passes"
                                                 target="_blank"
                                                 >Post processing multiple passes</a
                                             >
-                                            examples.
                                         </p>
                                     </li>
 
@@ -988,48 +931,46 @@
                                             <span class="api-item-version">v4.0</span>
                                         </p>
                                         <p>
-                                            Get the current scroll values along X and Y axis. Call
-                                            it after having called
+                                            获取沿 X 轴和 Y
+                                            轴的当前滚动值。如果滚动监视处于活动状态，则在调用
                                             <a href="curtains-class.html#update-scroll-values"
                                                 >updateScrollValues()</a
                                             >
-                                            or inside the
+                                            后或在
                                             <a href="curtains-class.html#on-scroll">onScroll()</a>
-                                            event if scroll watching is active.
+                                            事件内调用它。
                                         </p>
                                         <p>
-                                            <strong>returns:</strong> an object containing the
-                                            current scroll values along X and Y axis.
+                                            <strong>返回：</strong> 包含沿 X 轴和 Y
+                                            轴的当前滚动值的对象。
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
-                                            <a
+                                            <strong>示例：</strong
+                                            ><a
                                                 href="examples/multiple-planes/index.html"
                                                 title="Multiple planes"
                                                 target="_blank"
                                                 >Multiple planes</a
-                                            >,
+                                            >，
                                             <a
                                                 href="examples/multiple-planes-scroll-effect/index.html"
                                                 title="Multiple planes scroll effect : rotation, scale and parallax"
                                                 target="_blank"
                                                 >Multiple planes scroll effect : rotation, scale and
                                                 parallax</a
-                                            >,
+                                            >，
                                             <a
                                                 href="examples/post-processing-displacement/index.html"
                                                 title="Post processing displacement effect"
                                                 target="_blank"
                                                 >Post processing displacement effect</a
-                                            >
-                                            and
+                                            >，
                                             <a
                                                 href="examples/post-processing-scroll-effect/index.html"
                                                 title="Post processing multiple passes"
                                                 target="_blank"
                                                 >Post processing multiple passes</a
                                             >
-                                            examples.
                                         </p>
                                     </li>
 
@@ -1038,13 +979,10 @@
                                             <strong>isWebGL2</strong>():
                                             <span class="api-item-version">v7.3</span>
                                         </p>
+                                        <p>检查创建的 WebGL 上下文是否使用 WebGL2。</p>
                                         <p>
-                                            Check whether the created WebGL context is using WebGL2
-                                            or not.
-                                        </p>
-                                        <p>
-                                            <strong>returns:</strong> an boolean indicating if the
-                                            context is using WebGL2 or not.
+                                            <strong>返回：</strong>一个布尔值，指示上下文是否使用
+                                            WebGL2。
                                         </p>
                                     </li>
 
@@ -1348,7 +1286,7 @@
                                                     triggerCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    布尔值，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     whether
@@ -1408,7 +1346,7 @@
                                     </li>
                                 </ul>
 
-                                <h2 id="events">Events</h2>
+                                <h2 id="events">事件</h2>
                                 <ul>
                                     <li id="on-after-resize">
                                         <p>
