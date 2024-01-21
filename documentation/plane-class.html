@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | Plane class</title>
+        <title>Plane 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -103,17 +103,15 @@
 
                                         <div class="api-class-content">
                                             <div class="api-class-title">
-                                                <a href="plane-class.html#basic-usage"
-                                                    >Basic usage</a
-                                                >
+                                                <a href="plane-class.html#basic-usage">基本使用</a>
                                             </div>
                                             <div class="api-class-title">
                                                 <a href="plane-class.html#plane-init-params"
-                                                    >Parameters</a
+                                                    >参数</a
                                                 >
                                             </div>
                                             <div class="api-class-title">
-                                                <a href="plane-class.html#properties">Properties</a>
+                                                <a href="plane-class.html#properties">属性</a>
                                             </div>
                                             <ul class="api-class">
                                                 <li>
@@ -473,41 +471,58 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>Plane class</h1>
+                                <h1>Plane 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
                                         href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/core/Plane.js"
                                         title="Plane class source code"
                                         target="_blank"
-                                        >Source code</a
+                                        >源码</a
                                     >
                                 </div>
 
-                                <h2 id="basic-usage">Basic usage</h2>
+                                <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    Plane class inherits from the BasePlane class, which is a class
-                                    that just sets up the WebGL (buffers and attributes) and sources
-                                    loading parts of a plane.<br />
-                                    Plane <strong>extends</strong> the BasePlane class by adding
-                                    various properties and methods to keep your WebGL plane in sync
-                                    with its associated HTML element. All sizes and positions are
-                                    handled by two matrices that you will have to use inside your
-                                    vertex shader: the model view matrix and the projection matrix.
+                                    Plane 类继承自 BasePlane 类，BasePlane 类主要负责设置
+                                    WebGL（缓冲区和属性）以及加载平面的部分源内容。<br />
+                                    Plane 类通过添加多种属性和方法<strong>扩展了</strong> BasePlane
+                                    类，以确保 WebGL 平面与关联的 HTML
+                                    元素保持同步。所有尺寸和位置处理均由两个矩阵完成，您需要在顶点着色器内部使用这两个矩阵：模型视图矩阵(model
+                                    view matrix)和投影矩阵(projection matrix)。这样，Plane
+                                    类不仅集成了基本的 WebGL
+                                    设置功能，还为平面提供了更丰富的同步控制和渲染能力。
+
+                                    <span class="original">
+                                        Plane class inherits from the BasePlane class, which is a
+                                        class that just sets up the WebGL (buffers and attributes)
+                                        and sources loading parts of a plane.<br />
+                                        Plane <strong>extends</strong> the BasePlane class by adding
+                                        various properties and methods to keep your WebGL plane in
+                                        sync with its associated HTML element. All sizes and
+                                        positions are handled by two matrices that you will have to
+                                        use inside your vertex shader: the model view matrix and the
+                                        projection matrix.
+                                    </span>
                                 </p>
                                 <p>
-                                    To create a plane, you will need to
-                                    <strong
-                                        >pass your curtains object and a mandatory HTML
-                                        element</strong
-                                    >. It will be used to calculate the size and position of your
-                                    plane.<br />
+                                    要创建一个平面（plane），您需要<strong
+                                        >传递 curtains 对象以及一个必需的 HTML 元素</strong
+                                    >。这个 HTML 元素将用于计算plane的大小和位置。
+                                    <span class="original">
+                                        To create a plane, you will need to
+                                        <strong
+                                            >pass your curtains object and a mandatory HTML
+                                            element</strong
+                                        >. It will be used to calculate the size and position of
+                                        your plane.<br />
+                                    </span>
                                 </p>
 
                                 <div class="code">
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // "canvas" is the ID of our HTML container element
+                                            // “canvas” 是我们的 HTML 容器元素的 ID
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> curtains =
@@ -540,17 +555,16 @@
                                     </div>
                                 </div>
 
-                                <h2 id="plane-init-params">Parameters</h2>
+                                <h2 id="plane-init-params">参数</h2>
                                 <p>
-                                    The code above will create a basic plane but you won't be able
-                                    to do much with it. The Plane class has a third parameter in
-                                    which you can pass all the options you need:
+                                    上述代码将创建一个基础平面，但您可能无法对它进行更多操作。Plane
+                                    类有第三个参数，您可以通过该参数传递所有需要的选项：
                                 </p>
 
                                 <div class="code">
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // "canvas" is the ID of our HTML container element
+                                            // “canvas” 是我们的 HTML 容器元素的 ID
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> curtains =
@@ -580,22 +594,22 @@
                                                 <span class="code-string">"my-plane-vs"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// ID of your vertex shader script tag</span
-                                                >
+                                                    >// 顶点着色器（Vertex Shader）脚本标签的ID
+                                                </span>
                                             </div>
                                             <div>
                                                 <span class="code-property">fragmentShaderID</span>:
                                                 <span class="code-string">"my-plane-fs"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// ID of your fragment shader script tag</span
+                                                    >// 片段着色器（Fragment
+                                                    Shader）脚本标签的ID</span
                                                 >
                                             </div>
                                             <div>
                                                 <span class="code-property">uniforms</span>: {
                                                 <span class="code-comment"
-                                                    >// uniforms are what will allow you to interact
-                                                    with your plane</span
+                                                    >// uniforms 是允许您与平面进行交互的关键</span
                                                 >
                                             </div>
                                             <div class="code-indent">
@@ -608,26 +622,25 @@
                                                         <span class="code-string">"uTime"</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// uniform name that will be passed to
-                                                            our shaders</span
-                                                        >
+                                                            >// 将传递给着色器的uniform名称
+                                                        </span>
                                                     </div>
                                                     <div>
                                                         <span class="code-property">type</span>:
                                                         <span class="code-string">"1f"</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// this means our uniform is a
-                                                            float</span
-                                                        >
+                                                            >//
+                                                            这意味着我们的uniform变量是一个浮点数类型
+                                                        </span>
                                                     </div>
                                                     <div>
                                                         <span class="code-property">value</span>:
                                                         <span class="code-number">0</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// initial value of the uniform</span
-                                                        >
+                                                            >// uniform变量的初始值
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div>}<span class="code-var">,</span></div>
@@ -639,7 +652,7 @@
 
                                     <div>
                                         <div class="code-comment">
-                                            // create our plane with the above parameters
+                                            // 使用上述参数创建我们的平面
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> plane =
@@ -656,17 +669,16 @@
                                     </div>
                                 </div>
 
-                                <h3>Passing shaders via data attributes</h3>
+                                <h3>通过HTML数据属性传递着色器ID</h3>
                                 <p>
-                                    You can also pass the IDs of the vertex and fragment shaders
-                                    using respectively data-vs-id and data-fs-id attributes of your
-                                    plane HTML element:
+                                    您还可以通过plane
+                                    HTML元素分别使用data-vs-id和data-fs-id属性来传递顶点着色器和片段着色器的ID：
                                 </p>
 
                                 <div class="code">
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            &lt;!-- div used to create our plane --&gt;
+                                            &lt;!-- div 用于创建我们的平面 --&gt;
                                         </div>
                                         <div>
                                             <span class="code-tag">&lt;div</span> id=<span
@@ -683,8 +695,7 @@
 
                                     <div class="code-indent">
                                         <div class="code-comment">
-                                            &lt;!-- image that will be used as texture by our plane
-                                            --&gt;
+                                            &lt;!-- 这张图片将被用作我们平面的纹理 --&gt;
                                         </div>
                                         <div>
                                             <span class="code-tag">&lt;img</span> src=<span
@@ -699,12 +710,9 @@
                                     <div class="code-tag">&lt;/div&gt;</div>
                                 </div>
 
-                                <h3 id="parameters">Complete parameters list</h3>
+                                <h3 id="parameters">完整参数表</h3>
 
-                                <p>
-                                    Here is the complete list of the mandatory parameters and
-                                    available options:
-                                </p>
+                                <p>以下是必需参数和可用选项的完整列表：</p>
                                 <ul class="api-item-parameters">
                                     <li>
                                         <span class="api-item-parameter-label"> curtains </span>
@@ -712,23 +720,21 @@
                                             Curtains class object
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            Your Curtains class object.
+                                            使用 Curtains 类创建出来的实例对象
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> planeElement </span>
                                         <span class="api-item-parameter-type"> HTML element </span>
                                         <span class="api-item-parameter-desc">
-                                            a HTML element.
+                                            用于计算plane的大小和位置的HTML元素
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> params </span>
-                                        <span class="api-item-parameter-type">
-                                            object, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> object，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            an object containing the plane parameters:
+                                            一个包含平面参数的对象：
                                         </span>
 
                                         <ul
@@ -740,13 +746,10 @@
                                                     vertexShader
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    your vertex shader as a string. Be careful with
-                                                    the line-breaks as it may throw javascript
-                                                    errors. Will look for vertexShaderID param if
-                                                    not specified.
+                                                    您的顶点着色器代码，以字符串形式提供。请注意换行符的处理，因为不当的换行可能会导致JavaScript错误。如果不指定，则会查找vertexShaderID参数。
                                                 </span>
                                             </li>
                                             <li>
@@ -754,13 +757,11 @@
                                                     vertexShaderID
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the vertex shader ID. If ommited, will look for
-                                                    a data attribute data-vs-id on the plane HTML
-                                                    element. Will use a default vertex shader and
-                                                    throw a warning if nothing specified.
+                                                    顶点着色器ID。如果省略，将会在plane
+                                                    HTML元素上查找data-vs-id数据属性。如果没有指定任何内容，则会使用默认的顶点着色器，并抛出一个警告信息。
                                                 </span>
                                             </li>
                                             <li>
@@ -768,13 +769,10 @@
                                                     fragmentShader
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    your fragment shader as a string. Be careful
-                                                    with the line-breaks as it may throw javascript
-                                                    errors. Will look for fragmentShaderID param if
-                                                    not specified.
+                                                    您的片段着色器代码，以字符串形式提供。请注意换行符的处理，因为不当的换行可能会导致JavaScript错误。如果不指定，则会查找fragmentShaderID参数。
                                                 </span>
                                             </li>
                                             <li>
@@ -782,14 +780,10 @@
                                                     fragmentShaderID
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the fragment shader ID. If ommited, will look
-                                                    for a data attribute data-fs-id on the plane
-                                                    HTML element. Will use a default fragment shader
-                                                    that draws only black pixels and throw a warning
-                                                    if nothing specified.
+                                                    片段着色器ID。如果省略，则会在平面HTML元素上查找`data-fs-id`数据属性，并尝试从中获取片段着色器ID。如果没有明确指定任何片段着色器，系统将使用一个默认的片段着色器，该着色器仅绘制黑色像素，并且会抛出一个警告信息。
                                                 </span>
                                             </li>
                                             <li>
@@ -797,11 +791,10 @@
                                                     widthSegments
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    integer, optional
+                                                    integer，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the plane's definition along the X axis (1 by
-                                                    default).
+                                                    平面沿X轴方向的细分程度，默认值为1。这个参数用于定义平面在宽度方向上的细分数量，细分越多意味着平面在该方向上的几何细节越丰富，视觉效果上会更加平滑。
                                                 </span>
                                             </li>
                                             <li>
@@ -809,11 +802,10 @@
                                                     heightSegments
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    integer, optional
+                                                    integer，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the plane's definition along the Y axis (1 by
-                                                    default).
+                                                    平面沿Y轴方向的细分程度，默认值为1。这个参数用于定义平面在高度方向上的细分数量，细分越多意味着平面在垂直方向上的几何细节越丰富，视觉效果上会更加平滑和精细。
                                                 </span>
                                             </li>
                                             <li>
@@ -821,14 +813,19 @@
                                                     renderOrder
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    int, optional
+                                                    int，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    defines in which order the planes are drawn. See
-                                                    <a href="plane-class.html#render-order"
+                                                    定义平面对象的绘制顺序，默认值为0。参照<a
+                                                        href="plane-class.html#render-order"
                                                         >renderOrder</a
-                                                    >
-                                                    property. Default to 0.
+                                                    >属性。
+                                                    在三维场景中，当存在多个相互重叠或透明的对象时，renderOrder
+                                                    属性可以帮助确定这些对象被渲染的先后次序。默认情况下，所有对象的
+                                                    renderOrder
+                                                    值为0，引擎会根据它们在场景中的深度（远近）进行排序渲染（即深度测试）。然而，如果设置了自定义的
+                                                    renderOrder
+                                                    值，那么对象将按照这个值从小到大进行排序渲染，数值越小，优先级越高，越先被渲染。这对于需要特定渲染顺序以实现特殊效果或者确保某些对象总是在其他对象之上或之下显示的场景特别有用。
                                                 </span>
                                             </li>
                                             <li>
@@ -836,11 +833,11 @@
                                                     depthTest
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    if your plane should enable or disable the depth
-                                                    test. Default to true.
+                                                    决定是否启用深度测试，默认值为
+                                                    true。深度测试是一种确定像素在场景中的前后关系的技术，以防止较远的对象错误地绘制在较近的对象前面。
                                                 </span>
                                             </li>
                                             <li>
@@ -848,12 +845,12 @@
                                                     transparent
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    if your plane should handle transparency and
-                                                    therefore be drawn after the planes that do not
-                                                    use transparency (false by default).
+                                                    控制平面对象是否开启透明效果处理，默认值为
+                                                    false。如果设置为
+                                                    true，则该平面将在不使用透明度的其他平面之后进行渲染，以正确显示透明度叠加效果。
                                                 </span>
                                             </li>
                                             <li>
@@ -861,12 +858,13 @@
                                                     cullFace
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    'back' | 'front' | 'none'，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    which face of the plane should be culled. Could
-                                                    either be "back", "front" or "none". Default to
-                                                    "back".
+                                                    指定应该剔除哪个面。可能的值包括
+                                                    "back"（背面剔除，只渲染可见面）、"front"（正面剔除，仅渲染背面）、或
+                                                    "none"（不剔除任何面）。默认值为
+                                                    "back"，这意味着在渲染时会剔除那些面向观察者背面的多边形。
                                                 </span>
                                             </li>
                                             <li>
@@ -874,13 +872,11 @@
                                                     alwaysDraw
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Whether to use frustum culling: defines if the
-                                                    plane should always be drawn or if it should not
-                                                    be drawn if it lies completely outside of the
-                                                    scene (false by default).
+                                                    定义平面是否始终被绘制，即使它完全位于场景视锥体之外（即不在摄像机视野范围内）。默认值为
+                                                    false，这意味着如果平面完全不可见，则不会对其进行渲染。
                                                 </span>
                                             </li>
                                             <li>
@@ -888,10 +884,11 @@
                                                     visible
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Whether to draw your plane (default to true).
+                                                    简单地控制平面是否可见和需要被绘制。默认值为
+                                                    true
                                                 </span>
                                             </li>
                                             <li>
@@ -899,18 +896,23 @@
                                                     drawCheckMargins
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Additional margins to add in the draw check
-                                                    calculations, in pixels.<br />
-                                                    Positive value means the plane will be drawn
-                                                    even if outside the canvas by less than the
-                                                    value, negative value means the plane will be
-                                                    hidden if inside the canvas by more than the
-                                                    value.<br />
-                                                    Useful if you're messing with the vertices
-                                                    positions in your vertex shader.
+                                                    在绘制检查计算中添加的附加边距（以像素为单位）。<br />
+                                                    正值表示即使在画布外小于该值也会绘制平面，负值表示在画布内大于该值也会隐藏平面。<br />
+                                                    如果您弄乱了顶点着色器中的顶点位置，这很有用。
+                                                    <span class="original">
+                                                        Additional margins to add in the draw check
+                                                        calculations, in pixels.<br />
+                                                        Positive value means the plane will be drawn
+                                                        even if outside the canvas by less than the
+                                                        value, negative value means the plane will
+                                                        be hidden if inside the canvas by more than
+                                                        the value.<br />
+                                                        Useful if you're messing with the vertices
+                                                        positions in your vertex shader.
+                                                    </span>
                                                 </span>
 
                                                 <ul class="api-item-parameters-inner-list">
@@ -922,9 +924,12 @@
                                                             float
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            margin to apply when comparing the top
-                                                            side of the plane and the bottom side of
-                                                            the canvas (0 by default).
+                                                            当检查平面顶部相对于画布底部的位置时应用的边距。默认值为0。正值意味着即使平面在画布顶部之外但不超过该边距值时，仍会绘制平面；负值则表示即使平面在画布内但在画布顶部以内超过该绝对值时，将隐藏平面。
+                                                            <span class="original">
+                                                                margin to apply when comparing the
+                                                                top side of the plane and the bottom
+                                                                side of the canvas (0 by default).
+                                                            </span>
                                                         </span>
                                                     </li>
                                                     <li>
@@ -935,9 +940,12 @@
                                                             float
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            margin to apply when comparing the right
-                                                            side of the plane and the left side of
-                                                            the canvas (0 by default).
+                                                            当比较平面右边界和画布左边界时应用的边距，默认也为0。同样，正值使得即便平面超出画布右侧少许也会被绘制出来，而负值则会导致当平面比画布左侧稍微靠里时不再显示。
+                                                            <span class="original">
+                                                                margin to apply when comparing the
+                                                                right side of the plane and the left
+                                                                side of the canvas (0 by default).
+                                                            </span>
                                                         </span>
                                                     </li>
                                                     <li>
@@ -948,9 +956,12 @@
                                                             float
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            margin to apply when comparing the
-                                                            bottom side of the plane and the top
-                                                            side of the canvas (0 by default).
+                                                            应用于比较平面底部与画布顶部位置的边距，默认是0。其作用原理同上，不过这里是针对垂直方向上的底部边缘。
+                                                            <span class="original">
+                                                                margin to apply when comparing the
+                                                                bottom side of the plane and the top
+                                                                side of the canvas (0 by default).
+                                                            </span>
                                                         </span>
                                                     </li>
                                                     <li>
@@ -961,9 +972,12 @@
                                                             float
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            margin to apply when comparing the left
-                                                            side of the plane and the right side of
-                                                            the canvas (0 by default).
+                                                            在对比平面左边界与画布右边界时所用的边距，初始设置也是0。这里，正值让平面即使稍微超出画布左侧也能继续渲染，负值则会让平面在过于靠近画布右侧内部时不再显现。
+                                                            <span class="original">
+                                                                margin to apply when comparing the
+                                                                left side of the plane and the right
+                                                                side of the canvas (0 by default).
+                                                            </span>
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -973,12 +987,11 @@
                                                     watchScroll
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Whether the plane should auto update its
-                                                    position when the user scrolls (false by
-                                                    default).
+                                                    是否在用户滚动时自动更新平面的位置（默认为
+                                                    false）。
                                                 </span>
                                             </li>
                                             <li>
@@ -986,11 +999,10 @@
                                                     autoloadSources
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    defines if the sources should be load on init
-                                                    automatically (true by default).
+                                                    是否在初始化时自动加载资源（默认为 true）。
                                                 </span>
                                             </li>
                                             <li>
@@ -998,14 +1010,14 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to the textures of the
-                                                    plane. See the Texture class
+                                                    用于平面纹理的默认选项。请参阅
                                                     <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                        >Texture</a
+                                                    >
+                                                    类的参数。
                                                 </span>
                                             </li>
                                             <li>
@@ -1013,21 +1025,20 @@
                                                     crossOrigin
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    defines the crossOrigin process to load images
-                                                    if any (default to "anonymous").
+                                                    定义（如有需要）加载图片时采用的跨域处理方式，默认为
+                                                    "anonymous"。
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="api-item-parameter-label"> fov </span>
                                                 <span class="api-item-parameter-type">
-                                                    integer, optional
+                                                    integer，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    defines the perspective field of view (default
-                                                    to 50).
+                                                    透视视场角度（默认为 50）。
                                                 </span>
                                             </li>
                                             <li>
@@ -1035,12 +1046,11 @@
                                                     uniforms
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the uniforms that will be passed to the shaders
-                                                    (if no uniforms specified there won't be any
-                                                    interaction with the plane).
+                                                    将传递给着色器的 uniform（如果不指定任何
+                                                    uniform，则不会与平面进行任何交互）。
                                                 </span>
 
                                                 <ul class="api-item-parameters-inner-list">
@@ -1052,8 +1062,7 @@
                                                             string
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The name of the uniform to use in your
-                                                            shaders
+                                                            在您的着色器中使用的 uniform 名称
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1064,13 +1073,13 @@
                                                             string
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The type of your uniform (see
+                                                            uniform 的数据类型（请参考
                                                             <a
                                                                 href="https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html"
                                                                 title="all uniforms types"
                                                                 target="_blank"
-                                                                >here</a
-                                                            >).
+                                                                >相关文档</a
+                                                            >）
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1078,12 +1087,11 @@
                                                             value
                                                         </span>
                                                         <span class="api-item-parameter-type">
-                                                            float, integer, Vec2, Vec3, Mat4 or
-                                                            array of floats or integers depending on
-                                                            your uniform type
+                                                            float | integer | Vec2 | Vec3 | Mat4 |
+                                                            (float | integer)[]
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The value of the uniform.
+                                                            uniform 的具体值
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1092,7 +1100,7 @@
                                     </li>
                                 </ul>
 
-                                <h2 id="properties">Properties</h2>
+                                <h2 id="properties">属性</h2>
                                 <ul>
                                     <li id="always-draw">
                                         <p>
@@ -1100,43 +1108,37 @@
                                             <span class="api-item-version">v2.0</span>
                                         </p>
                                         <p>
-                                            Whether the WebGL renderer should always draw the plane
-                                            or if it should draw it only when the plane is contained
-                                            in the canvas viewport. Used for performance
-                                            optimizations.
+                                            该属性决定WebGL渲染器是否应始终绘制平面，或者仅在平面位于canvas视口内时才进行绘制。此属性用于性能优化。
                                         </p>
                                         <p>
-                                            Check the
+                                            查看
                                             <a
                                                 href="examples/plane-properties-transforms-cheat-sheet/index.html"
                                                 title="Plane properties and transformations cheat sheet"
                                                 target="_blank"
                                                 >Plane properties and transformations cheat sheet</a
                                             >
-                                            example to see how it could be used.
+                                            示例，了解如何实际应用此设置。
                                         </p>
                                     </li>
                                     <li id="autoload-sources">
                                         <p>
                                             <strong>autoloadSources</strong> (boolean):
                                             <span class="api-item-version">v2.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            Whether the sources (images, videos and canvases HTML
-                                            children elements of your plane) should be loaded and
-                                            according textures created on plane initialization.
+                                            该属性表示在平面初始化时，是否应自动加载平面的源（如图片、视频以及作为HTML子元素的canvas）并据此创建相应的纹理。
                                         </p>
                                     </li>
                                     <li id="camera">
                                         <p>
                                             <strong>camera</strong> (Camera class object):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The perspective camera used to compute the projection
-                                            matrix of the plane.
+                                            该属性代表用于计算平面投影矩阵的透视相机。这意味着，当你需要了解或间接操作与该平面相关的摄影机设置时，可以通过此属性访问到关联的透视相机实例。
                                         </p>
                                     </li>
                                     <li id="canvases">
@@ -1145,8 +1147,8 @@
                                             <span class="api-item-version">v1.4</span>
                                         </p>
                                         <p>
-                                            An array containing all the canvases loaded via the load
-                                            methods into the plane.
+                                            该属性是一个数组，包含了通过加载方法加载到平面中的所有canvas元素。这意味着你可以通过访问这个数组来获取和操作已加载到该平面上的所有HTML
+                                            canvas元素集合。
                                         </p>
                                     </li>
                                     <li id="cross-origin">
@@ -1154,7 +1156,7 @@
                                             <strong>crossOrigin</strong> (string):
                                             <span class="api-item-version">v1.4</span>
                                         </p>
-                                        <p>The cross origin process used to load the medias.</p>
+                                        <p>加载媒体资源时采用的跨域策略</p>
                                     </li>
                                     <li id="cull-face">
                                         <p>
@@ -1162,25 +1164,21 @@
                                             <span class="api-item-version">v6.0</span>
                                         </p>
                                         <p>
-                                            Which face of the plane should be culled (ie not drawn).
-                                            Could either be <strong>"back"</strong> (only the front
-                                            side of the plane is drawn),
-                                            <strong>"front"</strong> (only the back side of the
-                                            plane is drawn) or <strong>"none"</strong> (all the side
-                                            of the plane are drawn). Default to "back".<br />
-                                            You might want to change the default culling behavior if
-                                            you apply a rotation along the X or Y axis for example
-                                            (therefore showing the back side of the plane).
+                                            在渲染时应该剔除（即不绘制）多边形的哪一面。其可接受的值包括：<br />
+                                            "back"：默认值，仅绘制平面的正面，背面将被剔除。<br />
+                                            "front"：只绘制平面的背面，而正面会被剔除。<br />
+                                            "none"：不进行剔面操作，即正反两面都会被绘制。<br /><br />
+                                            当您对一个平面沿着 X 轴或 Y
+                                            轴进行旋转时，可能会改变原本被认为是“背面”或“正面”的面，因此可能需要更改默认的剔面行为以确保正确显示想要可视化的部分。
                                         </p>
                                         <p class="api-item-examples">
-                                            Check the
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/plane-properties-transforms-cheat-sheet/index.html"
                                                 title="Plane properties and transformations cheat sheet"
                                                 target="_blank"
                                                 >Plane properties and transformations cheat sheet</a
                                             >
-                                            example to see how it could be used.
                                         </p>
                                     </li>
                                     <li id="draw-check-margins">
@@ -1189,23 +1187,26 @@
                                             <span class="api-item-version">v4.0</span>
                                         </p>
                                         <p>
-                                            Additional margins to add in the draw check
-                                            calculations, in pixels.<br />
-                                            Positive value means the plane will be drawn even if
-                                            outside the canvas by less than the value, negative
-                                            value means the plane will be hidden if inside the
-                                            canvas by more than the value.<br />
-                                            Useful if you're messing with the vertices positions in
-                                            your vertex shader.
+                                            在绘制检查计算中添加的附加边距（以像素为单位）。<br />
+                                            正值表示即使在画布外小于该值也会绘制平面，负值表示在画布内大于该值也会隐藏平面。<br />
+                                            如果您弄乱了顶点着色器中的顶点位置，这很有用。
+                                            <span class="original">
+                                                Additional margins to add in the draw check
+                                                calculations, in pixels.<br />
+                                                Positive value means the plane will be drawn even if
+                                                outside the canvas by less than the value, negative
+                                                value means the plane will be hidden if inside the
+                                                canvas by more than the value.<br />
+                                                Useful if you're messing with the vertices positions
+                                                in your vertex shader.
+                                            </span>
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label"> top </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    margin to apply when comparing the top side of
-                                                    the plane and the bottom side of the canvas (0
-                                                    by default).
+                                                    在比较平面的顶部边缘与画布底部边缘时要应用的边距（默认为0）。
                                                 </span>
                                             </li>
                                             <li>
@@ -1214,9 +1215,7 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    margin to apply when comparing the right side of
-                                                    the plane and the left side of the canvas (0 by
-                                                    default).
+                                                    在比较平面的右侧边缘与画布左侧边缘时要应用的边距（默认为0）。
                                                 </span>
                                             </li>
                                             <li>
@@ -1225,53 +1224,46 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    margin to apply when comparing the bottom side
-                                                    of the plane and the top side of the canvas (0
-                                                    by default).
+                                                    在比较平面的底部边缘与画布顶部边缘时要应用的边距（默认为0）。
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="api-item-parameter-label"> left </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    margin to apply when comparing the left side of
-                                                    the plane and the right side of the canvas (0 by
-                                                    default).
+                                                    在比较平面的左侧边缘与画布右侧边缘时要应用的边距（默认为0）。
                                                 </span>
                                             </li>
                                         </ul>
                                         <p class="api-item-examples">
-                                            Check the
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/plane-properties-transforms-cheat-sheet/index.html"
                                                 title="Plane properties and transformations cheat sheet"
                                                 target="_blank"
                                                 >Plane properties and transformations cheat sheet</a
                                             >
-                                            example to see how it could be used.
                                         </p>
                                     </li>
                                     <li id="gl">
                                         <p>
                                             <strong>gl</strong> (WebGL context)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Our WebGL context.</p>
+                                        <p>WebGL 上下文</p>
                                     </li>
                                     <li id="html-element">
                                         <p>
                                             <strong>htmlElement</strong> (HTML element):
                                             <span class="api-item-version">v1.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The HTML element used to create your plane. Useful if
-                                            you want to add event listeners to it.<br />
-                                            You can change the HTML element used by the plane at
-                                            runtime by using the
+                                            用于创建平面的HTML元素。如果你想为该平面添加事件监听器时，这个属性很有用。<br />
+                                            你可以在运行时通过调用
                                             <a href="plane-class.html#reset-plane">resetPlane()</a>
-                                            method.
+                                            方法来改变平面所使用的HTML元素。
                                         </p>
                                     </li>
                                     <li id="images">
@@ -1279,31 +1271,29 @@
                                             <strong>images</strong> (array):
                                             <span class="api-item-version">v1.0</span>
                                         </p>
-                                        <p>
-                                            An array containing all the images loaded via the load
-                                            methods into the plane.
-                                        </p>
+                                        <p>包含了通过加载方法加载到平面中的所有图片资源的数组</p>
                                     </li>
                                     <li id="index">
                                         <p>
                                             <strong>index</strong> (integer):
                                             <span class="api-item-version">v1.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The index of your plane in the
+                                            当前平面在
                                             <a href="curtains-class.html#planes"
-                                                >Curtains planes array</a
-                                            >.
+                                                >Curtains平面数组</a
+                                            >
+                                            中的索引
                                         </p>
                                     </li>
                                     <li id="loader">
                                         <p>
                                             <strong>loader</strong> (PlaneTextureLoader class
                                             object): <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>The plane internal texture loader.</p>
+                                        <p>平面内部纹理加载器。</p>
                                     </li>
                                     <li id="quaternion">
                                         <p>
@@ -1314,9 +1304,8 @@
                                             ><span class="api-item-warning">updated in v7.0</span>
                                         </p>
                                         <p>
-                                            A <a href="quat-class.html">Quat</a> class object
-                                            representing your actual plane rotation in 3D space as a
-                                            quaternion.
+                                            一个 <a href="quat-class.html">Quat</a> 类对象，将 3D
+                                            空间中的实际平面旋转表示为四元数。
                                         </p>
                                     </li>
                                     <li id="relative-translation">
@@ -1329,19 +1318,20 @@
                                             ><span class="api-item-warning">updated in v6.1</span>
                                         </p>
                                         <p>
-                                            A <a href="vec-3-class.html">Vec3</a> class object
-                                            containing the additional translation applied to your
-                                            plane along X, Y and Z axis.
+                                            一个
+                                            <a href="vec-3-class.html">Vec3</a> 类对象，其中包含沿
+                                            X、Y 和 Z 轴应用于您的平面的附加平移量。
                                         </p>
                                         <p>
-                                            Since <strong>v8.0</strong>, this property is reactive,
-                                            which means that when you update one of the
-                                            relativeTranslation vector component, the translation of
-                                            the plane will automatically be updated:
+                                            自
+                                            <strong>v8.0</strong>
+                                            版本起，该属性具有响应性，这意味着当您更新
+                                            relativeTranslation
+                                            向量的一个分量时，平面的平移将自动更新：
                                         </p>
                                         <div class="code">
                                             <div class="code-comment">
-                                                // translate our plane by 100px along X axis
+                                                // 将我们的平面沿 X 轴平移 100px
                                             </div>
                                             <div>
                                                 plane.<span class="code-property"
@@ -1356,7 +1346,7 @@
                                         <p>
                                             <strong>renderer</strong> (Renderer class object):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
                                             The Renderer class object created by our curtains
@@ -1367,7 +1357,7 @@
                                         <p>
                                             <strong>renderOrder</strong> (int):
                                             <span class="api-item-version">v7.3</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
                                             The plane renderOrder value, which determines in which
@@ -1508,7 +1498,7 @@
                                         <p>
                                             <strong>type</strong> (string):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>Class object type: "Plane".</p>
                                     </li>
@@ -1549,7 +1539,7 @@
                                         <p>
                                             <strong>uuid</strong> (string):
                                             <span class="api-item-version">v6.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>The plane's unique identifier.</p>
                                     </li>
@@ -1657,7 +1647,7 @@
                                                     params
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     an object containing the texture
@@ -1850,7 +1840,7 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to that texture. See
@@ -1865,7 +1855,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on successful source load.
@@ -1939,7 +1929,7 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to those textures. See
@@ -1954,7 +1944,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each successful source
@@ -2020,7 +2010,7 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to that texture. See
@@ -2035,7 +2025,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on successful source load.
@@ -2071,7 +2061,7 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(image, error), optional
+                                                    function(image, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on source load error.
@@ -2136,7 +2126,7 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to those textures. See
@@ -2151,7 +2141,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each successful source
@@ -2188,7 +2178,7 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(image, error), optional
+                                                    function(image, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each source load error.
@@ -2262,7 +2252,7 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to that texture. See
@@ -2277,7 +2267,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on successful source load.
@@ -2313,7 +2303,7 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(source, error), optional
+                                                    function(source, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on source load error.
@@ -2379,7 +2369,7 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to that texture. See
@@ -2394,7 +2384,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each successful source
@@ -2431,7 +2421,7 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(source, error), optional
+                                                    function(source, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each source load error.
@@ -2496,7 +2486,7 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to that texture. See
@@ -2511,7 +2501,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on successful source load.
@@ -2547,7 +2537,7 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(video, error), optional
+                                                    function(video, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on source load error.
@@ -2612,7 +2602,7 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Default options to apply to those textures. See
@@ -2627,7 +2617,7 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each successful source
@@ -2664,7 +2654,7 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(video, error), optional
+                                                    function(video, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     Callback executed on each source load error.
@@ -2831,7 +2821,7 @@
                                                     htmlElement
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    HTML element, optional
+                                                    HTML element，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     a new HTML to use for your plane sizes and
@@ -2899,7 +2889,7 @@
                                                     nearPlane
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    float, optional
+                                                    float，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     closest point where a mesh vertex is displayed.
@@ -2911,7 +2901,7 @@
                                                     farPlane
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    float, optional
+                                                    float，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
                                                     farthest point where a mesh vertex is displayed.
