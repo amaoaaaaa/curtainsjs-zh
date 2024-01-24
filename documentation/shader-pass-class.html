@@ -380,45 +380,56 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>ShaderPass class</h1>
+                                <h1>ShaderPass 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
                                         href="https://github.com/martinlaxenaire/curtainsjs/blob/master/src/framebuffers/ShaderPass.js"
                                         title="ShaderPass class source code"
                                         target="_blank"
-                                        >Source code</a
+                                        >源码</a
                                     >
                                 </div>
 
-                                <h2 id="basic-usage">Basic usage</h2>
+                                <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    Shader passes offers the possibility to add
-                                    <strong>post-processing</strong> to either a bunch of planes or
-                                    your whole scene. Think of it as an additional plane that would
-                                    have the size of your WebGL canvas and that would render a set
-                                    of planes into a texture and draw it. You'd then be able to
-                                    manipulate that texture in your fragment shader.
+                                    Shader passes
+                                    提供了向一组平面或整个场景添加<strong>后期处理</strong>的可能性。可以将其想象为一个额外的、大小与WebGL画布相同的平面，它将一组平面渲染到一个纹理中并进行绘制。这样你就可以在片元着色器中操作那个纹理。
+                                    <span class="original">
+                                        Shader passes offers the possibility to add
+                                        <strong>post-processing</strong> to either a bunch of planes
+                                        or your whole scene. Think of it as an additional plane that
+                                        would have the size of your WebGL canvas and that would
+                                        render a set of planes into a texture and draw it. You'd
+                                        then be able to manipulate that texture in your fragment
+                                        shader.
+                                    </span>
                                 </p>
                                 <p>
-                                    Like the <a href="plane-class.html">Plane</a> class it inherits
-                                    from the Mesh and DOMMesh classes.<br />
-                                    ShaderPass <strong>extends</strong> the DOMMesh class by
-                                    handling the creation of a frame buffer object and the creation
-                                    of a render texture.
+                                    就像 <a href="plane-class.html">Plane类</a> 一样，ShaderPass
+                                    类也继承自 Mesh 和 DOMMesh 类，并且它进一步<strong
+                                        >扩展了</strong
+                                    >
+                                    DOMMesh 类的功能，通过管理帧缓冲对象（frame buffer
+                                    object）的创建和渲染纹理（render texture）的生成。
+                                    <span class="original">
+                                        Like the <a href="plane-class.html">Plane</a> class it
+                                        inherits from the Mesh and DOMMesh classes.<br />
+                                        ShaderPass <strong>extends</strong> the DOMMesh class by
+                                        handling the creation of a frame buffer object and the
+                                        creation of a render texture.</span
+                                    >
                                 </p>
                                 <p class="api-item-examples">
-                                    Please note that render targets (and therefore shader passes)
-                                    disable the WebGL context default antialiasing. If you use them,
-                                    you should set the
-                                    <a href="curtains-class.html#curtains-init-parameters"
-                                        >antialias Curtains property</a
-                                    >
-                                    to false when initiating your context.<br />
-                                    You might then want to add an extra antialiasing pass, by using
-                                    the built-in <a href="fxaa-pass-class.html">FXAAPass</a> class
-                                    or your own FXAA or MSAA implementation.<br />
-                                    See the
+                                    需要注意的是，渲染目标（以及因此而来的Shader
+                                    Passes）会禁用WebGL上下文的默认抗锯齿功能。如果你使用它们，在初始化上下文时，应将<a
+                                        href="curtains-class.html#curtains-init-parameters"
+                                        >Curtains属性中的antialias</a
+                                    >设置为false。<br />
+                                    之后，你可能希望添加一个额外的抗锯齿处理步骤，可以通过内置的
+                                    <a href="fxaa-pass-class.html">FXAAPass</a>
+                                    类实现，或者采用你自己的FXAA或MSAA实现方法。<br />
+                                    有关如何添加FXAAPass的一个示例，请参考
                                     <a
                                         href="examples/post-processing-transform-origin/index.html"
                                         title="Post processing scrolling wheel with custom transform origin"
@@ -426,12 +437,35 @@
                                         >Post processing scrolling wheel with custom transform
                                         origin</a
                                     >
-                                    for an example of how to add a FXAAPass.
+                                    这个例子的源代码或在线演示。
+                                    <span class="original">
+                                        Please note that render targets (and therefore shader
+                                        passes) disable the WebGL context default antialiasing. If
+                                        you use them, you should set the
+                                        <a href="curtains-class.html#curtains-init-parameters"
+                                            >antialias Curtains property</a
+                                        >
+                                        to false when initiating your context.<br />
+                                        You might then want to add an extra antialiasing pass, by
+                                        using the built-in
+                                        <a href="fxaa-pass-class.html">FXAAPass</a> class or your
+                                        own FXAA or MSAA implementation.<br />
+                                        See the
+                                        <a
+                                            href="examples/post-processing-transform-origin/index.html"
+                                            title="Post processing scrolling wheel with custom transform origin"
+                                            target="_blank"
+                                            >Post processing scrolling wheel with custom transform
+                                            origin</a
+                                        >
+                                        for an example of how to add a FXAAPass.</span
+                                    >
                                 </p>
-                                <h3>Creation</h3>
+
+                                <h3>创建</h3>
                                 <p>
-                                    To create a shader pass that will be applied to the whole scene,
-                                    use its constructor:
+                                    为了创建一个将应用于整个场景的着色器通道（Shader
+                                    Pass），请使用其构造函数：
                                 </p>
 
                                 <div class="code">
@@ -452,7 +486,7 @@
                                     </div>
 
                                     <div class="code-comment">
-                                        // create a new shader pass using our curtains object
+                                        // 使用Curtains对象创建一个新的着色器通道
                                     </div>
                                     <div>
                                         <span class="code-var">const</span> shaderPass =
@@ -464,13 +498,10 @@
                                     </div>
                                 </div>
 
-                                <h2 id="parameters">Parameters</h2>
+                                <h2 id="parameters">参数</h2>
                                 <p>
-                                    The code above will create a basic shader pass but you won't be
-                                    able to do much with it. The
-                                    <a href="curtains-class.html#add-shader-pass">addShaderPass</a>
-                                    method has a parameter in which you can pass all the options you
-                                    need:
+                                    上述代码将创建一个基础的着色器通道，但你可能无法直接对其进行太多操作。<br />
+                                    可以在 new ShaderPass() 中传递第二个参数，传递所有需要的选项：
                                 </p>
 
                                 <div class="code">
@@ -500,7 +531,7 @@
                                                 <span class="code-string">"my-shader-pass-vs"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// ID of your vertex shader script tag</span
+                                                    >// 顶点着色器script标签的 id</span
                                                 >
                                             </div>
                                             <div>
@@ -508,15 +539,15 @@
                                                 <span class="code-string">"my-shader-pass-fs"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// ID of your fragment shader script tag</span
+                                                    >// 片段着色器script标签的 ID</span
                                                 >
                                             </div>
                                             <div>
                                                 <span class="code-property">uniforms</span>: {
                                                 <span class="code-comment"
-                                                    >// uniforms are what will allow you to interact
-                                                    with your shader pass</span
-                                                >
+                                                    >//
+                                                    uniforms（统一变量）是允许你与着色器通道进行交互的关键
+                                                </span>
                                             </div>
                                             <div class="code-indent">
                                                 <div>
@@ -528,26 +559,25 @@
                                                         <span class="code-string">"uTime"</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// uniform name that will be passed to
-                                                            our shaders</span
-                                                        >
+                                                            >// 传递给着色器的uniform变量名称
+                                                        </span>
                                                     </div>
                                                     <div>
                                                         <span class="code-property">type</span>:
                                                         <span class="code-string">"1f"</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// this means our uniform is a
-                                                            float</span
-                                                        >
+                                                            >//
+                                                            这意味着我们的uniform变量是一个浮点数
+                                                        </span>
                                                     </div>
                                                     <div>
                                                         <span class="code-property">value</span>:
                                                         <span class="code-number">0</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// initial value of the uniform</span
-                                                        >
+                                                            >// uniform变量的初始值
+                                                        </span>
                                                     </div>
                                                 </div>
                                                 <div>}<span class="code-var">,</span></div>
@@ -558,8 +588,7 @@
                                     </div>
 
                                     <div class="code-comment">
-                                        // create a new shader pass using our curtains object and
-                                        the above parameters
+                                        // 使用Curtains对象和上述参数创建一个新的着色器通道
                                     </div>
                                     <div>
                                         <span class="code-var">var</span> shaderPass =
@@ -572,37 +601,40 @@
                                     </div>
                                 </div>
 
-                                <h3>Using with a render target</h3>
+                                <h3>与RenderTarget结合使用</h3>
                                 <p>
-                                    If you want to apply your shader pass to just a set of planes
-                                    instead of your whole scene, you'll have to pass a RenderTarget
-                                    element as a parameter. See
+                                    如果你希望将着色器通道仅应用于一组特定的平面，而不是整个场景，那么你需要将RenderTarget元素作为参数传递。请参阅
                                     <a
                                         href="render-target-class.html#assigning-render-target-to-shader-pass"
                                         >Assigning a RenderTarget to a ShaderPass</a
-                                    >.
-                                </p>
-
-                                <p>
-                                    See below for a full list of all
-                                    <a href="shader-pass-class.html#shader-pass-parameters"
-                                        >possible parameters</a
                                     >
-                                    to know more.
                                 </p>
 
-                                <h3>Shaders</h3>
                                 <p>
-                                    Shader passes uses slightly different vertex and fragment
-                                    shaders than the <a href="plane-class.html">Plane</a> objects.
+                                    查看完整的<a
+                                        href="shader-pass-class.html#shader-pass-parameters"
+                                        >参数列表</a
+                                    >
                                 </p>
-                                <h3>Vertex shader</h3>
+
+                                <h3>着色器</h3>
                                 <p>
-                                    Since shader passes does not have projection and model view
-                                    matrices, the default vertex shader is extremely simple (and
-                                    optional).<br />
-                                    If you add a new texture to your shader pass, do not forget to
-                                    handle its matrix in this vertex shader.
+                                    着色器通道使用的顶点着色器和片元着色器与
+                                    <a href="plane-class.html">平面（Plane）对象</a> 稍有不同。
+                                </p>
+
+                                <h3>顶点着色器（Vertex shader）</h3>
+                                <p>
+                                    由于着色器通道并不包含投影矩阵和模型视图矩阵，因此默认的顶点着色器极其简单（并且是可选的）。<br />
+                                    如果你在着色器通道中添加了新的纹理，请务必在这个顶点着色器中处理该纹理对应的变换矩阵。
+
+                                    <span class="original">
+                                        Since shader passes does not have projection and model view
+                                        matrices, the default vertex shader is extremely simple (and
+                                        optional).<br />
+                                        If you add a new texture to your shader pass, do not forget
+                                        to handle its matrix in this vertex shader.
+                                    </span>
                                 </p>
 
                                 <div class="code">
@@ -610,9 +642,7 @@
                                         precision mediump float<span class="code-var">;</span>
                                     </div>
                                     <div class="code-block">
-                                        <div class="code-comment">
-                                            // those are the mandatory attributes that the lib sets
-                                        </div>
+                                        <div class="code-comment">// 这些是库中设定的必要属性</div>
                                         <div>
                                             <span class="code-var">attribute</span>
                                             <span class="code-tag">vec3</span> aVertexPosition<span
@@ -631,8 +661,7 @@
 
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // pass your vertex and texture coords to the fragment
-                                            shader
+                                            // 将顶点坐标和纹理坐标传递给片段着色器
                                         </div>
                                         <div>
                                             <span class="code-var">varying</span>
@@ -665,10 +694,9 @@
                                             >
                                         </div>
 
-                                        <div class="code-comment">// set the varyings</div>
+                                        <div class="code-comment">// 设置变量</div>
                                         <div class="code-comment">
-                                            // use our aTextureCoord attributes as texture coords in
-                                            our fragment shader
+                                            // 在片段着色器中，使用aTextureCoord属性作为纹理坐标
                                         </div>
                                         <div>
                                             vTextureCoord = aTextureCoord<span class="code-var"
@@ -685,14 +713,20 @@
                                     <div>}</div>
                                 </div>
 
-                                <h3>Fragment shader</h3>
+                                <h3>片段着色器（Fragment shader）</h3>
                                 <p>
-                                    The ShaderPass object automatically creates a texture holding
-                                    your shader pass FBO content upon creation. You will have to
-                                    display that texture to display your shader pass content. If you
-                                    want to apply any post processing effect, this will be by
-                                    manipulating this texture.<br />
-                                    This texture sampler name is <strong>uRenderTexture</strong>.
+                                    ShaderPass
+                                    对象在创建时会自动生成一个纹理，用于存储你的着色器通道帧缓冲区（FBO）内容。若要显示着色器通道的内容，你需要展示这个纹理。如果你想应用任何后期处理效果，这将是通过操作该纹理实现的。<br />
+                                    这个纹理采样器的名字是 <strong>uRenderTexture</strong>。
+                                    <span class="original">
+                                        The ShaderPass object automatically creates a texture
+                                        holding your shader pass FBO content upon creation. You will
+                                        have to display that texture to display your shader pass
+                                        content. If you want to apply any post processing effect,
+                                        this will be by manipulating this texture.<br />
+                                        This texture sampler name is
+                                        <strong>uRenderTexture</strong>.
+                                    </span>
                                 </p>
 
                                 <div class="code">
@@ -700,7 +734,7 @@
                                         precision mediump float<span class="code-var">;</span>
                                     </div>
                                     <div class="code-block">
-                                        <div class="code-comment">// get our varyings</div>
+                                        <div class="code-comment">// 获取变量</div>
                                         <div>
                                             <span class="code-var">varying</span>
                                             <span class="code-tag">vec3</span> vVertexPosition<span
@@ -718,7 +752,7 @@
                                     </div>
 
                                     <div class="code-block">
-                                        <div class="code-comment">// our render texture</div>
+                                        <div class="code-comment">// 我们的渲染纹理</div>
                                         <div>
                                             <span class="code-var">uniform</span>
                                             <span class="code-tag">sampler2D</span>
@@ -731,8 +765,8 @@
 
                                         <div class="code-indent">
                                             <div class="code-comment">
-                                                // display our render texture, which contains our
-                                                shader pass frame buffer object content
+                                                //
+                                                显示我们的渲染纹理，其中包含了着色器通道帧缓冲对象的内容
                                             </div>
                                             <div>
                                                 gl_FragColor =
@@ -746,7 +780,7 @@
                                     </div>
                                 </div>
 
-                                <h3 id="shader-pass-parameters">Complete parameters list</h3>
+                                <h3 id="shader-pass-parameters">完整参数列表</h3>
 
                                 <ul class="api-item-parameters">
                                     <li>
@@ -755,16 +789,14 @@
                                             Curtains class object
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            Your Curtains class object.
+                                            Curtains 示例对象
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> params </span>
-                                        <span class="api-item-parameter-type">
-                                            object, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> object，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            an object containing the plane parameters:
+                                            包含plane参数的对象：
                                         </span>
 
                                         <ul
@@ -776,13 +808,12 @@
                                                     vertexShader
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    your vertex shader as a string. Be careful with
-                                                    the line-breaks as it may throw javascript
-                                                    errors. Will look for vertexShaderID param if
-                                                    not specified.
+                                                    作为字符串提供的顶点着色器代码。需要注意代码中的换行符，因为它可能导致
+                                                    JavaScript 错误。如果不指定，则会查找
+                                                    vertexShaderID 参数。
                                                 </span>
                                             </li>
                                             <li>
@@ -790,11 +821,10 @@
                                                     vertexShaderID
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the vertex shader ID. Will use a default vertex
-                                                    shader if nothing specified.
+                                                    顶点着色器ID。如果没有指定，则会使用默认的顶点着色器。
                                                 </span>
                                             </li>
                                             <li>
@@ -802,13 +832,11 @@
                                                     fragmentShader
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    your fragment shader as a string. Be careful
-                                                    with the line-breaks as it may throw javascript
-                                                    errors. Will look for fragmentShaderID param if
-                                                    not specified.
+                                                    作为字符串提供的片段着色器代码。同样要注意换行符以免引发JavaScript错误。如果不指定此参数，则会查找
+                                                    fragmentShaderID 参数。
                                                 </span>
                                             </li>
                                             <li>
@@ -816,12 +844,10 @@
                                                     fragmentShaderID
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the fragment shader ID. Will use a default
-                                                    fragment shader that draws the scene without
-                                                    modifications if nothing specified.
+                                                    片段着色器ID。若未指定任何内容，则将使用一个默认的片段着色器，它会不作修改地绘制场景。
                                                 </span>
                                             </li>
                                             <li>
@@ -829,15 +855,14 @@
                                                     renderOrder
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    int, optional
+                                                    int，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    defines in which order the shader passes are
-                                                    drawn. See
+                                                    定义着色器通道被绘制的顺序。参见
                                                     <a href="shader-pass-class.html#render-order"
                                                         >renderOrder</a
                                                     >
-                                                    property. Default to 0.
+                                                    属性。默认值为0。
                                                 </span>
                                             </li>
                                             <li>
@@ -845,11 +870,11 @@
                                                     depthTest
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    if your shader pass should enable or disable the
-                                                    depth test. Default to true.
+                                                    是否为该着色器通道启用或禁用深度测试功能。默认值为
+                                                    true。
                                                 </span>
                                             </li>
                                             <li>
@@ -857,15 +882,13 @@
                                                     depth
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    whether the shader pass render target should use
-                                                    a depth buffer (see
-                                                    <a href="render-target-class.html"
+                                                    设定着色器通道渲染目标是否应使用深度缓冲区（参见<a
+                                                        href="render-target-class.html"
                                                         >RenderTarget</a
-                                                    >
-                                                    class object). Default to false.
+                                                    >类对象）。默认值为 false。
                                                 </span>
                                             </li>
                                             <li>
@@ -873,15 +896,13 @@
                                                     clear
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    whether the shader pass render target content
-                                                    should be cleared before being drawn (see
-                                                    <a href="render-target-class.html"
+                                                    决定在绘制之前是否清除着色器通道渲染目标的内容（参见<a
+                                                        href="render-target-class.html"
                                                         >RenderTarget</a
-                                                    >
-                                                    class object). Default to true.
+                                                    >类对象）。默认值为 true。
                                                 </span>
                                             </li>
                                             <li>
@@ -892,11 +913,11 @@
                                                     <a href="render-target-class.html"
                                                         >RenderTarget</a
                                                     >
-                                                    class object, optional
+                                                    class object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an already existing render target to use.
-                                                    Default to null.
+                                                    可以提供一个已经存在的渲染目标来使用。默认值为
+                                                    null。
                                                 </span>
                                             </li>
                                             <li>
@@ -904,14 +925,13 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to the textures of the
-                                                    shader pass. See the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    用于着色器通道纹理的默认选项，参照<a
+                                                        href="texture-class.html#parameters"
+                                                        >Texture类参数</a
+                                                    >。
                                                 </span>
                                             </li>
                                             <li>
@@ -919,11 +939,11 @@
                                                     crossOrigin
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string, optional
+                                                    string，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    defines the crossOrigin process to load images
-                                                    if any (default to "anonymous").
+                                                    定义在加载图片时（如果有需要的话）使用的跨域处理方式，默认为
+                                                    "anonymous"。
                                                 </span>
                                             </li>
                                             <li>
@@ -931,12 +951,10 @@
                                                     uniforms
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the uniforms that will be passed to the shaders
-                                                    (if no uniforms specified there won't be any
-                                                    interaction with the shader pass).
+                                                    将要传递给着色器的统一变量。如果未指定任何统一变量，则与着色器通道没有交互。
                                                 </span>
 
                                                 <ul class="api-item-parameters-inner-list">
@@ -948,8 +966,7 @@
                                                             string
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The name of the uniform to use in your
-                                                            shaders
+                                                            在您的着色器代码中使用的统一变量名称。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -960,13 +977,15 @@
                                                             string
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The type of your uniform (see
+                                                            统一变量的数据类型。可参考
                                                             <a
                                                                 href="https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html"
                                                                 title="all uniforms types"
                                                                 target="_blank"
-                                                                >here</a
-                                                            >).
+                                                                >WebGL Fundamentals</a
+                                                            >
+                                                            页面获取所有可用的统一变量类型信息，包括但不限于
+                                                            float、int、vec2、vec3、mat4 等。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -979,7 +998,8 @@
                                                             your uniform type
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The value of the uniform.
+                                                            统一变量的具体值，其数据类型应与声明的
+                                                            uniform type 相匹配。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -988,44 +1008,39 @@
                                     </li>
                                 </ul>
 
-                                <h2 id="properties">Properties</h2>
+                                <h2 id="properties">属性</h2>
                                 <ul>
                                     <li id="canvases">
                                         <p>
                                             <strong>canvases</strong> (array):
                                             <span class="api-item-version">v3.0</span>
                                         </p>
-                                        <p>
-                                            An array containing all the canvases loaded via the load
-                                            methods into the shader pass.
-                                        </p>
+                                        <p>包含通过加载方法加载到着色器通道的所有canvas元素。</p>
                                     </li>
                                     <li id="cross-origin">
                                         <p>
                                             <strong>crossOrigin</strong> (string):
                                             <span class="api-item-version">v3.0</span>
                                         </p>
-                                        <p>The cross origin process used to load the medias.</p>
+                                        <p>指定加载媒体资源时使用的跨域策略。</p>
                                     </li>
                                     <li id="cull-face">
                                         <p>
                                             <strong>cullFace</strong> (string):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            Which face of the shader pass should be culled (ie not
-                                            drawn). By default, only the back face of the shader
-                                            pass is culled.
+                                            决定着色器通道中哪一面（正面或背面）不被绘制，默认仅剔除背面。
                                         </p>
                                     </li>
                                     <li id="gl">
                                         <p>
                                             <strong>gl</strong> (WebGL context)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Our WebGL context.</p>
+                                        <p>提供当前WebGL上下文。</p>
                                     </li>
                                     <li id="html-element">
                                         <p>
@@ -1033,11 +1048,10 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            The HTML element used to create your shader passwhich is
-                                            your
+                                            创建着色器通道所用的HTML元素，即
                                             <a href="curtains-class.html#container"
-                                                >Curtains wrapper container</a
-                                            >.
+                                                >Curtains container</a
+                                            >。
                                         </p>
                                     </li>
                                     <li id="images">
@@ -1045,64 +1059,57 @@
                                             <strong>images</strong> (array):
                                             <span class="api-item-version">v3.0</span>
                                         </p>
-                                        <p>
-                                            An array containing all the images loaded via the load
-                                            methods into the shader pass.
-                                        </p>
+                                        <p>包含通过加载方法加载到着色器通道的所有图像资源的数组</p>
                                     </li>
                                     <li id="index">
                                         <p>
                                             <strong>index</strong> (integer):
                                             <span class="api-item-version">v3.0</span>
-                                            <span class="api-item-warning">read only</span>
+                                            <span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The index of your shader pass in the
-                                            <a href="curtains-class.html#shader-passes"
-                                                >Curtains shaderPasses array</a
-                                            >.
+                                            表示着色器通道在Curtains对象的<a
+                                                href="curtains-class.html#shader-passes"
+                                                >shaderPasses</a
+                                            >数组中的索引位置。
                                         </p>
                                     </li>
                                     <li id="loader">
                                         <p>
                                             <strong>loader</strong> (PlaneTextureLoader class
                                             object): <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>The shader pass internal texture loader.</p>
+                                        <p>着色器通道内部的纹理加载器。</p>
                                     </li>
                                     <li id="renderer">
                                         <p>
                                             <strong>renderer</strong> (Renderer class object):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>
-                                            The Renderer class object created by our curtains
-                                            object.
-                                        </p>
+                                        <p>指向由Curtains对象创建的Renderer实例。</p>
                                     </li>
                                     <li id="render-order">
                                         <p>
                                             <strong>renderOrder</strong> (int):
                                             <span class="api-item-version">v7.3</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The shader pass renderOrder value, which determines in
-                                            which order the shader passes are drawn.<br />
-                                            A shader pass will be drawn after shader passes with a
-                                            lower renderOrder number.<br />
-                                            Use
+                                            此属性为着色器通道的渲染顺序值，它决定了各着色器通道被绘制的具体顺序。<br />
+                                            若一个着色器通道的 renderOrder 值较高，则其会在
+                                            renderOrder 值较低的着色器通道之后进行绘制。<br />
+                                            若要更改此值，请使用
                                             <a href="plane-class.html#set-render-order"
                                                 >setRenderOrder()</a
                                             >
-                                            to change this value. Default to 0.<br />
-                                            See
+                                            方法。默认情况下该值为0。<br />
+                                            了解更多关于场景中对象绘制顺序的信息，请参阅
                                             <a href="scene-rendering-order.html"
                                                 >Scene rendering order</a
                                             >
-                                            to know more about how the things are drawn.
+                                            文档。
                                         </p>
                                     </li>
                                     <li id="target">
@@ -1110,7 +1117,7 @@
                                             <strong>target</strong> (RenderTarget class object):
                                             <span class="api-item-version">v5.0</span>
                                         </p>
-                                        <p>The render target used to render the shader pass.</p>
+                                        <p>用于渲染着色器通道的渲染目标。</p>
                                     </li>
                                     <li id="textures">
                                         <p>
@@ -1118,18 +1125,18 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            An array containing all the shader pass'
-                                            <a href="texture-class.html">Textures</a> already
-                                            created.
+                                            包含着色器通道已创建的所有<a href="texture-class.html"
+                                                >Textures</a
+                                            >对象的数组
                                         </p>
                                     </li>
                                     <li id="type">
                                         <p>
                                             <strong>type</strong> (string):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Class object type: "ShaderPass".</p>
+                                        <p>表示类对象类型，此处是"ShaderPass"。</p>
                                     </li>
                                     <li id="uniforms">
                                         <p>
@@ -1138,20 +1145,15 @@
                                             ><span class="api-item-warning">updated in v7.0</span>
                                         </p>
                                         <p>
-                                            An object containing all the uniforms you passed as
-                                            parameters.<br />
-                                            You can update your uniform by modifying its value
-                                            property.<br />
-                                            Since version 7.0,
-                                            <strong
-                                                >you can directly use
-                                                <a href="vec-2-class.html">Vec2</a>,
-                                                <a href="vec-3-class.html">Vec3</a>,
-                                                <a href="mat-4-class.html">Mat4</a> and
-                                                <a href="quat-class.html">Quat</a> objects as
-                                                uniform values</strong
-                                            >
-                                            instead of arrays.
+                                            该对象包含了你作为参数传递的所有
+                                            uniforms（统一变量）。<br />
+                                            你可以通过修改其 value 属性来更新你的 uniform 值。<br />
+                                            自从 v7.0 版本开始， <strong>你可以直接使用</strong>
+                                            <a href="vec-2-class.html">Vec2</a>，
+                                            <a href="vec-3-class.html">Vec3</a>，
+                                            <a href="mat-4-class.html">Mat4</a> 以及
+                                            <a href="quat-class.html">Quat</a> 对象作为 uniform 的值
+                                            ，而无需再使用数组。
                                         </p>
                                     </li>
                                     <li id="user-data">
@@ -1160,17 +1162,16 @@
                                             <span class="api-item-version">v4.2</span>
                                         </p>
                                         <p>
-                                            An empty object to store any additional data or custom
-                                            properties into your shader pass.
+                                            一个空的对象，用于在你的着色器通道中存储任何额外的数据或自定义属性。
                                         </p>
                                     </li>
                                     <li id="uuid">
                                         <p>
                                             <strong>uuid</strong> (string):
                                             <span class="api-item-version">v6.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>The shader pass's unique identifier.</p>
+                                        <p>着色器通道的唯一标识符。</p>
                                     </li>
                                     <li id="videos">
                                         <p>
@@ -1178,13 +1179,12 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            An array containing all the videos loaded via the load
-                                            methods into the shader pass.
+                                            一个数组，包含所有通过加载方法加载到着色器通道中的视频资源。
                                         </p>
                                     </li>
                                 </ul>
 
-                                <h2 id="methods">Methods</h2>
+                                <h2 id="methods">方法</h2>
                                 <ul>
                                     <li id="add-texture">
                                         <p>
@@ -1192,8 +1192,7 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes an already existing texture and adds
-                                            it to the shader pass.
+                                            此函数接受一个已存在的纹理，并将其添加到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1205,12 +1204,11 @@
                                                     object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    The texture to add to this shader pass.
-                                                    Equivalent of the Texture class
+                                                    要添加到此着色器通道的纹理。等同于 Texture 类的
                                                     <a href="texture-class.html#add-parent"
                                                         >addParent()</a
                                                     >
-                                                    method.
+                                                    方法。
                                                 </span>
                                             </li>
                                         </ul>
@@ -1224,10 +1222,10 @@
                                             >
                                         </p>
                                         <p>
-                                            This function will create a new
-                                            <a href="texture-class.html">Texture</a> and add it to
-                                            our ShaderPass.<br />
-                                            The newly created texture will be returned.
+                                            此函数将创建一个新的
+                                            <a href="texture-class.html">Texture</a>，并将其添加至
+                                            ShaderPass 中。<br />
+                                            新创建的纹理将会被返回。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1235,10 +1233,10 @@
                                                     params
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optionnal
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an object containing the texture parameters:
+                                                    包含纹理参数的对象：
                                                 </span>
 
                                                 <ul
@@ -1250,15 +1248,14 @@
                                                             sampler
                                                         </span>
                                                         <span class="api-item-parameter-type">
-                                                            string, optionnal
+                                                            string，可选
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            a string to set the name of your sampler
-                                                            uniform in your shader. Will also impact
-                                                            the texture matrix uniform name. If not
-                                                            specified, will name your sampler
-                                                            "uSampler" + index of this texture in
-                                                            your shader pass.
+                                                            用于设置着色器中采样器 uniform
+                                                            的名称。也会影响纹理矩阵 uniform
+                                                            的名称。如果不指定，默认将采样器命名为
+                                                            "uSampler"
+                                                            加上此纹理在着色器通道中的索引。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1267,25 +1264,24 @@
                                                         </span>
                                                         <span class="api-item-parameter-type">
                                                             <a href="texture-class.html">Texture</a>
-                                                            object, optionnal
+                                                            object，可选
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            an already existing texture to copy into
-                                                            your new texture. Similar to the Texture
-                                                            class'
+                                                            已存在的纹理，用于复制到新创建的纹理中。类似于
+                                                            Texture 类的
                                                             <a
                                                                 href="texture-class.html#set-from-texture"
                                                                 >setFromTexture()</a
                                                             >
-                                                            method.
+                                                            方法。
                                                         </span>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> the newly created
-                                            <a href="texture-class.html">Texture</a> if successful.
+                                            <strong>返回值：</strong>如果成功，返回新创建的
+                                            <a href="texture-class.html">Texture</a> 对象。
                                         </p>
                                     </li>
 
@@ -1295,20 +1291,18 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            Useful to get our
+                                            获取
                                             <a href="curtains-class.html#container">container</a>
-                                            HTML element bounding rectangle without causing a
-                                            reflow/layout repaint. Be careful as the values are
-                                            relative to your
+                                            HTML
+                                            元素的边界矩形而不触发重新布局或重绘。请注意，这些值是相对于你的
                                             <a href="curtains-class.html#pixel-ratio"
                                                 >Curtains pixelRatio</a
                                             >
-                                            value.
+                                            值的。
                                         </p>
                                         <p>
-                                            <strong>returns:</strong> an object containing the
-                                            container HTML element width, height, top and left
-                                            positions.
+                                            <strong>返回值：</strong>包含 container HTML
+                                            元素宽度、高度、顶部和左侧位置的对象。
                                         </p>
                                     </li>
 
@@ -1320,9 +1314,9 @@
                                             ><span class="api-item-warning">updated in v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes a canvas HTML element, creates a
-                                            <a href="texture-class.html">Texture</a> using it and
-                                            loads it into your shader pass.
+                                            此函数用于处理一个 HTML canvas 元素，基于该元素创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载至着色器通道。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1333,8 +1327,7 @@
                                                     HTML canvas element
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a HTML canvas element to load into your shader
-                                                    pass.
+                                                    要加载到着色器通道中的 HTML canvas 元素。
                                                 </span>
                                             </li>
                                             <li>
@@ -1342,14 +1335,12 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到该纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分获取详细信息。
                                                 </span>
                                             </li>
                                             <li>
@@ -1357,10 +1348,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    加载成功时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1372,32 +1363,30 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/multiple-planes-canvas-text/index.html"
                                                 title="Text planes using canvas"
                                                 target="_blank"
                                                 >Text planes using canvas</a
                                             >
-                                            example.
                                         </p>
                                     </li>
 
@@ -1409,9 +1398,9 @@
                                             ><span class="api-item-warning">updated in v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes an array of canvas HTML elements and
-                                            creates a <a href="texture-class.html">Texture</a> for
-                                            each of them.
+                                            此函数接收一个HTML
+                                            canvas元素数组，并为其中每个canvas元素创建一个
+                                            <a href="texture-class.html">Texture</a> 对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1422,8 +1411,8 @@
                                                     array or collection of HTML canvas elements
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array or collection of HTML canvas elements
-                                                    to load into your shader pass.
+                                                    要加载至着色器通道中的HTML
+                                                    canvas元素数组或集合。
                                                 </span>
                                             </li>
                                             <li>
@@ -1431,14 +1420,12 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to those textures. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到该纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分获取详细信息。
                                                 </span>
                                             </li>
                                             <li>
@@ -1446,11 +1433,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1462,18 +1448,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到每个纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1489,10 +1474,9 @@
                                             ><span class="api-item-warning">updated in v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an image HTML element (or image
-                                            source URL), creates a
-                                            <a href="texture-class.html">Texture</a> using it and
-                                            loads it into your shader pass.
+                                            此函数用于接收一个HTML图像元素或图片源URL，使用该图像创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1503,8 +1487,7 @@
                                                     HTML image element or string
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a HTML image element or image source URL to load
-                                                    into your shader pass.
+                                                    要加载至着色器通道中的HTML图像元素或图片源URL。
                                                 </span>
                                             </li>
                                             <li>
@@ -1512,14 +1495,13 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到该纹理的默认选项。详细信息请参考 Texture
+                                                    类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -1527,10 +1509,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1542,18 +1524,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1563,10 +1544,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(image, error), optional
+                                                    function(image, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on source load error.
+                                                    加载错误时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1577,7 +1558,7 @@
                                                             HTML image element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The image you were trying to load
+                                                            尝试加载失败的图像元素。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1588,7 +1569,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1604,10 +1585,9 @@
                                             ><span class="api-item-warning">updated in v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of image HTML elements (or
-                                            images sources URL) and creates a
-                                            <a href="texture-class.html">Texture</a> for each of
-                                            them.
+                                            此函数用于接收一个HTML图像元素或图片源URL数组，使用每一个图像创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1619,9 +1599,7 @@
                                                     strings
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array or collection of HTML image elements or
-                                                    images sources URL to load into your shader
-                                                    pass.
+                                                    要加载至着色器通道中的HTML图像元素或图片源URL的数组
                                                 </span>
                                             </li>
                                             <li>
@@ -1629,14 +1607,13 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to those textures. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到这些纹理的默认选项。详细信息请参考 Texture
+                                                    类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -1644,11 +1621,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    每次成功加载源时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1660,18 +1636,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1681,10 +1656,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(image, error), optional
+                                                    function(image, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each source load error.
+                                                    每当源加载出现错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1695,7 +1670,7 @@
                                                             HTML image element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The image you were trying to load
+                                                            尝试加载失败的图像元素。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1706,21 +1681,20 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息。
                                                         </span>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/asynchronous-textures/index.html"
                                                 title="Asynchronous textures loading"
                                                 target="_blank"
                                                 >Asynchronous textures loading</a
                                             >
-                                            example.
                                         </p>
                                     </li>
 
@@ -1732,9 +1706,9 @@
                                             ><span class="api-item-warning">updated in v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes a source element (or source URL),
-                                            creates a <a href="texture-class.html">Texture</a> using
-                                            it and loads it into your shader pass.
+                                            此函数接受一个源元素（或源URL），使用它创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1746,8 +1720,8 @@
                                                     string
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an image, canvas or video HTML element to load
-                                                    into your shader pass.
+                                                    要加载至着色器通道中的图像、canvas 或 video HTML
+                                                    元素。
                                                 </span>
                                             </li>
                                             <li>
@@ -1755,14 +1729,13 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到该纹理的默认选项。详细信息请参考 Texture
+                                                    类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -1770,10 +1743,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1785,18 +1758,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1806,10 +1778,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(source, error), optional
+                                                    function(source, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on source load error.
+                                                    加载错误时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1821,7 +1793,7 @@
                                                             element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The source you were trying to load
+                                                            尝试加载的失败的源
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1832,7 +1804,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1848,10 +1820,9 @@
                                             ><span class="api-item-warning">updated in v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of source elements (or
-                                            sources URL), creates
-                                            <a href="texture-class.html">Textures</a> using them and
-                                            loads them into your shader pass.
+                                            此函数接受一个源元素（或源URL）的数组，使用每一个数组元素创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1863,8 +1834,8 @@
                                                     or videos HTML elements or strings
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array of image, canvas or video HTML elements
-                                                    or sources URL to load into your shader pass.
+                                                    要加载至着色器通道中的图像、canvas 或 video HTML
+                                                    元素的数组
                                                 </span>
                                             </li>
                                             <li>
@@ -1872,14 +1843,13 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到这些纹理的默认选项。详细信息请参考 Texture
+                                                    类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -1887,11 +1857,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    每次成功加载源时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1903,18 +1872,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1924,10 +1892,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(source, error), optional
+                                                    function(source, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each source load error.
+                                                    每当源加载出现错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1939,7 +1907,7 @@
                                                             element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The source you were trying to load
+                                                            您尝试加载的源
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1950,7 +1918,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1966,10 +1934,9 @@
                                             ><span class="api-item-warning">updated in v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes a video HTML element (or video
-                                            source URL), creates a
-                                            <a href="texture-class.html">Texture</a> using it and
-                                            loads it into your shader pass.
+                                            此函数用于接收一个HTML视频元素（或视频源URL），使用该视频创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1980,8 +1947,7 @@
                                                     HTML video element or string
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a HTML video element or video source URL to load
-                                                    into your shader pass.
+                                                    要加载至着色器通道中的HTML视频元素或视频源URL。
                                                 </span>
                                             </li>
                                             <li>
@@ -1989,14 +1955,13 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到该纹理的默认选项。详细信息请参考 Texture
+                                                    类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -2004,10 +1969,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -2019,18 +1984,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -2040,10 +2004,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(video, error), optional
+                                                    function(video, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on source load error.
+                                                    加载错误时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -2054,7 +2018,7 @@
                                                             HTML video element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The video you were trying to load
+                                                            尝试加载的视频
                                                         </span>
                                                     </li>
                                                     <li>
@@ -2065,7 +2029,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -2081,10 +2045,9 @@
                                             ><span class="api-item-warning">updated in v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of video HTML elements (or
-                                            videos sources URL) and creates a
-                                            <a href="texture-class.html">Texture</a> for each of
-                                            them.
+                                            此函数用于接收一个HTML视频元素（或视频源URL）的数组，使用每一个视频创建一个
+                                            <a href="texture-class.html">Texture</a>
+                                            对象，并将其加载到着色器通道中。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2096,9 +2059,7 @@
                                                     strings
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array or collection of HTML video elements or
-                                                    videos sources URL to load into your shader
-                                                    pass.
+                                                    要加载至着色器通道中的HTML视频元素或视频源URL的数组
                                                 </span>
                                             </li>
                                             <li>
@@ -2106,14 +2067,13 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to those textures. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到这些纹理的默认选项。详细信息请参考 Texture
+                                                    类的
+                                                    <a href="texture-class.html#parameters">参数</a>
+                                                    部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -2121,11 +2081,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    每次成功加载源时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -2137,18 +2096,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在此处您可以访问到纹理的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -2158,10 +2116,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(video, error), optional
+                                                    function(video, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each source load error.
+                                                    每当源加载出现错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -2172,7 +2130,7 @@
                                                             HTML video element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The video you were trying to load
+                                                            尝试加载的视频
                                                         </span>
                                                     </li>
                                                     <li>
@@ -2183,7 +2141,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -2198,12 +2156,10 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            Get the mouse coordinates relative to the shader pass
-                                            clip space values. Use it to send to a uniform and
-                                            interact with your shader pass. A shader pass
-                                            coordinates ranges from (-1, 1) in the top left corner
-                                            to (1, -1) in the bottom right corner, which means the
-                                            values along the Y axis are inverted.
+                                            此函数用于获取鼠标坐标相对于着色器通道裁剪空间的值。您可以将这些坐标发送到
+                                            uniforms，并与着色器通道进行交互。着色器通道中的坐标范围从左上角的
+                                            (-1, 1) 到右下角的 (1, -1)，这意味着沿 Y
+                                            轴方向的值是反转的。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2212,7 +2168,7 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    mouse event clientX value.
+                                                    鼠标事件的 clientX 值
                                                 </span>
                                             </li>
                                             <li>
@@ -2221,7 +2177,7 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    mouse event clientX value.
+                                                    鼠标事件的 clientY 值
                                                 </span>
                                             </li>
                                         </ul>
@@ -2233,9 +2189,7 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            This function will automatically start all of your
-                                            shader pass videos playback. If you are not calling it
-                                            after a user action it might not work on mobile.
+                                            这个函数会自动启动所有着色器通道中的视频播放。如果在用户交互动作之前调用它，在移动设备上可能无法正常工作。使用此方法确保所有关联的视频内容开始播放。
                                         </p>
                                     </li>
 
@@ -2245,10 +2199,7 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function will remove the shader pass and its render
-                                            target from our Curtains object and renderer and delete
-                                            all of its textures. It will also update all other
-                                            shader passes indexes.
+                                            该函数将从Curtains对象及其渲染器中移除指定的着色器通道及其渲染目标，并删除其所有的纹理资源。同时，此操作还会更新所有其他着色器通道的索引顺序。
                                         </p>
                                     </li>
                                     <li id="set-render-order">
@@ -2257,13 +2208,13 @@
                                             <span class="api-item-version">v7.3</span>
                                         </p>
                                         <p>
-                                            Sets the shader pass new
-                                            <a href="plane-class.html#render-order">render order</a
-                                            >.<br />
-                                            A shader pass will be drawn after the shader passes with
-                                            a lower renderOrder number. Negative numbers are
-                                            accepted. You can ommit the renderOrder parameter to
-                                            reset a shader pass renderOrder value.
+                                            设置着色器通道的新
+                                            <a href="plane-class.html#render-order">渲染顺序</a
+                                            >。<br />
+                                            着色器通道将会在具有更低 renderOrder
+                                            数值的着色器通道之后被绘制。允许使用负数作为
+                                            renderOrder。若省略 renderOrder
+                                            参数，可以重置着色器通道的 renderOrder 值。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2272,7 +2223,7 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> int </span>
                                                 <span class="api-item-parameter-desc">
-                                                    the new render order to use. Default to 0.
+                                                    要使用的新的渲染顺序值，默认为0。
                                                 </span>
                                             </li>
                                         </ul>
@@ -2395,7 +2346,7 @@
                                             allowing it to be chainable.
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/post-processing-displacement/index.html"
                                                 title="Post processing displacement effect"
@@ -2432,7 +2383,7 @@
                                             allowing it to be chainable.
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/post-processing-displacement/index.html"
                                                 title="Post processing displacement effect"
@@ -2470,7 +2421,7 @@
                                             allowing it to be chainable.
                                         </p>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/post-processing-displacement/index.html"
                                                 title="Post processing displacement effect"
