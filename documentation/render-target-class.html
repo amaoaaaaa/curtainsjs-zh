@@ -120,12 +120,12 @@
                                             </div>
                                             <div class="api-submenu-title">
                                                 <a href="render-target-class.html#parameters"
-                                                    >Parameters</a
+                                                    >参数</a
                                                 >
                                             </div>
                                             <div class="api-submenu-title">
                                                 <a href="render-target-class.html#properties"
-                                                    >Properties</a
+                                                    >属性</a
                                                 >
                                             </div>
                                             <ul class="api-submenu">
@@ -160,9 +160,7 @@
                                                 </li>
                                             </ul>
                                             <div class="api-submenu-title">
-                                                <a href="render-target-class.html#methods"
-                                                    >Methods</a
-                                                >
+                                                <a href="render-target-class.html#methods">方法</a>
                                             </div>
                                             <ul class="api-submenu">
                                                 <li>
@@ -342,7 +340,7 @@
                                 <div class="code">
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // "canvas" is the ID of our HTML container element
+                                            // “canvas” 是我们的 HTML 容器元素的 ID
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> curtains =
@@ -358,7 +356,7 @@
 
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // create a new render target using our curtains object
+                                            // 使用curtains对象创建一个新的渲染目标
                                         </div>
                                         <div class="code-block">
                                             <span class="code-var">const</span> renderTarget =
@@ -377,7 +375,7 @@
                                     </div>
 
                                     <div class="code-block">
-                                        <div class="code-comment">// create a plane</div>
+                                        <div class="code-comment">// 创建一个平面</div>
                                         <span class="code-var">const</span> plane =
                                         <span class="code-var">new</span>
                                         <span class="code-tag">Plane</span>(curtains<span
@@ -403,7 +401,7 @@
                                     <div>
                                         <div class="code-block">
                                             <div class="code-comment">
-                                                // add our plane to our frame buffer object
+                                                // 将我们的平面添加到我们的帧缓冲区对象中
                                             </div>
                                             <div>
                                                 plane.<span class="code-tag">setRenderTarget</span
@@ -413,8 +411,7 @@
 
                                         <div class="code-block">
                                             <div class="code-comment">
-                                                // create a plane to display our render target
-                                                result
+                                                // 创建一个平面显示我们的渲染目标结果
                                             </div>
                                             <span class="code-var">const</span> renderElement =
                                             document.<span class="code-tag">getElementById</span
@@ -458,12 +455,10 @@
                                             >() {
                                             <div class="code-indent">
                                                 <div class="code-comment">
-                                                    // create a new texture and copy the render
-                                                    target texture into it
+                                                    // 创建一个新纹理并将渲染目标纹理复制到其中
                                                 </div>
                                                 <div class="code-comment">
-                                                    // you'll be able to use it as a regular texture
-                                                    in your plane shader
+                                                    // 您将能够在平面着色器中将其用作常规纹理
                                                 </div>
                                                 <span class="code-var">const</span> renderTexture =
                                                 renderPlane.<span class="code-tag"
@@ -492,20 +487,27 @@
                                 </div>
 
                                 <h3 id="assigning-render-target-to-shader-pass">
-                                    Assigning a RenderTarget to a ShaderPass
+                                    将RenderTarget分配给ShaderPass
                                 </h3>
                                 <p>
-                                    You can decide to add a
-                                    <a href="shader-pass-class.html">ShaderPass</a> to a defined set
-                                    of plane instead of your whole scene. By combining a shader pass
-                                    with a render target, you'll be able to add an additional pass
-                                    to all the planes that use that render target.
+                                    您可以选择向一组预定义的平面添加<a href="shader-pass-class.html"
+                                        >ShaderPass</a
+                                    >，而不是应用于整个场景。通过将着色器通道与RenderTarget相结合，您能够对所有使用该RenderTarget的平面添加一个额外的渲染通道。这样，您就能针对特定平面集合独立应用特定的后期处理效果或其他图形效果。
+
+                                    <span class="original">
+                                        You can decide to add a
+                                        <a href="shader-pass-class.html">ShaderPass</a> to a defined
+                                        set of plane instead of your whole scene. By combining a
+                                        shader pass with a render target, you'll be able to add an
+                                        additional pass to all the planes that use that render
+                                        target.
+                                    </span>
                                 </p>
 
                                 <div class="code">
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // "canvas" is the ID of our HTML container element
+                                            // “canvas” 是我们的 HTML 容器元素的 ID
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> curtains =
@@ -521,7 +523,7 @@
 
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // create a new render target using our curtains object
+                                            // 使用curtains对象创建一个新的渲染目标
                                         </div>
                                         <div class="code-block">
                                             <span class="code-var">const</span> renderTarget =
@@ -541,7 +543,7 @@
                                     </div>
 
                                     <div class="code-block">
-                                        <div class="code-comment">// create a bunch of planes</div>
+                                        <div class="code-comment">// 批量创建平面</div>
                                         <div class="code-block">
                                             <div>
                                                 <span class="code-var">for</span>(<span
@@ -585,7 +587,7 @@
                                                 </div>
 
                                                 <div class="code-comment">
-                                                    // add our plane to our frame buffer object
+                                                    // 将我们的平面添加到我们的帧缓冲区对象中
                                                 </div>
                                                 <div>
                                                     plane.<span class="code-tag"
@@ -599,7 +601,7 @@
 
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // now assign our render target to a shader pass
+                                            // 现在将渲染目标分配给着色器通道
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> shaderPassParams = {
@@ -619,8 +621,8 @@
                                                 <span class="code-property">renderTarget</span>:
                                                 renderTarget<span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// this is how we assign the render target to
-                                                    our shader pass</span
+                                                    >//
+                                                    这就是我们将渲染目标分配给着色器通道的方式</span
                                                 >
                                             </div>
                                             <div>
@@ -666,23 +668,19 @@
                                 </div>
 
                                 <p>
-                                    Check the
+                                    请查看
                                     <a
                                         href="examples/render-passes-using-render-targets/index.html"
                                         title="Selective shader passes using render targets"
                                         target="_blank"
                                         >Selective shader passes using render targets</a
                                     >
-                                    example to see how you can apply different shader passes to
-                                    different bunch of planes.
+                                    示例，了解如何为不同的平面集合应用不同的着色器通道。
                                 </p>
 
-                                <h2 id="parameters">Parameters</h2>
+                                <h2 id="parameters">参数</h2>
 
-                                <p>
-                                    Here is the complete list of mandatory and optional parameters
-                                    for the render target:
-                                </p>
+                                <p>以下是完整的参数列表：</p>
 
                                 <ul class="api-item-parameters">
                                     <li>
@@ -691,16 +689,14 @@
                                             Curtains class object
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            Your Curtains class object.
+                                            Curtains 示例对象
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> params </span>
-                                        <span class="api-item-parameter-type">
-                                            object, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> object，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            an object containing the render target parameters:
+                                            包含 render target 参数的对象：
                                         </span>
 
                                         <ul
@@ -712,11 +708,10 @@
                                                     depth
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Whether to create a depth buffer (handle depth
-                                                    inside your render target). Default to false.
+                                                    是否创建深度缓冲区（在RenderTarget中处理深度信息）。默认为false。
                                                 </span>
                                             </li>
                                             <li>
@@ -724,13 +719,10 @@
                                                     clear
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    bool, optional
+                                                    bool，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Whether the content of the render target should
-                                                    be cleared before being drawn. Should be set to
-                                                    false to handle ping-pong shading. Default to
-                                                    true.
+                                                    在渲染目标被绘制之前，是否应清除其内容。在处理乒乓（ping-pong）着色等技术时，应将其设置为false。默认情况下为true。
                                                 </span>
                                             </li>
                                             <li>
@@ -738,10 +730,10 @@
                                                     maxWidth
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    float, optional
+                                                    float，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Maximum width of the render target.
+                                                    渲染目标的最大宽度。
                                                 </span>
                                             </li>
                                             <li>
@@ -749,10 +741,10 @@
                                                     maxHeight
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    float, optional
+                                                    float，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Maximum height of the render target.
+                                                    渲染目标的最大高度。
                                                 </span>
                                             </li>
                                             <li>
@@ -760,11 +752,10 @@
                                                     minWidth
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    float, optional
+                                                    float，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Minimum width of the render target. Default to
-                                                    1024.
+                                                    渲染目标的最小宽度。默认为 1024。
                                                 </span>
                                             </li>
                                             <li>
@@ -772,11 +763,10 @@
                                                     minHeight
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    float, optional
+                                                    float，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Minimum height of the render target. Default to
-                                                    1024.
+                                                    渲染目标的最小高度。默认为 1024。
                                                 </span>
                                             </li>
                                             <li>
@@ -784,51 +774,50 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to the texture of the
-                                                    render target. See the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用于渲染目标纹理的默认选项。请参阅<a
+                                                        href="texture-class.html#parameters"
+                                                        >Texture类参数</a
+                                                    >。
                                                 </span>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
 
-                                <h2 id="properties">Properties</h2>
+                                <h2 id="properties">属性</h2>
                                 <ul>
                                     <li id="index">
                                         <p>
                                             <strong>index</strong>(integer):
                                             <span class="api-item-version">v5.0</span>
-                                            <span class="api-item-warning">read only</span>
+                                            <span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            The index of the render target in the
+                                            此属性表示渲染目标在
                                             <a href="curtains-class.html#render-targets"
                                                 >renderTargets</a
                                             >
-                                            array.<br />
+                                            数组中的索引位置。
                                         </p>
                                     </li>
                                     <li id="gl">
                                         <p>
                                             <strong>gl</strong> (WebGL context)
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Our WebGL context.</p>
+                                        <p>WebGL 上下文</p>
                                     </li>
                                     <li id="renderer">
                                         <p>
                                             <strong>renderer</strong> (Renderer class object):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>The renderer created by our curtains object.</p>
+                                        <p>由我们的curtains对象创建的渲染器。</p>
                                     </li>
                                     <li id="textures">
                                         <p>
@@ -836,17 +825,17 @@
                                             <span class="api-item-version">v5.0</span>
                                         </p>
                                         <p>
-                                            An array of length 1 containing the only render target's
-                                            <a href="texture-class.html">Texture</a>.
+                                            一个长度为1的数组，其中包含渲染目标所对应的
+                                            <a href="texture-class.html">Texture</a> 对象。
                                         </p>
                                     </li>
                                     <li id="type">
                                         <p>
                                             <strong>type</strong> (string):
                                             <span class="api-item-version">v7.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Class object type: "RenderTarget".</p>
+                                        <p>类对象类型: "RenderTarget"。</p>
                                     </li>
                                     <li id="user-data">
                                         <p>
@@ -854,31 +843,32 @@
                                             <span class="api-item-version">v5.0</span>
                                         </p>
                                         <p>
-                                            An empty object to store any additional data or custom
-                                            properties into your render target.
+                                            一个空的对象，用于在渲染目标中存储任何额外的数据或自定义属性。
                                         </p>
                                     </li>
                                     <li id="uuid">
                                         <p>
                                             <strong>uuid</strong> (string):
                                             <span class="api-item-version">v6.0</span
-                                            ><span class="api-item-warning">read only</span>
+                                            ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>The render target's unique identifier.</p>
+                                        <p>渲染目标的唯一标识符。</p>
                                     </li>
                                 </ul>
 
-                                <h2 id="methods">Methods</h2>
+                                <h2 id="methods">方法</h2>
                                 <ul>
                                     <li id="get-texture">
                                         <p>
                                             <strong>getTexture</strong>():
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Returns the render target texture to be used later.</p>
+                                        <p>返回渲染目标的纹理，以便后续使用。</p>
                                         <p>
-                                            <strong>returns:</strong> the render target
-                                            <a href="texture-class.html">texture</a>.
+                                            <strong>返回值：</strong>渲染目标对应的<a
+                                                href="texture-class.html"
+                                                >纹理</a
+                                            >对象。
                                         </p>
                                     </li>
                                     <li id="remove">
@@ -887,9 +877,7 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function will remove the render target from our
-                                            Curtains object and renderer and delete its texture. It
-                                            will also update all other render targets indexes.
+                                            此函数会从Curtains对象及其渲染器中移除该渲染目标，并删除其关联的纹理。同时，它还会更新所有其他渲染目标的索引。
                                         </p>
                                     </li>
                                 </ul>
