@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | Mat4 class</title>
+        <title>Mat4 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -220,7 +220,7 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>Mat4 class</h1>
+                                <h1>Mat4 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
@@ -232,21 +232,15 @@
                                 </div>
 
                                 <h2 id="basic-usage">基本使用</h2>
-                                <p>
-                                    Mat4 is the class used for all 4 dimensions matrices
-                                    manipulations.
-                                </p>
+                                <p>Mat4 是用于所有四维矩阵操作的类。</p>
                                 <h3>创建</h3>
                                 <p>
-                                    To create a new Mat4, just use its constructor.<br />
-                                    If used without parameters, it will create a 4 dimensions
-                                    identity matrix.
+                                    要创建一个新的 Mat4（四维矩阵），你只需使用其构造函数。<br />
+                                    如果不传递任何参数，它将创建一个四维单位矩阵。
                                 </p>
 
                                 <div class="code">
-                                    <div class="code-comment">
-                                        // create a new Mat4 identity matrix
-                                    </div>
+                                    <div class="code-comment">// 创建一个新的 Mat4 单位矩阵</div>
 
                                     <div>
                                         <span class="code-var">const</span> matrix =
@@ -257,15 +251,15 @@
                                     </div>
                                 </div>
 
-                                <h3>Use chaining</h3>
+                                <h3>链式调用</h3>
                                 <p>
-                                    Since most of the Mat4 methods return the matrix itself, you can
-                                    use chaining:
+                                    由于 Mat4
+                                    类中大部分方法都会返回矩阵自身，因此你可以采用链式调用来连续操作：
                                 </p>
 
                                 <div class="code">
                                     <div class="code-comment">
-                                        // create a new Mat4 matrix and chain methods
+                                        // 创建一个新的 Mat4 矩阵并利用链式调用进行方法串联
                                     </div>
 
                                     <div>
@@ -289,16 +283,14 @@
                                 </div>
 
                                 <h2 id="parameters">参数</h2>
-
                                 <ul class="api-item-parameters">
                                     <li>
                                         <span class="api-item-parameter-label"> elements </span>
                                         <span class="api-item-parameter-type">
-                                            array of length 16, optional
+                                            长度为16的数组，可选
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            values to use for that matrix. Default to 4 dimensions
-                                            identity matrix.
+                                            用于初始化矩阵的值。若不指定，则默认为一个4维单位矩阵。
                                         </span>
                                     </li>
                                 </ul>
@@ -310,7 +302,7 @@
                                             <strong>elements</strong> (Float32Array):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>A Float32Array of length 16 representing that matrix.</p>
+                                        <p>一个长度为16的 Float32Array 数组，用于表示该矩阵。</p>
                                     </li>
                                 </ul>
 
@@ -321,8 +313,8 @@
                                             <strong>clone</strong>():
                                             <span class="api-item-version">v7.2</span>
                                         </p>
-                                        <p>Clone this matrix.</p>
-                                        <p><strong>returns:</strong> new cloned matrix.</p>
+                                        <p>克隆出一个四维矩阵</p>
+                                        <p><strong>返回：</strong>新的四维矩阵</p>
                                     </li>
                                     <li id="compose-from-origin">
                                         <p>
@@ -331,11 +323,8 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            Creates a matrix from a quaternion rotation, vector
-                                            translation and vector scale, rotating and scaling
-                                            around the given origin.<br />
-                                            Equivalent for applying translation, rotation and scale
-                                            matrices but much faster.
+                                            通过四元数旋转、向量平移和向量缩放，围绕给定的原点创建一个矩阵。<br />
+                                            这种方法相当于分别应用平移、旋转和缩放矩阵，但执行速度更快。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -346,7 +335,7 @@
                                                     <a href="vec-3-class.html">Vec3</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    translation vector
+                                                    平移向量
                                                 </span>
                                             </li>
                                             <li>
@@ -357,7 +346,7 @@
                                                     <a href="quat-class.html">Quat</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    rotation quaternion
+                                                    旋转四元数
                                                 </span>
                                             </li>
                                             <li>
@@ -368,7 +357,7 @@
                                                     <a href="vec-3-class.html">Vec3</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    scale vector
+                                                    缩放向量
                                                 </span>
                                             </li>
                                             <li>
@@ -379,14 +368,11 @@
                                                     <a href="vec-3-class.html">Vec3</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    origin vector around which to scale and rotate
+                                                    围绕其进行缩放和旋转的原点向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this matrix after
-                                            transformations.
-                                        </p>
+                                        <p><strong>返回：</strong>经过变换后的此矩阵。</p>
                                     </li>
 
                                     <li id="copy">
@@ -394,7 +380,7 @@
                                             <strong>copy</strong>(matrix):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Copy a matrix into this matrix.</p>
+                                        <p>将一个矩阵复制到当前矩阵。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -404,11 +390,11 @@
                                                     Mat4 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    matrix to copy
+                                                    要复制的 Mat4 类对象。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> this matrix after copy.</p>
+                                        <p><strong>返回：</strong>复制操作后的当前矩阵。</p>
                                     </li>
 
                                     <li id="get-inverse">
@@ -416,11 +402,8 @@
                                             <strong>getInverse</strong>():
                                             <span class="api-item-version">v7.1</span>
                                         </p>
-                                        <p>Creates a new matrix inverse from this matrix.</p>
-                                        <p>
-                                            <strong>returns:</strong> a new matrix inverse of this
-                                            matrix.
-                                        </p>
+                                        <p>创建并返回一个当前矩阵的逆矩阵</p>
+                                        <p><strong>返回：</strong>当前矩阵的逆矩阵的新实例。</p>
                                     </li>
 
                                     <li id="multiply">
@@ -428,9 +411,7 @@
                                             <strong>multiply</strong>(matrix):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>
-                                            Multiply this matrix by the matrix passed as parameter.
-                                        </p>
+                                        <p>将当前矩阵与传入的参数矩阵进行乘法运算（矩阵组合）。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -440,14 +421,11 @@
                                                     Mat4 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    matrix to multiply with.
+                                                    用于乘法运算的 Mat4 类对象。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this matrix after
-                                            multiplication.
-                                        </p>
+                                        <p><strong>返回：</strong>完成乘法操作后的当前矩阵。</p>
                                     </li>
 
                                     <li id="scale">
@@ -455,7 +433,7 @@
                                             <strong>scale</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Scale this matrix by the vector passed as parameter.</p>
+                                        <p>根据提供的向量对当前矩阵应用缩放变换。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -465,11 +443,12 @@
                                                     <a href="vec-3-class.html">Vec3</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to use for scaling
+                                                    用于缩放的
+                                                    <a href="vec-3-class.html">Vec3</a> 类对象。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> this matrix after scaling.</p>
+                                        <p><strong>返回：</strong>完成缩放操作后的当前矩阵。</p>
                                     </li>
 
                                     <li id="set-from-array">
@@ -477,7 +456,7 @@
                                             <strong>setFromArray</strong>(array):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Sets the matrix values from an array.</p>
+                                        <p>从给定数组设置当前矩阵的所有元素。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -485,13 +464,11 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> array </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array of at least 16 elements
+                                                    包含至少16个元素的数组，这些元素会被用来填充矩阵。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this matrix after being set.
-                                        </p>
+                                        <p><strong>返回：</strong>设置数组元素后得到的当前矩阵。</p>
                                     </li>
                                 </ul>
                             </div>
