@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | PingPongPlane class</title>
+        <title>PingPongPlane 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -152,7 +152,9 @@
                                 <div class="api-top-menu-item">额外组件</div>
                                 <ul class="api-submenu-content">
                                     <li class="active">
-                                        <a href="ping-pong-plane-class.html">PingPongPlane</a>
+                                        <a href="ping-pong-plane-class.html"
+                                            >乒乓渲染平面（PingPongPlane）</a
+                                        >
 
                                         <div class="api-submenu-content">
                                             <div class="api-submenu-title">
@@ -209,7 +211,7 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>PingPongPlane class</h1>
+                                <h1>PingPongPlane 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
@@ -222,28 +224,22 @@
 
                                 <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    The PingPongPlane class is used to create a plane and two
-                                    associated render targets that will be swapped at each draw
-                                    call. This method is called FBO swapping or FBO ping pong and is
-                                    often used to create fluids or flowmaps effects.<br />
-                                    The PingPongPlane class <strong>extends</strong> the
-                                    <a href="plane-class.html">Plane</a> class, inheriting from all
-                                    its methods and properties.
+                                    PingPongPlane
+                                    类用于创建一个平面以及两个相关的渲染目标，这两个目标将在每次绘制调用时进行交换。这种方法被称为
+                                    FBO 交换或 FBO
+                                    乒乓技术，并常被用来实现流体效果或其他如流动贴图等特效。<br />
+                                    PingPongPlane 类<strong>继承</strong>自
+                                    <a href="plane-class.html">Plane</a>
+                                    类，从而继承了其所有的方法和属性。
                                 </p>
+
                                 <h3>创建</h3>
                                 <p>
-                                    To create a new PingPongPlane, just use its constructor.<br />
-                                    Since they inherit from the Plane class, parameters are almost
-                                    the same. There's
-                                    <strong
-                                        >an additional parameter that allows you to set the
-                                        PingPongPlane's texture sampler name</strong
-                                    >
-                                    that you will read in your fragment shader to apply your effect.
-                                    If ommited, it will use "uPingPongTexture" as sampler name.<br />
-                                    Note that the ping pong planes are rendered onto render targets
-                                    so you will have to create another plane to display the result
-                                    of your effect.
+                                    要创建一个新的 PingPongPlane 对象，只需使用其构造函数。<br />
+                                    由于它继承自 Plane
+                                    类，因此参数几乎相同。不过，它还包含一个额外的参数，<strong>允许您设置在片段着色器中读取以应用特效的纹理采样器名称</strong>。如果不指定，默认会使用
+                                    "uPingPongTexture" 作为采样器名称。<br />
+                                    请注意，乒乓平面是渲染到渲染目标上的，因此您需要创建另一个平面来展示特效的结果。
                                 </p>
 
                                 <div class="code">
@@ -264,6 +260,9 @@
                                     </div>
 
                                     <div class="code-block">
+                                        <div class="code-comment">
+                                            // 获取用于乒乓平面的HTML元素
+                                        </div>
                                         <span class="code-var">const</span> pingPongPlaneElement =
                                         document.<span class="code-tag">getElementById</span>(<span
                                             class="code-string"
@@ -272,6 +271,7 @@
                                     </div>
 
                                     <div class="code-block">
+                                        <div class="code-comment">// 设置乒乓平面参数</div>
                                         <div><span class="code-var">const</span> params = {</div>
                                         <div class="code-indent">
                                             <div>
@@ -279,15 +279,15 @@
                                                 <span class="code-string">"ping-pong-vs"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// ID of your vertex shader script tag</span
-                                                >
+                                                    >// 顶点着色器script标签的ID
+                                                </span>
                                             </div>
                                             <div>
                                                 <span class="code-property">fragmentShaderID</span>:
                                                 <span class="code-string">"ping-pong-fs"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// ID of your fragment shader script tag</span
+                                                    >// 片段着色器script标签的ID</span
                                                 >
                                             </div>
                                             <div>
@@ -295,15 +295,14 @@
                                                 <span class="code-string">"uTexture"</span
                                                 ><span class="code-var">,</span>
                                                 <span class="code-comment"
-                                                    >// sampler to use in your fragment shader.
-                                                    Default to "uPingPongTexture"</span
+                                                    >在片段着色器中使用的采样器名称，默认为
+                                                    "uPingPongTexture"</span
                                                 >
                                             </div>
                                             <div>
                                                 <span class="code-property">uniforms</span>: {
                                                 <span class="code-comment"
-                                                    >// uniforms are what will allow you to interact
-                                                    with your plane</span
+                                                    >// uniforms 变量是与平面交互的方式</span
                                                 >
                                             </div>
                                             <div class="code-indent">
@@ -316,8 +315,8 @@
                                                         <span class="code-string">"uTime"</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// uniform name that will be passed to
-                                                            our shaders</span
+                                                            >// 将传递给着色器的 uniforms
+                                                            变量名</span
                                                         >
                                                     </div>
                                                     <div>
@@ -325,8 +324,8 @@
                                                         <span class="code-string">"1f"</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// this means our uniform is a
-                                                            float</span
+                                                            >// 表示我们的 uniforms
+                                                            变量是一个浮点数</span
                                                         >
                                                     </div>
                                                     <div>
@@ -334,7 +333,7 @@
                                                         <span class="code-number">0</span
                                                         ><span class="code-var">,</span>
                                                         <span class="code-comment"
-                                                            >// initial value of the uniform</span
+                                                            >// uniforms 的初始值</span
                                                         >
                                                     </div>
                                                 </div>
@@ -346,9 +345,7 @@
                                     </div>
 
                                     <div class="code-block">
-                                        <div class="code-comment">
-                                            // create our ping pong plane with the above parameters
-                                        </div>
+                                        <div class="code-comment">// 使用上述参数创建乒乓平面</div>
                                         <div>
                                             <span class="code-var">const</span> pingPongPlane =
                                             <span class="code-var">new</span>
@@ -361,7 +358,7 @@
 
                                     <div class="code-block">
                                         <div class="code-comment">
-                                            // 创建一个平面 to use our ping pong plane effect
+                                            // 创建一个平面以展示乒乓效果的结果
                                         </div>
                                         <span class="code-var">const</span> planeElement =
                                         document.<span class="code-tag">getElementById</span>(<span
@@ -382,8 +379,7 @@
 
                                     <div>
                                         <div class="code-comment">
-                                            // create a texture that will contain the result of our
-                                            ping pong effect
+                                            // 创建一个纹理，该纹理将包含乒乓效果的结果
                                         </div>
                                         <span class="code-var">const</span> pingPongTexture =
                                         plane.<span class="code-tag">createTexture</span>({
@@ -405,51 +401,42 @@
                                 </div>
 
                                 <p>
-                                    Have a look at the
+                                    <strong>示例：</strong>
                                     <a
                                         href="examples/ping-pong-shading-flowmap/index.html"
                                         title="Ping pong shading flowmap"
                                         target="_blank"
                                         >Ping pong shading flowmap</a
                                     >
-                                    example to see it live.
                                 </p>
 
                                 <h2 id="parameters">参数</h2>
-
                                 <p>
-                                    PingPongPlanes use the same
-                                    <a href="plane-class.html#parameters">参数</a> as the usual
-                                    Planes. Note however that it will set the
-                                    <strong>depthTest</strong> and
-                                    <strong>autoloadSources</strong> to
-                                    <strong>false</strong>.<br />
-                                    You can also pass a sampler name as an additional parameter:
+                                    PingPongPlanes 类在创建时使用的参数与常规的
+                                    <a href="plane-class.html#parameters">Plane类参数</a>
+                                    相同。但是请注意，PingPongPlanes 默认会将
+                                    <strong>depthTest（深度测试）</strong> 和
+                                    <strong>autoloadSources（自动加载资源）</strong> 属性设置为
+                                    <strong>false</strong>。<br />
+                                    此外，您还可以传递一个额外的纹理采样器名称作为参数：
                                 </p>
-
                                 <ul class="api-item-parameters">
                                     <li>
                                         <span class="api-item-parameter-label"> sampler </span>
-                                        <span class="api-item-parameter-type">
-                                            string, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> string，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            the texture sampler name you'll use in your fragment
-                                            shader to create your effect. Default to
-                                            "uPingPongTexture".
+                                            在片段着色器中用于创建特效的纹理采样器名称。默认值为
+                                            "uPingPongTexture"。
                                         </span>
                                     </li>
                                 </ul>
 
                                 <h2 id="properties">属性</h2>
-
                                 <p>
-                                    PingPongPlanes also have the same
-                                    <a href="plane-class.html#properties">属性</a> as the usual
-                                    Planes. Their two render targets are also availables as
-                                    additional properties:
+                                    PingPongPlanes 类同样继承了常规
+                                    <a href="plane-class.html#properties">Plane类的所有属性</a
+                                    >。除此之外，它们还额外提供了两个用于渲染目标（RenderTarget）的属性：
                                 </p>
-
                                 <ul>
                                     <li id="read-pass">
                                         <p>
@@ -461,11 +448,10 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            Render target read pass that will be swapped with the
-                                            write pass at each draw call. Its
-                                            <strong>depth</strong> and
-                                            <strong>clear</strong> properties are set to
-                                            <strong>false</strong>.
+                                            渲染目标读取通道，在每次绘制调用时会与写入通道进行交换。它的
+                                            <strong>depth</strong> 和
+                                            <strong>clear</strong> 属性均设置为
+                                            <strong>false</strong>
                                         </p>
                                     </li>
                                     <li id="write-pass">
@@ -478,11 +464,10 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            Render target write pass that will be swapped with the
-                                            read pass at each draw call. Its
-                                            <strong>depth</strong> and
-                                            <strong>clear</strong> properties are set to
-                                            <strong>false</strong>.
+                                            渲染目标写入通道，在每次绘制调用时会与读取通道进行交换。它的
+                                            <strong>depth</strong> 和
+                                            <strong>clear</strong> 属性也同样被设置为
+                                            <strong>false</strong>
                                         </p>
                                     </li>
                                 </ul>
@@ -494,10 +479,13 @@
                                             <strong>getTexture</strong>():
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Returns the ping pong plane texture to be used later.</p>
                                         <p>
-                                            <strong>returns:</strong> the ping pong plane
-                                            <a href="texture-class.html">texture</a>.
+                                            返回用于后续使用的乒乓平面纹理。这个方法获取的是在多次渲染交换过程中产生的最终结果纹理。
+                                        </p>
+                                        <p>
+                                            <strong>返回值：</strong>一个乒乓平面的
+                                            <a href="texture-class.html">texture纹理对象</a
+                                            >，该纹理包含了所有渲染操作完成后写入通道（writePass）的内容。
                                         </p>
                                     </li>
                                 </ul>
