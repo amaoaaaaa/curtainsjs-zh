@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | Quat class</title>
+        <title>Quat 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -222,7 +222,7 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>Quat class</h1>
+                                <h1>Quat 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
@@ -235,19 +235,18 @@
 
                                 <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    Quat is the class used for rotation quaternions manipulations.
-                                    Quaternions are used to represent rotations in the 3D space.
+                                    Quat 类用于旋转四元数的操作。四元数在三维空间中被用来表示旋转。
                                 </p>
+
                                 <h3>创建</h3>
                                 <p>
-                                    To create a new Quat, just use its constructor.<br />
-                                    If used without parameters, it will create a quaternion
-                                    representing a rotation of angle 0 along X, Y and Z axes with
-                                    "XYZ" as axis order: [0, 0, 0, 1].
+                                    要创建一个新的 Quat（四元数），只需使用其构造函数。<br />
+                                    如果不传递任何参数，它将创建一个代表绕 X、Y 和 Z 轴旋转角度为 0
+                                    的四元数，并且轴顺序为 "XYZ"：[0, 0, 0, 1]。
                                 </p>
 
                                 <div class="code">
-                                    <div class="code-comment">// create a new Quat quaternion</div>
+                                    <div class="code-comment">// 创建一个新的四元数</div>
 
                                     <div>
                                         <span class="code-var">const</span> quaternion =
@@ -258,15 +257,15 @@
                                     </div>
                                 </div>
 
-                                <h3>Use chaining</h3>
+                                <h3>链式调用</h3>
                                 <p>
-                                    Since most of the Quat methods return the quaternion itself, you
-                                    can use chaining:
+                                    由于 Quat
+                                    类中的大多数方法都会返回四元数自身，因此你可以利用链式调用来连续执行多个操作：
                                 </p>
 
                                 <div class="code">
                                     <div class="code-comment">
-                                        // create a new Quat quaternion and chain methods
+                                        // 创建一个新的 Quat 四元数并利用链式调用进行方法串联
                                     </div>
 
                                     <div>
@@ -295,22 +294,18 @@
                                     <li>
                                         <span class="api-item-parameter-label"> elements </span>
                                         <span class="api-item-parameter-type">
-                                            array of floats of length 4, optional
+                                            长度为4的浮点数组，可选
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            values to use for that quaternion. Default to [0, 0, 0,
-                                            1].
+                                            用于初始化四元数的值。默认为 [0, 0, 0, 1]，表示无旋转。
                                         </span>
                                     </li>
 
                                     <li>
                                         <span class="api-item-parameter-label"> axisOrder </span>
-                                        <span class="api-item-parameter-type">
-                                            string, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> string，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            axis order to use for the rotation calculations. Default
-                                            to "XYZ".
+                                            用于旋转计算的轴顺序，默认为 "XYZ"。
                                         </span>
                                     </li>
                                 </ul>
@@ -323,8 +318,8 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            A Float32Array of floats of length 4 representing that
-                                            quaternion.
+                                            一个长度为4的浮点数数组，以 Float32Array
+                                            类型表示四元数。
                                         </p>
                                     </li>
                                     <li id="axis-order">
@@ -332,7 +327,7 @@
                                             <strong>axisOrder</strong> (string):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Axis order to use for the 3D rotation calculations.</p>
+                                        <p>用于三维旋转计算的轴顺序。</p>
                                     </li>
                                 </ul>
 
@@ -343,15 +338,15 @@
                                             <strong>clone</strong>():
                                             <span class="api-item-version">v7.2</span>
                                         </p>
-                                        <p>Clone this quaternion.</p>
-                                        <p><strong>returns:</strong> new cloned quaternion.</p>
+                                        <p>克隆该四元数</p>
+                                        <p><strong>返回：</strong>新克隆的四元数。</p>
                                     </li>
                                     <li id="copy">
                                         <p>
                                             <strong>copy</strong>(quaternion):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Copy a quaternion into this quaternion.</p>
+                                        <p>将一个四元数复制到当前四元数中</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -361,11 +356,11 @@
                                                     Quat class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    quaternion to copy
+                                                    要复制的四元数
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> this quaternion after copy.</p>
+                                        <p><strong>返回：</strong>复制操作后的当前四元数。</p>
                                     </li>
 
                                     <li id="equals">
@@ -374,8 +369,7 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            Checks if 2 quaternions are equal (i.e. have the same
-                                            values and axis orders).
+                                            检查两个四元数是否相等（即它们具有相同的数值和轴顺序）
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -386,13 +380,13 @@
                                                     Quat class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    quaternion to compare
+                                                    用于比较的四元数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> true if the 2 quaternions are
-                                            equals, false otherwise.
+                                            <strong>返回：</strong>如果两个四元数相等，则返回
+                                            true，否则返回 false。
                                         </p>
                                     </li>
 
@@ -401,26 +395,21 @@
                                             <strong>setAxisOrder</strong>(axisOrder):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Sets the quaternion values from an array.</p>
+                                        <p>设置四元数的轴顺序</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
                                                     axisOrder
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    string
+                                                    "XYZ" | "XZY" | "YXZ" | "YZX" | "ZXY" | "ZYX"
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a string representing the axis order to use.
-                                                    Could be "XYZ", "YXZ", "ZXY", "ZYX", "YZX" or
-                                                    "XZY".
+                                                    表示要使用的轴顺序的字符串
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this quaternion after axis
-                                            order has been set.
-                                        </p>
+                                        <p><strong>返回：</strong>设置轴顺序后的当前四元数。</p>
                                     </li>
 
                                     <li id="set-from-array">
@@ -428,7 +417,7 @@
                                             <strong>setFromArray</strong>(array):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Sets the quaternion values from an array.</p>
+                                        <p>从数组设置四元数的数值</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -436,14 +425,11 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> array </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array of at least 4 floats
+                                                    至少包含 4 个浮点数的数组
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this quaternion after being
-                                            set.
-                                        </p>
+                                        <p><strong>返回：</strong>设置数值后的当前四元数。</p>
                                     </li>
 
                                     <li id="set-from-vec-3">
@@ -452,8 +438,9 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            Sets a rotation quaternion using Euler angles as a Vec3
-                                            and its axis order.
+                                            使用欧拉角（以
+                                            <a href="vec-3-class.html">Vec3</a>
+                                            对象形式）和其轴顺序设置旋转四元数
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -464,14 +451,12 @@
                                                     <a href="vec-3-class.html">Vec3</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    rotation vector to set our quaternion from
+                                                    作为旋转源的
+                                                    <a href="vec-3-class.html">Vec3</a> 向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this quaternion after having
-                                            applied the rotation.
-                                        </p>
+                                        <p><strong>返回：</strong>应用旋转后得到的当前四元数。</p>
                                     </li>
                                 </ul>
                             </div>
