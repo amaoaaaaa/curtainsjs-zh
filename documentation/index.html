@@ -91,7 +91,7 @@
 
                 <section id="intro" class="flex-wrapper">
                     <h1 id="site-title">curtains.js</h1>
-                    <h2 id="site-subtitle">easy WebGL tool to animate images and videos</h2>
+                    <h2 id="site-subtitle">用于为图像和视频制作动画的简单 WebGL 工具</h2>
 
                     <div class="curtain" data-vs-id="intro-vs" data-fs-id="intro-fs">
                         <img data-sampler="curtainSampler" src="images/intro-background.jpg" />
@@ -101,39 +101,32 @@
                 <section class="content-section">
                     <div class="wrapper">
                         <div class="text-section">
-                            <h2>What is it ?</h2>
+                            <h2>这是什么？</h2>
                             <p>
-                                Shaders are the new front-end web development big thing, with the
-                                ability to create very powerful 3D interactions and animations. A
-                                lot of very good javascript libraries already handle WebGL but with
-                                most of them it's kind of a headache to position your meshes
-                                relative to the DOM elements of your web page.
+                                现在，着色器已经成为实现网页上强大三维交互和动画效果的热门技术手段，在众多JavaScript库中，许多库能够处理WebGL，但在将3D网格与网页中的DOM元素进行相对定位时，往往给开发者带来一定的困扰。
                             </p>
                             <p>
-                                curtains.js was created with just that issue in mind. It is a small
-                                vanilla WebGL javascript library that converts HTML elements
-                                containing images, videos and canvases into 3D WebGL textured
-                                planes, allowing you to animate them via shaders.
+                                Curtains.js 就是为了解决这个问题而创建的。它是一个小型普通 WebGL
+                                javascript 库，可将包含图像、视频和画布的 HTML 元素转换为 3D WebGL
+                                纹理平面，允许您通过着色器对它们进行动画处理。 curtains.js
+                                就是为了解决这一具体问题应运而生的。它能够将HTML元素中包含的图片、视频和canvas转换为带有纹理的3D
+                                WebGL平面，并允许开发者通过着色器对这些平面进行动画制作。
                             </p>
                             <p>
-                                You can define each plane size and position via CSS, which makes it
-                                super easy to add WebGL responsive planes all over your pages.
+                                特别值得一提的是，你能够通过CSS来定义每个平面的大小和位置，这就使得在网页各处添加响应式WebGL平面变得极其简便易行。
                             </p>
+                            <p>此外，你还可以向场景中添加后期处理特效，以提升整个视觉表现力。</p>
                             <p>
-                                You can also add post processing effects to your scene to spice up
-                                the whole thing.
-                            </p>
-                            <p>
-                                Be sure to check the
+                                强烈建议查阅
                                 <a href="documentation.html" title="curtains.js documentation"
-                                    >documentation</a
+                                    >文档</a
                                 >
-                                and examples to see what's possible.
+                                和示例，以便更好地了解其功能及所能实现的效果。
                             </p>
                         </div>
 
                         <div class="text-section">
-                            <h2>Download</h2>
+                            <h2>下载</h2>
                             <p>
                                 <a
                                     href="dist/curtains.umd.js"
@@ -163,12 +156,10 @@
                         </div>
 
                         <div class="text-section">
-                            <h2 id="examples">Examples</h2>
-                            <p>
-                                All the examples are fully commented: do not hesitate to have a look
-                                at the source code.
-                            </p>
-                            <h3>Images</h3>
+                            <h2 id="examples">示例</h2>
+                            <p>所有的例子都有完整的注释：不要犹豫，看看源代码。</p>
+
+                            <h3>图片</h3>
                             <p>
                                 <a
                                     href="examples/vertex-coords-helper/index.html"
@@ -219,7 +210,7 @@
                                     >AJAX navigation with plane removal</a
                                 ><br />
                             </p>
-                            <h3>Videos</h3>
+                            <h3>视频</h3>
                             <p>
                                 <a
                                     href="examples/simple-video-plane/index.html"
@@ -234,7 +225,7 @@
                                     >Multiple video textures with a displacement shader</a
                                 ><br />
                             </p>
-                            <h3>Canvas</h3>
+                            <h3>画布</h3>
                             <p>
                                 <a
                                     href="examples/simple-canvas-plane/index.html"
@@ -249,7 +240,7 @@
                                     >Text planes using canvas</a
                                 >
                             </p>
-                            <h3>Post processing</h3>
+                            <h3>后期处理</h3>
                             <p>
                                 <a
                                     href="examples/post-processing-displacement/index.html"
@@ -270,7 +261,7 @@
                                     >Post processing scrolling wheel with custom transform origin</a
                                 >
                             </p>
-                            <h3>Advanced render targets usage</h3>
+                            <h3>高级使用</h3>
                             <p>
                                 <a
                                     href="examples/ping-pong-shading-flowmap/index.html"
@@ -291,7 +282,7 @@
                                     >GSAP click to fullscreen gallery</a
                                 >
                             </p>
-                            <h3>Custom scroll</h3>
+                            <h3>自定义滚动</h3>
                             <p>
                                 <a
                                     href="examples/multiple-planes-scroll-effect-custom-scroll/index.html"
@@ -303,35 +294,29 @@
                         </div>
 
                         <div class="text-section">
-                            <h2>Knowledge and technical requirements</h2>
+                            <h2>知识与技术要求</h2>
                             <p>
-                                It is easy to use but you will of course have to possess good basics
-                                of HTML, CSS and javascript.
+                                使用某个易用的WebGL库时，尽管其上手相对简单，但您当然需要具备扎实的HTML、CSS和JavaScript基础知识。
                             </p>
                             <p>
-                                If you've never heard about shaders, you may want to learn a bit
-                                more about them on
-                                <a
+                                如果您之前从未接触过着色器（shader），那么您可能需要通过例如<a
                                     href="https://thebookofshaders.com/"
                                     title="The Book of Shaders"
                                     target="_blank"
-                                    >The Book of Shaders</a
-                                >
-                                for example. You will have to understand what are the vertex and
-                                fragment shaders, the use of uniforms as well as the GLSL syntax
-                                basics.
+                                    >《 The Book of Shaders》</a
+                                >这样的资源学习更多相关知识。在使用过程中，您必须理解什么是顶点着色器和片段着色器，了解如何运用uniform变量以及掌握GLSL基本语法。
                             </p>
                         </div>
 
                         <div class="text-section">
-                            <h2>Installation</h2>
+                            <h2>安装</h2>
                             <div>
-                                <p>Using npm:</p>
+                                <p>使用 npm：</p>
 
                                 <div class="code">npm i curtainsjs</div>
                             </div>
                             <div>
-                                <p>Load ES modules:</p>
+                                <p>加载ES模块：</p>
 
                                 <div class="code">
                                     <span class="code-var">import</span> {<span class="code-tag"
@@ -342,17 +327,13 @@
                                     <span class="code-string">'curtainsjs'</span
                                     ><span class="code-var">;</span>
                                 </div>
-
                                 <p>
-                                    See the <a href="documentation.html">documentation</a> for a
-                                    complete list of all classes availables.
+                                    请参阅<a href="documentation.html">文档</a
+                                    >以获取所有可用类的完整列表。
                                 </p>
                             </div>
                             <div>
-                                <p>
-                                    In a browser, you can use the UMD files located in the 'dist'
-                                    directory:
-                                </p>
+                                <p>在浏览器中，您可以使用位于 dist 目录中的 UMD 文件：</p>
 
                                 <div class="code">
                                     <span class="code-tag">&lt;script</span> src=<span
@@ -393,109 +374,108 @@
                                 </div>
                             </div>
 
-                            <h3>Usage with React & Vue</h3>
+                            <h3>在 React & Vue 中使用</h3>
 
                             <div>
                                 <p>
-                                    Note that if you are using React or Vue, you might want to try
+                                    如果您使用 React 或 Vue，您可能需要尝试 curtains.js 官方的 React
+                                    和 Vue 包：
                                     <a
                                         href="https://github.com/martinlaxenaire/react-curtains"
                                         title="react-curtains"
                                         target="_blank"
                                         >react-curtains</a
                                     >
-                                    or
+                                    或
                                     <a
                                         href="https://github.com/martinlaxenaire/vue-curtains"
                                         title="vue-curtains"
                                         target="_blank"
                                         >vue-curtains</a
-                                    >, curtains.js official React and Vue packages.
+                                    >
                                 </p>
                             </div>
                         </div>
 
                         <div class="text-section">
-                            <h2>About</h2>
+                            <h2>关于</h2>
+                            <p>此库遵循MIT许可协议发布，这意味着个人和商业项目均可免费使用。</p>
                             <p>
-                                This library is released under the MIT license which means it is
-                                free to use for personnal and commercial projects.
-                            </p>
-                            <p>
-                                All images used in the examples were taken by
+                                示例中使用的所有图片均由
                                 <a
                                     href="https://marionbornaz.com/"
                                     title="Marion Bornaz"
                                     target="_blank"
                                     >Marion Bornaz</a
                                 >
-                                during the
+                                在
                                 <a
                                     href="https://www.miragefestival.com/"
                                     title="Mirage Festival"
                                     target="_blank"
-                                    >Mirage Festival</a
-                                >.
+                                    >Mirage Festival音乐节</a
+                                >
+                                期间拍摄。
                             </p>
                             <p>
-                                All examples video footages were shot by
+                                所有示例视频素材由
                                 <a
                                     href="https://analogueprod.com/"
                                     title="Analogue Production"
                                     target="_blank"
                                     >Analogue Production</a
-                                >.
+                                >
+                                制作提供。
                             </p>
                             <p>
-                                Many thanks to
+                                特别感谢
                                 <a
                                     href="https://webglfundamentals.org/"
                                     title="webglfundamentals.org"
                                     target="_blank"
                                     >webglfundamentals.org</a
                                 >
-                                tutorials which helped me a lot.
+                                上的教程，它们为我提供了极大的帮助。
                             </p>
                             <p>
-                                Author of this library is
+                                该库的作者是
                                 <a
                                     href="https://www.martin-laxenaire.fr/"
                                     title="Martin Laxenaire"
                                     target="_blank"
                                     >Martin Laxenaire</a
-                                >, a french creative front-end developper based in Lyon.<br />
-                                Found a bug ? Have questions ? Do not hesitate to
-                                <a href="mailto:martin.laxenaire@gmail.com" title="contact me"
-                                    >email me</a
-                                >,
-                                <a
+                                >，他是一位来自法国里昂的创意前端开发者。
+                                如果您发现任何错误、有任何问题，请随时通过<a
+                                    href="mailto:martin.laxenaire@gmail.com"
+                                    title="contact me"
+                                    >电子邮件与我联系</a
+                                >，或在<a
                                     href="https://github.com/martinlaxenaire/curtainsjs/issues"
                                     title="Fill an issue on Github"
-                                    >fill an issue on Github</a
-                                >
-                                or send me a tweet :
+                                    >GitHub上提交问题</a
+                                >，亦可发送推文至
                                 <a
                                     href="https://twitter.com/webdesign_ml"
                                     target="_blank"
                                     title="My twitter"
                                     >@webdesign_ml</a
-                                >.
+                                >。
                             </p>
                         </div>
 
                         <div id="showcase" class="text-section">
-                            <h2>Showcase</h2>
-
+                            <h2>展示</h2>
                             <p>
-                                Here you'll find websites that use curtains.js with their own custom
-                                shaders. You can also check all the
+                                在本部分，您将看到一些使用 curtains.js
+                                并结合自定义着色器的网站示例。<br /><br />
+                                同时，您还可以查看所有通过
                                 <a
                                     href="https://www.awwwards.com/websites/curtains/"
                                     title="Websites using curtains.js on Awwwards"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    >Awwwards' submitted websites using it</a
-                                >.
+                                    >Awwwards 提交并采用 curtains.js 的网站作品</a
+                                >。
                             </p>
 
                             <div class="websites-examples-gallery">
