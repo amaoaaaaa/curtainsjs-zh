@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | FXAAPass class</title>
+        <title>FXAAPass 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -157,7 +157,9 @@
                                         >
                                     </li>
                                     <li class="active">
-                                        <a href="fxaa-pass-class.html">FXAAPass</a>
+                                        <a href="fxaa-pass-class.html"
+                                            >FXAA抗锯齿通道（FXAAPass）</a
+                                        >
 
                                         <div class="api-submenu-content">
                                             <div class="api-submenu-title">
@@ -178,7 +180,7 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>FXAAPass class</h1>
+                                <h1>FXAAPass 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
@@ -191,23 +193,23 @@
 
                                 <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    The FXAAPass lets you easily add a
-                                    <strong>Fast Approximate Anti-Aliasing</strong> pass to your
-                                    scene.<br />
-                                    The FXAAPass class extends the
-                                    <a href="shader-pass-class.html">ShaderPass</a> class,
-                                    inheriting from all its methods and properties.
+                                    FXAAPass 类可以帮助您轻松地为场景添加<strong
+                                        >快速近似抗锯齿（Fast Approximate Anti-Aliasing,
+                                        FXAA）</strong
+                                    >效果。<br />
+                                    FXAAPass 类继承自
+                                    <a href="shader-pass-class.html">ShaderPass</a>
+                                    类，因此它也包含了 ShaderPass 类的所有方法和属性。
                                 </p>
                                 <p class="api-item-examples">
-                                    The fragment shader code used for that FXAA pass has been taken
-                                    from here:<br />
+                                    用于实现 FXAA 效果的片段着色器代码来源于以下链接：<br />
                                     <a
                                         href="https://github.com/spite/Wagner/blob/master/fragment-shaders/fxaa-fs.glsl"
                                         target="_blank"
                                         >https://github.com/spite/Wagner/blob/master/fragment-shaders/fxaa-fs.glsl</a
                                     >
                                 </p>
-                                <p>To create a FXAAPass, just use its constructor:</p>
+                                <p>要创建一个 FXAAPass 实例，请按照以下步骤操作：</p>
 
                                 <div class="code">
                                     <div class="code-block">
@@ -228,7 +230,7 @@
 
                                     <div>
                                         <div class="code-comment">
-                                            // create our FXAA pass using our curtains object
+                                            // 使用 curtains 对象来创建我们的 FXAA 渲染通道
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> fxaaPass =
@@ -242,20 +244,17 @@
                                 </div>
 
                                 <h2 id="parameters">参数</h2>
-
                                 <p>
-                                    To create a FXAAPass you will have to pass your curtains object
-                                    as the first parameter.<br />
-                                    You can add an additional parameter object in which you can pass
-                                    the following
+                                    若要创建一个 FXAAPass，您需要将 curtains
+                                    对象作为第一个参数传递。<br />
+                                    此外，您还可以添加一个额外的参数对象，在其中可以传递以下
                                     <a href="shader-pass-class.html#shader-pass-parameters"
-                                        >ShaderPass parameters</a
+                                        >ShaderPass参数</a
                                     >
-                                    options:
-                                    <strong
-                                        >clear, depth, depthTest, renderOrder, renderTarget,
+                                    选项：<strong
+                                        >clear、depth、depthTest、renderOrder、renderTarget,
                                         texturesOptions</strong
-                                    >.
+                                    >
                                 </p>
                             </div>
                         </div>
