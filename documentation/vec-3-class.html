@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | Vec3 class</title>
+        <title>Vec3 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -281,7 +281,7 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>Vec3 class</h1>
+                                <h1>Vec3 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
@@ -293,19 +293,17 @@
                                 </div>
 
                                 <h2 id="basic-usage">基本使用</h2>
-                                <p>
-                                    Vec3 is the class used for all 3 dimensions vector
-                                    manipulations.
-                                </p>
+                                <p>Vec3 是用于所有 3 维向量操作的类。</p>
+
                                 <h3>创建</h3>
                                 <p>
-                                    To create a new Vec3, just use its constructor.<br />
-                                    If used without parameters, it will create a null vector Vec3
-                                    with X, Y and Z components equal to 0.
+                                    要创建一个新的 Vec3，只需使用它的构造函数。<br />
+                                    如果不带参数使用，它将创建一个 X、Y 和 Z 分量等于 0 的空向量
+                                    Vec3。
                                 </p>
 
                                 <div class="code">
-                                    <div class="code-comment">// create two new Vec3 vectors</div>
+                                    <div class="code-comment">// X、Y 和 Z 分量等于 0 的空向量</div>
                                     <div class="code-block">
                                         <span class="code-var">const</span> nullVector =
                                         <span class="code-var">new</span>
@@ -328,15 +326,12 @@
                                     </div>
                                 </div>
 
-                                <h3>Use chaining</h3>
-                                <p>
-                                    Since most of the Vec3 methods return the vector itself, you can
-                                    use chaining:
-                                </p>
+                                <h3>链式调用</h3>
+                                <p>由于大多数 Vec3 方法返回向量本身，因此您可以进行链式调用：</p>
 
                                 <div class="code">
                                     <div class="code-comment">
-                                        // create a new Vec3 vector and chain methods
+                                        // 创建一个新的 Vec3 向量并且链式调用
                                     </div>
 
                                     <div>
@@ -350,15 +345,15 @@
                                     </div>
                                 </div>
 
-                                <h3>onChange callback</h3>
+                                <h3>onChange 回调</h3>
                                 <p>
-                                    Vec3 class is using getters and setters, allowing to execute a
-                                    function each time one of the vector components changes:
+                                    Vec3 类使用 getter 和
+                                    setter，允许每次向量分量之一发生变化时执行一个函数：
                                 </p>
 
                                 <div class="code">
                                     <div class="code-comment">
-                                        // create a new Vec3 vector and listen to its changes
+                                        // 创建一个新的 Vec3 向量并监听其变化
                                     </div>
 
                                     <div>
@@ -371,8 +366,7 @@
 
                                     <div class="code-indent">
                                         <div class="code-comment">
-                                            // one of the vector component just changed, do
-                                            something...
+                                            // 向量的分量之一刚刚改变，做一些事情...
                                         </div>
                                         <div>
                                             <span class="code-var">const</span> normalizedVector =
@@ -384,17 +378,13 @@
                                     </div>
                                     <div class="code-block">})<span class="code-var">;</span></div>
 
-                                    <div class="code-comment">
-                                        // this will trigger our onChange callback
-                                    </div>
+                                    <div class="code-comment">// 这将触发我们的 onChange 回调</div>
                                     <div class="code-block">
                                         vector.<span class="code-property">x</span> =
                                         <span class="code-number">1</span
                                         ><span class="code-var">;</span>
                                     </div>
-                                    <div class="code-comment">
-                                        // be careful, this will trigger onChange again!
-                                    </div>
+                                    <div class="code-comment">// 注意，这会再次触发 onChange！</div>
                                     <div>
                                         vector.<span class="code-property">y</span> =
                                         <span class="code-number">2</span
@@ -407,29 +397,23 @@
                                 <ul class="api-item-parameters">
                                     <li>
                                         <span class="api-item-parameter-label"> X </span>
-                                        <span class="api-item-parameter-type">
-                                            float, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> float，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            value along X axis. Default to 0.
+                                            沿 X 轴的值。默认为 0。
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> Y </span>
-                                        <span class="api-item-parameter-type">
-                                            float, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> float，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            value along Y axis. Default to 0.
+                                            沿 Y 轴的值。默认为 0。
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> Z </span>
-                                        <span class="api-item-parameter-type">
-                                            float, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> float，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            value along Z axis. Default to 0.
+                                            沿 Z 轴的值。默认为 0。
                                         </span>
                                     </li>
                                 </ul>
@@ -441,21 +425,21 @@
                                             <strong>x</strong> (float):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Value along X axis.</p>
+                                        <p>沿 X 轴的值。</p>
                                     </li>
                                     <li id="y-value">
                                         <p>
                                             <strong>y</strong> (float):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Value along Y axis.</p>
+                                        <p>沿 Y 轴的值。</p>
                                     </li>
                                     <li id="z-value">
                                         <p>
                                             <strong>z</strong> (float):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Value along Z axis.</p>
+                                        <p>沿 Z 轴的值。</p>
                                     </li>
                                 </ul>
 
@@ -466,7 +450,7 @@
                                             <strong>add</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Adds a vector to this vector.</p>
+                                        <p>把一个向量与当前向量相加</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -476,11 +460,11 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to add
+                                                    需要相加的向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> this vector after addition.</p>
+                                        <p><strong>返回值：</strong>相加后的向量</p>
                                     </li>
 
                                     <li id="add-scalar">
@@ -488,7 +472,7 @@
                                             <strong>addScalar</strong>(scalar):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Adds a scalar to this vector.</p>
+                                        <p>给每个分量分别加上一个值</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -496,11 +480,11 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    number to add
+                                                    相加的值
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> this vector after addition.</p>
+                                        <p><strong>返回值：</strong>相加后的向量</p>
                                     </li>
 
                                     <li id="apply-mat-4">
@@ -508,7 +492,7 @@
                                             <strong>applyMat4</strong>(matrix):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Apply a 4 dimensions Mat4 matrix to this vector.</p>
+                                        <p>将一个四维 Mat4 矩阵应用于此向量。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -518,14 +502,11 @@
                                                     <a href="mat-4-class.html">Mat4</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    matrix to apply
+                                                    要应用的矩阵
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after matrix
-                                            application.
-                                        </p>
+                                        <p><strong>返回值：</strong>应用矩阵后得到的此向量。</p>
                                     </li>
 
                                     <li id="apply-quat">
@@ -533,10 +514,7 @@
                                             <strong>applyQuat</strong>(quaternion):
                                             <span class="api-item-version">v7.1</span>
                                         </p>
-                                        <p>
-                                            Apply a quaternion (rotation in 3D space) to this
-                                            vector.
-                                        </p>
+                                        <p>将一个四元数（三维空间中的旋转）应用到此向量上。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -546,13 +524,12 @@
                                                     <a href="quat-class.html">Quat</a> class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    quaternion to apply
+                                                    要应用的四元数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> this vector after quaternion
-                                            application.
+                                            <strong>返回值：</strong>应用四元数变换后得到的此向量。
                                         </p>
                                     </li>
 
@@ -561,8 +538,8 @@
                                             <strong>clone</strong>():
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Clone this vector.</p>
-                                        <p><strong>returns:</strong> new cloned vector.</p>
+                                        <p>克隆此向量。</p>
+                                        <p><strong>返回值：</strong>新创建的克隆向量</p>
                                     </li>
 
                                     <li id="copy">
@@ -570,7 +547,7 @@
                                             <strong>copy</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Copy a vector into this vector.</p>
+                                        <p>将一个向量复制到此向量中。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -580,11 +557,11 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to copy
+                                                    要复制的向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> this vector after copy.</p>
+                                        <p><strong>返回值：</strong>复制操作后的此向量。</p>
                                     </li>
 
                                     <li id="dot">
@@ -592,7 +569,7 @@
                                             <strong>dot</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Calculates the dot product of 2 vectors.</p>
+                                        <p>计算两个向量的点积（内积）。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -602,13 +579,12 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to use for dot product
+                                                    用于计算点积的向量
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> a float representing the dot
-                                            product of the 2 vectors.
+                                            <strong>返回值：</strong>代表两个向量点积结果的浮点数。
                                         </p>
                                     </li>
 
@@ -617,7 +593,7 @@
                                             <strong>equals</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Checks if 2 vectors are equal.</p>
+                                        <p>检查两个向量是否相等。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -627,13 +603,13 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to compare
+                                                    用于比较的向量
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> true if the 2 vectors are
-                                            equals, false otherwise.
+                                            <strong>返回值：</strong>如果两个向量相等则返回
+                                            true，否则返回 false。
                                         </p>
                                     </li>
 
@@ -642,7 +618,7 @@
                                             <strong>max</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Apply max values to this vector.</p>
+                                        <p>将最大值应用到此向量上。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -652,14 +628,11 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector representing max values
+                                                    其他向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> vector with max values
-                                            applied.
-                                        </p>
+                                        <p><strong>返回值：</strong>应用了最大值的新向量。</p>
                                     </li>
 
                                     <li id="min">
@@ -667,7 +640,7 @@
                                             <strong>min</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Apply min values to this vector.</p>
+                                        <p>将最小值应用到此向量上。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -677,14 +650,11 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector representing min values
+                                                    其他向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> vector with min values
-                                            applied.
-                                        </p>
+                                        <p><strong>返回值：</strong>应用了最小值的新向量。</p>
                                     </li>
 
                                     <li id="multiply">
@@ -692,7 +662,7 @@
                                             <strong>multiply</strong>(vector):
                                             <span class="api-item-version">v7.1</span>
                                         </p>
-                                        <p>Multiplies a vector with this vector.</p>
+                                        <p>将一个向量与该向量相乘。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -702,14 +672,11 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to use for multiplication
+                                                    用于相乘的向量
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after
-                                            multiplication.
-                                        </p>
+                                        <p><strong>返回值：</strong>相乘后的此向量。</p>
                                     </li>
 
                                     <li id="multiply-scalar">
@@ -717,7 +684,7 @@
                                             <strong>multiplyScalar</strong>(scalar):
                                             <span class="api-item-version">v7.1</span>
                                         </p>
-                                        <p>Multiplies a scalar with this vector.</p>
+                                        <p>将一个标量与该向量相乘。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -725,14 +692,11 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    number to use for multiplication
+                                                    用于相乘的数字
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after
-                                            multiplication.
-                                        </p>
+                                        <p><strong>返回值：</strong>相乘后的此向量。</p>
                                     </li>
 
                                     <li id="normalize">
@@ -740,8 +704,8 @@
                                             <strong>normalize</strong>():
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Normalize this vector.</p>
-                                        <p><strong>returns:</strong> normalized vector.</p>
+                                        <p>规范化（单位化）此向量。</p>
+                                        <p><strong>返回值：</strong>规范化后的向量。</p>
                                     </li>
 
                                     <li id="project">
@@ -749,7 +713,7 @@
                                             <strong>project</strong>(camera):
                                             <span class="api-item-version">v7.1</span>
                                         </p>
-                                        <p>Project 3D coordinate to 2D point.</p>
+                                        <p>将三维坐标投影到二维点上。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -760,15 +724,11 @@
                                                     <a href="plane-class.html#camera">camera</a>.
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    camera to use to project this vector from 3D to
-                                                    2D space.
+                                                    将此向量从三维空间投影到二维空间所使用的相机。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after having been
-                                            projected.
-                                        </p>
+                                        <p><strong>返回值：</strong>投影后的此向量。</p>
                                     </li>
 
                                     <li id="sanitize-nan-values-with">
@@ -777,8 +737,8 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            Merges this vector with a vector when values are NaN.
-                                            Mostly used internally to avoid errors.
+                                            当值为 NaN
+                                            时，将此向量与另一个向量合并。主要用于内部避免错误。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -789,12 +749,12 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to use for sanitization (i.e. set this
-                                                    vector value if original vector value is NaN).
+                                                    用于清理操作的向量（即当原始向量值为 NaN
+                                                    时，用这个向量的值替代）。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p><strong>returns:</strong> sanitized vector.</p>
+                                        <p><strong>返回值：</strong>清理过的向量。</p>
                                     </li>
 
                                     <li id="set">
@@ -802,33 +762,31 @@
                                             <strong>set</strong>(x, y, z):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Sets the vector from values.</p>
+                                        <p>通过给定值设置向量。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label"> x </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    X component of our vector.
+                                                    设置 X 向量的值
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="api-item-parameter-label"> y </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Y component of our vector.
+                                                    设置 Y 向量的值
                                                 </span>
                                             </li>
                                             <li>
                                                 <span class="api-item-parameter-label"> z </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Z component of our vector.
+                                                    设置 Z 向量的值
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after being set.
-                                        </p>
+                                        <p><strong>返回值：</strong>设置后的新向量。</p>
                                     </li>
 
                                     <li id="sub">
@@ -836,7 +794,7 @@
                                             <strong>sub</strong>(vector):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Subtracts a vector from this vector.</p>
+                                        <p>从该向量中减去另一个向量。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -846,13 +804,11 @@
                                                     Vec3 class object
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    vector to use for subtraction.
+                                                    用于相减的向量。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after subtraction.
-                                        </p>
+                                        <p><strong>返回值：</strong>减法操作后的此向量。</p>
                                     </li>
 
                                     <li id="sub-scalar">
@@ -860,7 +816,7 @@
                                             <strong>subScalar</strong>(scalar):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>Subtracts a scalar to this vector.</p>
+                                        <p>从该向量中减去一个标量值。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -868,13 +824,11 @@
                                                 </span>
                                                 <span class="api-item-parameter-type"> float </span>
                                                 <span class="api-item-parameter-desc">
-                                                    number to use for subtraction.
+                                                    用于相减的数字。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after subtraction.
-                                        </p>
+                                        <p><strong>返回值：</strong>减法操作后的此向量。</p>
                                     </li>
 
                                     <li id="unproject">
@@ -882,7 +836,7 @@
                                             <strong>unproject</strong>(camera):
                                             <span class="api-item-version">v7.1</span>
                                         </p>
-                                        <p>Unproject 2D point to 3D coordinate.</p>
+                                        <p>将二维点反投影到三维坐标上。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -893,15 +847,11 @@
                                                     <a href="plane-class.html#camera">camera</a>.
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    camera to use to unproject this vector from 2D
-                                                    to 3D space.
+                                                    将此向量从二维空间反投影到三维空间所使用的相机。
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> this vector after having been
-                                            unprojected.
-                                        </p>
+                                        <p><strong>返回值：</strong>反投影后的此向量。</p>
                                     </li>
                                 </ul>
 
@@ -912,10 +862,7 @@
                                             <strong>onChange</strong>(callback):
                                             <span class="api-item-version">v8.0</span>
                                         </p>
-                                        <p>
-                                            Execute a function each time the x, y or z component of
-                                            the vector changed.
-                                        </p>
+                                        <p>每次向量的 x、y 或 z 分量发生变化时执行一个函数。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -925,14 +872,11 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute.
+                                                    回调函数
                                                 </span>
                                             </li>
                                         </ul>
-                                        <p>
-                                            <strong>returns:</strong> your Vec3 object, allowing it
-                                            to be chainable.
-                                        </p>
+                                        <p><strong>返回值：</strong>当前的 Vec3 对象本身</p>
                                     </li>
                                 </ul>
                             </div>
