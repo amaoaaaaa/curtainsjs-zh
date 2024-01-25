@@ -8,7 +8,7 @@
         />
 
         <!-- Metas -->
-        <title>curtains.js | Documentation | TextureLoader class</title>
+        <title>TextureLoader 类 - curtains.js 中文网</title>
         <meta
             name="description"
             content="curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes."
@@ -258,7 +258,7 @@
                     <div id="api-content">
                         <div class="api-content-inner">
                             <div class="inner-section">
-                                <h1>TextureLoader class</h1>
+                                <h1>TextureLoader 类</h1>
 
                                 <div class="api-item-examples">
                                     <a
@@ -271,19 +271,18 @@
 
                                 <h2 id="basic-usage">基本使用</h2>
                                 <p>
-                                    The TextureLoader is specifically useful if you want to create
-                                    textures before creating any Planes or ShaderPasses objects.<br />
-                                    You can for example use a TextureLoader to
-                                    <strong>preload</strong> all your website's
-                                    <strong>textures to the GPU</strong> while displaying a loader,
-                                    and then run your app without having to create any texture
-                                    afterwards.
+                                    TextureLoader
+                                    特别适用于在创建平面（Planes）或着色器通道（ShaderPasses）对象之前加载纹理资源。
                                 </p>
-                                <h3>Creation</h3>
                                 <p>
-                                    To create a new texture loader, just use its constructor. You'll
-                                    the be able to load medias and create textures by using its
-                                    various load methods:
+                                    您可以使用 TextureLoader
+                                    <strong>预加载</strong
+                                    >网站中所有需要用到的<strong>纹理至GPU</strong>，同时展示加载进度指示器。这样一来，在预加载完成后启动应用程序时，就无需再为这些纹理资源创建新的加载实例，从而实现更快的应用初始化和流畅的用户体验。
+                                </p>
+
+                                <h3>创建</h3>
+                                <p>
+                                    要创建一个新的纹理加载器，只需使用其构造函数。之后您将能够通过它的各种加载方法来加载媒体并创建纹理：
                                 </p>
 
                                 <div class="code">
@@ -304,9 +303,7 @@
                                     </div>
 
                                     <div class="code-block">
-                                        <div class="code-comment">
-                                            // create a new texture loader
-                                        </div>
+                                        <div class="code-comment">// 创建一个新的纹理加载器</div>
                                         <div>
                                             <span class="code-var">const</span> loader =
                                             <span class="code-var">new</span>
@@ -315,7 +312,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="code-comment">// load an image with the loader</div>
+                                    <div class="code-comment">// 加载一张图片</div>
 
                                     <div class="code-block">
                                         <div>
@@ -346,8 +343,7 @@
                                         {
                                         <div class="code-indent">
                                             <div class="code-comment">
-                                                // texture options (we're only setting its sampler
-                                                name here)
+                                                // 纹理选项（我们仅在此处设置其采样器名称）
                                             </div>
                                             <span class="code-property">sampler</span>:
                                             <span class="code-string">"uTexture"</span>
@@ -356,16 +352,11 @@
                                     </div>
 
                                     <div class="code-indent">
-                                        <div class="code-comment">
-                                            // texture has been successfully created, you can safely
-                                            use it
-                                        </div>
+                                        <div class="code-comment">// 纹理创建成功，做点什么</div>
                                     </div>
                                     <div>}, (image, error) => {</div>
                                     <div class="code-indent">
-                                        <div class="code-comment">
-                                            // there has been an error while loading the image
-                                        </div>
+                                        <div class="code-comment">// 纹理创建失败的处理</div>
                                     </div>
                                     <div>})<span class="code-var">;</span></div>
                                 </div>
@@ -379,17 +370,15 @@
                                             Curtains class object
                                         </span>
                                         <span class="api-item-parameter-desc">
-                                            Your Curtains class object.
+                                            Curtains 实例对象
                                         </span>
                                     </li>
                                     <li>
                                         <span class="api-item-parameter-label"> crossOrigin </span>
-                                        <span class="api-item-parameter-type">
-                                            string, optional
-                                        </span>
+                                        <span class="api-item-parameter-type"> string，可选 </span>
                                         <span class="api-item-parameter-desc">
-                                            defines the crossOrigin process to load images if any
-                                            (default to "anonymous").
+                                            如果加载图片发生跨域时使用的跨域策略，默认为
+                                            "anonymous"。
                                         </span>
                                     </li>
                                 </ul>
@@ -401,7 +390,7 @@
                                             <strong>crossOrigin</strong> (string):
                                             <span class="api-item-version">v7.0</span>
                                         </p>
-                                        <p>The cross origin process used to load the medias.</p>
+                                        <p>用于加载媒体资源的跨域处理策略。</p>
                                     </li>
                                     <li id="elements">
                                         <p>
@@ -410,9 +399,7 @@
                                             ><span class="api-item-warning">只读</span>
                                         </p>
                                         <p>
-                                            An array containing all the loading and loaded elements.
-                                            An element is an object containing a texture, its source
-                                            and the event listeners used to load that source.
+                                            包含所有加载中和已加载元素的数组。每个元素都是一个包含纹理、其源以及用于加载该源的事件监听器的对象。
                                         </p>
                                     </li>
                                     <li id="gl">
@@ -421,7 +408,7 @@
                                             <span class="api-item-version">v7.0</span
                                             ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Our WebGL context.</p>
+                                        <p>WebGL 上下文</p>
                                     </li>
                                     <li id="renderer">
                                         <p>
@@ -429,7 +416,7 @@
                                             <span class="api-item-version">v7.0</span
                                             ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>The renderer created by our curtains object.</p>
+                                        <p>由 curtains 对象创建的渲染器实例。</p>
                                     </li>
                                     <li id="type">
                                         <p>
@@ -437,7 +424,7 @@
                                             <span class="api-item-version">v7.0</span
                                             ><span class="api-item-warning">只读</span>
                                         </p>
-                                        <p>Class object type: "TextureLoader".</p>
+                                        <p>类的对象类型： "TextureLoader"。</p>
                                     </li>
                                 </ul>
 
@@ -450,8 +437,10 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes a canvas HTML element and creates a
-                                            <a href="texture-class.html">Texture</a> using it.
+                                            此函数接受一个HTML canvas元素，并使用它来创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -462,7 +451,7 @@
                                                     HTML canvas element
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a HTML canvas element to load.
+                                                    要加载的HTML canvas元素。
                                                 </span>
                                             </li>
                                             <li>
@@ -470,14 +459,12 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    用于该纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >。
                                                 </span>
                                             </li>
                                             <li>
@@ -485,10 +472,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    当源加载成功时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -500,32 +487,30 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/multiple-planes-canvas-text/index.html"
                                                 title="Text planes using canvas"
                                                 target="_blank"
                                                 >Text planes using canvas</a
                                             >
-                                            example.
                                         </p>
                                     </li>
 
@@ -536,9 +521,11 @@
                                             <span class="api-item-version">v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of canvas HTML elements and
-                                            creates a <a href="texture-class.html">Texture</a> for
-                                            each of them.
+                                            此函数接收一个HTML
+                                            canvas元素数组，并为其中的每一个canvas元素创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -549,8 +536,7 @@
                                                     array or collection of HTML canvas elements
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array or collection of HTML canvas elements
-                                                    to load.
+                                                    要加载的一组HTML canvas元素。
                                                 </span>
                                             </li>
                                             <li>
@@ -558,14 +544,12 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to those textures. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    用于所有这些纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >。
                                                 </span>
                                             </li>
                                             <li>
@@ -573,11 +557,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    对于每个源成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -589,18 +572,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -615,9 +597,11 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes an image HTML element (or image
-                                            source URL) and creates a
-                                            <a href="texture-class.html">Texture</a> using it.
+                                            接收一个HTML图像元素（或图像源URL），并使用它创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >
+                                            对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -628,8 +612,7 @@
                                                     HTML image element or string
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a HTML image element or image source URL to
-                                                    load.
+                                                    图片元素或图片URL
                                                 </span>
                                             </li>
                                             <li>
@@ -637,14 +620,12 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到此纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -652,10 +633,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    当源加载成功时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -667,18 +648,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -688,10 +668,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(image, error), optional
+                                                    function(image, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on source load error.
+                                                    在源加载错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -702,7 +682,7 @@
                                                             HTML image element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The image you were trying to load
+                                                            尝试加载的图片
                                                         </span>
                                                     </li>
                                                     <li>
@@ -713,7 +693,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -728,10 +708,10 @@
                                             <span class="api-item-version">v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of image HTML elements (or
-                                            images sources URL) and creates a
-                                            <a href="texture-class.html">Texture</a> for each of
-                                            them.
+                                            接收一个HTML图像元素数组（或图像源URL数组），并为其中的每个元素创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -743,8 +723,7 @@
                                                     strings
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array or collection of HTML image elements or
-                                                    images sources URL to load.
+                                                    图片元素或图片URL的数组
                                                 </span>
                                             </li>
                                             <li>
@@ -752,14 +731,12 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to those textures. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    用于所有这些纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >。
                                                 </span>
                                             </li>
                                             <li>
@@ -767,11 +744,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    对于每个源成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -783,18 +759,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -804,10 +779,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(image, error), optional
+                                                    function(image, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each source load error.
+                                                    在每个源加载错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -818,7 +793,7 @@
                                                             HTML image element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The image you were trying to load
+                                                            尝试加载的图片
                                                         </span>
                                                     </li>
                                                     <li>
@@ -829,21 +804,20 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息
                                                         </span>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                         <p class="api-item-examples">
-                                            <strong>Examples:</strong> used in
+                                            <strong>示例：</strong>
                                             <a
                                                 href="examples/asynchronous-textures/index.html"
                                                 title="Asynchronous textures loading"
                                                 target="_blank"
                                                 >Asynchronous textures loading</a
                                             >
-                                            example.
                                         </p>
                                     </li>
 
@@ -854,9 +828,10 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes a source element (or source URL) and
-                                            creates a <a href="texture-class.html">Texture</a> using
-                                            it.
+                                            接受一个源元素（或源URL），并使用它来创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -868,8 +843,7 @@
                                                     string
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an image, canvas, video HTML element or source
-                                                    URL to load.
+                                                    要加载的图像、canvas、视频HTML元素或源URL。
                                                 </span>
                                             </li>
                                             <li>
@@ -877,14 +851,12 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到此纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -892,10 +864,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    当源加载成功时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -907,18 +879,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -928,10 +899,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(source, error), optional
+                                                    function(source, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on source load error.
+                                                    在源加载错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -943,7 +914,7 @@
                                                             element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The source you were trying to load
+                                                            尝试加载但失败的源元素。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -954,7 +925,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -969,9 +940,10 @@
                                             <span class="api-item-version">v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of source elements (or
-                                            sources URL) and creates
-                                            <a href="texture-class.html">Textures</a> using them.
+                                            此函数接受一个源元素数组（或源URL数组），并使用这些源创建多个<a
+                                                href="texture-class.html"
+                                                >Textures</a
+                                            >对象。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -983,8 +955,7 @@
                                                     or videos HTML elements or strings
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array of image, canvas or video HTML elements
-                                                    or sources URL to load.
+                                                    要加载的一组图像、canvas 或视频HTML元素或源URL。
                                                 </span>
                                             </li>
                                             <li>
@@ -992,14 +963,12 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到此纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -1007,11 +976,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    对于每个源成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1023,18 +991,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1044,10 +1011,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(source, error), optional
+                                                    function(source, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each source load error.
+                                                    在每个源加载错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1059,7 +1026,7 @@
                                                             element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The source you were trying to load
+                                                            尝试加载但失败的源元素。
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1070,7 +1037,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1085,9 +1052,10 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function takes a video HTML element (or video
-                                            source URL) and creates a
-                                            <a href="texture-class.html">Texture</a> using it.
+                                            此函数接收一个视频HTML元素（或视频源URL），利用它创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >对象
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1098,8 +1066,7 @@
                                                     HTML video element or string
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    a HTML video element or video source URL to
-                                                    load.
+                                                    HTML视频元素，或者是视频源的URL。
                                                 </span>
                                             </li>
                                             <li>
@@ -1107,14 +1074,12 @@
                                                     textureOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to that texture. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    应用到此纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >部分。
                                                 </span>
                                             </li>
                                             <li>
@@ -1122,10 +1087,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on successful source load.
+                                                    当源加载成功时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1137,18 +1102,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1158,10 +1122,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(video, error), optional
+                                                    function(video, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on source load error.
+                                                    在源加载错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1172,7 +1136,7 @@
                                                             HTML video element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The video you were trying to load
+                                                            尝试加载的视频
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1183,7 +1147,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1198,10 +1162,11 @@
                                             <span class="api-item-version">v7.1</span>
                                         </p>
                                         <p>
-                                            This function takes an array of video HTML elements (or
-                                            videos sources URL) and creates a
-                                            <a href="texture-class.html">Texture</a> for each of
-                                            them.
+                                            接受视频 HTML 元素（或视频源
+                                            URL）数组并为每个元素创建一个<a
+                                                href="texture-class.html"
+                                                >Texture</a
+                                            >
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -1213,8 +1178,8 @@
                                                     strings
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    an array or collection of HTML video elements or
-                                                    videos sources URL to load.
+                                                    要加载的 HTML 视频元素或视频源 URL
+                                                    的数组或集合。
                                                 </span>
                                             </li>
                                             <li>
@@ -1222,14 +1187,12 @@
                                                     texturesOptions
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    object, optional
+                                                    object，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Default options to apply to those textures. See
-                                                    the Texture class
-                                                    <a href="texture-class.html#parameters"
-                                                        >parameters</a
-                                                    >.
+                                                    用于所有这些纹理的默认选项。请参阅 Texture 类的
+                                                    <a href="texture-class.html#parameters">参数</a
+                                                    >。
                                                 </span>
                                             </li>
                                             <li>
@@ -1237,11 +1200,10 @@
                                                     successCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(texture), optional
+                                                    function(texture)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each successful source
-                                                    load.
+                                                    对于每个源成功加载时执行的回调函数
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1253,18 +1215,17 @@
                                                             class object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            newly created texture. You'll have
-                                                            access to the textures
+                                                            新创建的纹理对象。在这里，您可以访问到纹理对象的
                                                             <a
                                                                 href="texture-class.html#on-source-loaded"
                                                                 >onSourceLoaded</a
                                                             >
-                                                            and
+                                                            和
                                                             <a
                                                                 href="texture-class.html#on-source-uploaded"
                                                                 >onSourceUploaded</a
                                                             >
-                                                            callbacks here.
+                                                            回调方法。
                                                         </span>
                                                     </li>
                                                 </ul>
@@ -1274,10 +1235,10 @@
                                                     errorCallback
                                                 </span>
                                                 <span class="api-item-parameter-type">
-                                                    function(video, error), optional
+                                                    function(video, error)，可选
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    Callback executed on each source load error.
+                                                    在每个源加载错误时执行的回调函数。
                                                 </span>
                                                 <ul class="api-item-parameters-inner-list">
                                                     <li>
@@ -1288,7 +1249,7 @@
                                                             HTML video element
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            The video you were trying to load
+                                                            尝试加载的视频
                                                         </span>
                                                     </li>
                                                     <li>
@@ -1299,7 +1260,7 @@
                                                             object
                                                         </span>
                                                         <span class="api-item-parameter-desc">
-                                                            Error thrown
+                                                            抛出的错误信息
                                                         </span>
                                                     </li>
                                                 </ul>
