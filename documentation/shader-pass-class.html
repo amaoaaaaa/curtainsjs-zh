@@ -2230,17 +2230,14 @@
                                     </li>
                                 </ul>
 
-                                <h2 id="events">Events</h2>
+                                <h2 id="events">事件</h2>
                                 <ul>
                                     <li id="on-after-render">
                                         <p>
                                             <strong>onAfterRender</strong>(callback):
                                             <span class="api-item-version">v5.0</span>
                                         </p>
-                                        <p>
-                                            This function will be called just after your shader pass
-                                            has been drawn.
-                                        </p>
+                                        <p>此函数将在您的着色器通道绘制完成后被调用。</p>
                                         <ul class="api-item-parameters">
                                             <li>
                                                 <span class="api-item-parameter-label">
@@ -2250,13 +2247,13 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute.
+                                                    回调函数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> your ShaderPass object,
-                                            allowing it to be chainable.
+                                            <strong>返回值：</strong>你的 ShaderPass
+                                            对象，这使得它可以进行链式调用。
                                         </p>
                                     </li>
                                     <li id="on-after-resize">
@@ -2265,8 +2262,7 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            This function will be called each time your container
-                                            has been resized, after everything has been updated.
+                                            这个函数会在每次你的container完成resize，并且所有内容更新完毕后被调用。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2277,13 +2273,13 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute.
+                                                    回调函数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> your ShaderPass object,
-                                            allowing it to be chainable.
+                                            <strong>返回值：</strong>你的 ShaderPass
+                                            对象，这使得它可以进行链式调用。
                                         </p>
                                     </li>
                                     <li id="on-error">
@@ -2292,9 +2288,7 @@
                                             <span class="api-item-version">v7.0</span>
                                         </p>
                                         <p>
-                                            This function is called if there's an error while
-                                            instancing your shader pass, usually because the shaders
-                                            compilation failed.
+                                            当在实例化着色器通道时出现错误时，会调用此函数。这通常是因为着色器编译失败所导致的。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2305,13 +2299,13 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute.
+                                                    回调函数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> your ShaderPass object,
-                                            allowing it to be chainable.
+                                            <strong>返回值：</strong>你的 ShaderPass
+                                            对象，这使得它可以进行链式调用。
                                         </p>
                                         <p class="api-item-examples"></p>
                                     </li>
@@ -2321,11 +2315,7 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            This function will be fired each time a source element
-                                            (either an image, a canvas or a video) of the shader
-                                            pass has been loaded and is ready to display. You'll
-                                            have access here to the newly created texture. Useful to
-                                            handle a loader or manipulate the texture.
+                                            每当着色器通道的源元素（无论是图像、画布还是视频）加载完毕并准备好显示时，此函数将被触发。在这里，您可以访问到新创建的纹理，这对于处理加载器或操作纹理非常有用。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2336,14 +2326,13 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute, with the newly created
-                                                    texture passed as parameter.
+                                                    需要执行的函数，新创建的纹理将会作为参数传递给该函数。
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> your ShaderPass object,
-                                            allowing it to be chainable.
+                                            <strong>返回值：</strong>你的 ShaderPass
+                                            对象，这使得它可以进行链式调用。
                                         </p>
                                         <p class="api-item-examples">
                                             <strong>示例：</strong>
@@ -2353,7 +2342,6 @@
                                                 target="_blank"
                                                 >Post processing displacement effect</a
                                             >
-                                            example.
                                         </p>
                                     </li>
                                     <li id="on-ready">
@@ -2362,8 +2350,7 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            This function will be called once our shader pass is all
-                                            set up and ready to be drawn.<br />
+                                            当我们的着色器通道完全设置完毕并准备好进行绘制时，此函数将会被调用。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2374,13 +2361,13 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute.
+                                                    回调函数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> your ShaderPass object,
-                                            allowing it to be chainable.
+                                            <strong>返回值：</strong>你的 ShaderPass
+                                            对象，这使得它可以进行链式调用。
                                         </p>
                                         <p class="api-item-examples">
                                             <strong>示例：</strong>
@@ -2390,7 +2377,6 @@
                                                 target="_blank"
                                                 >Post processing displacement effect</a
                                             >
-                                            example.
                                         </p>
                                     </li>
                                     <li id="on-render">
@@ -2399,9 +2385,8 @@
                                             <span class="api-item-version">v3.0</span>
                                         </p>
                                         <p>
-                                            This function will be triggered for each shader pass at
-                                            each requestAnimationFrame call. Useful to update a time
-                                            uniform.
+                                            此函数会在每次调用requestAnimationFrame时，针对每个着色器通道触发执行。它的用途在于在每一次渲染循环中更新那些随时间变化的
+                                            uniforms（统一变量）。
                                         </p>
                                         <ul class="api-item-parameters">
                                             <li>
@@ -2412,13 +2397,13 @@
                                                     function
                                                 </span>
                                                 <span class="api-item-parameter-desc">
-                                                    function to execute.
+                                                    回调函数
                                                 </span>
                                             </li>
                                         </ul>
                                         <p>
-                                            <strong>returns:</strong> your ShaderPass object,
-                                            allowing it to be chainable.
+                                            <strong>返回值：</strong>你的 ShaderPass
+                                            对象，这使得它可以进行链式调用。
                                         </p>
                                         <p class="api-item-examples">
                                             <strong>示例：</strong>
@@ -2427,15 +2412,13 @@
                                                 title="Post processing displacement effect"
                                                 target="_blank"
                                                 >Post processing displacement effect</a
-                                            >
-                                            and
+                                            >，
                                             <a
                                                 href="examples/post-processing-scroll-effect/index.html"
                                                 title="Post processing multiple passes"
                                                 target="_blank"
                                                 >Post processing multiple passes</a
                                             >
-                                            examples.
                                         </p>
                                     </li>
                                 </ul>
