@@ -33,15 +33,16 @@ jobs:
         uses: actions/checkout@v4
       - name: 配置页面
         uses: actions/configure-pages@v4
-      - name: 把 documentation 和 examples 合并到同一个文件夹 _merged 中
+      - name: 把需要的文件放到 _files 文件夹中
         run: |
-          mkdir _merged
-          cp -r ./documentation/* _merged/
-          cp -r ./examples/* _merged/
-      - name: 上传 _merged 文件夹
+          mkdir _files
+          cp -r ./src _files/
+          cp -r ./documentation _files/
+          cp -r ./examples _files/
+      - name: 上传 _files 文件夹
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './_merged'
+          path: './_files'
       - name: 部署到 GitHub 页面
         id: deployment
         uses: actions/deploy-pages@v4
