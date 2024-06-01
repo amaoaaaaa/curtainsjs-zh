@@ -35,10 +35,14 @@ jobs:
         uses: actions/configure-pages@v4
       - name: 把需要的文件放到 _files 文件夹中
         run: |
+          # 创建一个_files文件夹
           mkdir _files
-          cp -r ./src _files/
-          cp -r ./documentation _files/
-          cp -r ./examples _files/
+          # 文档需要用来当做首页，所以需要把documentation里面的文件放到根目录
+          cp -r ./documentation/ _files/ 
+          # src包含了源码，因为examples要引用里面的文件，所以需要保留src文件夹
+          cp -r ./src _files/ 
+          # examples文件夹也要保留
+          cp -r ./examples _files/ 
       - name: 上传 _files 文件夹
         uses: actions/upload-pages-artifact@v3
         with:
