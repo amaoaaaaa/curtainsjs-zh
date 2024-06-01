@@ -38,7 +38,6 @@ jobs:
         with:
           # 上传 ./documentation 子目录作为首页
           path: './documentation'
-          name: documentation-${{ github.run_id }}-${{ github.run_number }}
       - name: 部署到 GitHub 页面
         id: deployment
         uses: actions/deploy-pages@v4
