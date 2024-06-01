@@ -36,7 +36,7 @@ jobs:
           # 设置仓库根目录作为发布目录
           publish_dir: ./
       - name: Upload artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           # 上传 ./documentation 子目录作为首页
           name: documentation
